@@ -3,7 +3,7 @@ version: '2.1'
 services:
 
   wordpress:
-    image: myuserindocker/dentrist-webapp:latest
+    image: myuserindocker/gaziteng-webapp:latest
     container_name: wordpress
     ports:
       - "80:80"
@@ -16,7 +16,7 @@ services:
       DEPLOYMENT: 'production'
       WORDPRESS_DB_HOST: mysql:3306
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-WebApp_Dentrist_Database}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-WebApp_GazitEng_Database}
     # entrypoint: updateDefaultEntrypoint.sh
 
   wordpressBuild:

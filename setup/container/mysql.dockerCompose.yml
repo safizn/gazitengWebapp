@@ -8,16 +8,9 @@ services:
             dockerfile: ./setup/container/mysql.dockerfile
         restart: always
         environment:
-          MYSQL_ROOT_PASSWORD: wordpress
-        #   # MYSQL_USER: MyUserIn8D
-        #   # MYSQL_PASSWORD: <g.,qPE:9U>21#B](
-          MYSQL_DATABASE: WebApp_Dentrist_Database
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-wordpress}
+            MYSQL_DATABASE: ${MYSQL_DATABASE:-WebApp_GazitEng_Database}
         container_name: mysql
         volumes:
             # - "./../volume/mysqlDatabase/:/var/lib/mysql"
             - "../../volume/mysqlDatabase/:/docker-entrypoint-initdb.d"
-        environment:
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-wordpress}
-            # MYSQL_USER: MyUserIn8D
-            # MYSQL_PASSWORD: <g.,qPE:9U>21#B](
-            MYSQL_DATABASE: ${MYSQL_DATABASE:-WebApp_Dentrist_Database}

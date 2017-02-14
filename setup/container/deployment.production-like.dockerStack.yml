@@ -9,7 +9,7 @@ networks:
 services:
 
   wordpress:
-    image: myuserindocker/dentrist-webapp:latest
+    image: myuserindocker/gaziteng-webapp:latest
     volumes:
       # - "$PWD/volume/app:/app"
       # - "$PWD/volume/log:/var/log/apache2"
@@ -18,7 +18,7 @@ services:
       DEPLOYMENT: production
       WORDPRESS_DB_HOST: mysql:3306
       WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DB_NAME: WebApp_Dentrist_Database
+      WORDPRESS_DB_NAME: WebApp_GazitEng_Database
     deploy:
       replicas: 1
       update_config:
@@ -45,7 +45,7 @@ services:
     environment:
         # MYSQL_ROOT_PASSWORD: wordpress
         MYSQL_ROOT_PASSWORD: wordpress
-        MYSQL_DATABASE: WebApp_Dentrist_Database
+        MYSQL_DATABASE: WebApp_GazitEng_Database
     networks:
       - default
 

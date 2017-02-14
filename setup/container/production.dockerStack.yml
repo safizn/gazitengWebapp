@@ -13,7 +13,7 @@ networks:
 services:
 
   wordpress:
-    image: myuserindocker/dentrist-webapp:latest
+    image: myuserindocker/gaziteng-webapp:latest
     # ports:
     #   - 80:80
     #   - 443:443
@@ -26,7 +26,7 @@ services:
       WORDPRESS_DB_HOST: mysql:3306
       # WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-WebApp_Dentrist_Database}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-WebApp_GazitEng_Database}
     deploy:
       replicas: 1
       update_config:
@@ -54,7 +54,7 @@ services:
         MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-wordpress}
         # MYSQL_USER: wordpress
         # MYSQL_PASSWORD: wordpress
-        MYSQL_DATABASE: ${MYSQL_DATABASE:-WebApp_Dentrist_Database}
+        MYSQL_DATABASE: ${MYSQL_DATABASE:-WebApp_GazitEng_Database}
     networks:
       - default
 
