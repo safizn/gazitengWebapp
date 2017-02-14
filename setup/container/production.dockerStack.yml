@@ -7,7 +7,7 @@ networks:
     external: true
 
 # volumes: 
-#   dentrist:
+#   gaziteng:
 #     driver: rexray
 
 services:
@@ -19,8 +19,8 @@ services:
     #   - 443:443
     volumes:
       # - "/app"
-      - "/mnt/datadisk-1/dentrist/log:/var/log/apache2"
-      - "/mnt/datadisk-1/dentrist/wordpressUploads:/app/root/content/uploads/"
+      - "/mnt/datadisk-1/gaziteng/log:/var/log/apache2"
+      - "/mnt/datadisk-1/gaziteng/wordpressUploads:/app/root/content/uploads/"
     environment:
       DEPLOYMENT: production
       WORDPRESS_DB_HOST: mysql:3306
@@ -48,8 +48,8 @@ services:
   mysql:
     image: mysql:latest
     volumes:
-        - "/mnt/datadisk-1/dentrist/mysqlData/:/var/lib/mysql"
-        - "/mnt/datadisk-1/dentrist/mysqlDatabase/:/docker-entrypoint-initdb.d"
+        - "/mnt/datadisk-1/gaziteng/mysqlData/:/var/lib/mysql"
+        - "/mnt/datadisk-1/gaziteng/mysqlDatabase/:/docker-entrypoint-initdb.d"
     environment:
         MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-wordpress}
         # MYSQL_USER: wordpress
