@@ -1,0 +1,76 @@
+version: '3'
+
+networks: 
+  default:
+    external: false
+  proxy_default:
+    external: true
+
+# volumes: 
+#   dentrist:
+#     driver: rexray
+
+services:
+
+  wordpress:
+    image: myuserindocker/dentrist-webapp:latest
+    # ports:
+    #   - 80:80
+    #   - 443:443
+    volumes:
+      # - "/app"
+      - "/mnt/datadisk-1/dentrist/log:/var/log/apache2"
+      - "/mnt/datadisk-1/dentrist/wordpressUploads:/app/root/content/uploads/"
+    environment:
+      DEPLOYMENT: production
+      WORDPRESS_DB_HOST: mysql:3306
+      # WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-WebApp_Dentrist_Database}
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      labels:
+        - com.df.notify=true
+        - com.df.distribute=true
+        - com.df.servicePath=/
+        - com.df.port=443
+        - com.df.srcPort=443
+        # - com.df.httpsPort=443
+        # - com.df.httpsOnly=true
+        - com.df.reqMode=tcp
+    networks:
+      - default
+      - proxy_default
+
+  mysql:
+    image: mysql:latest
+    volumes:
+        - "/mnt/datadisk-1/dentrist/mysqlData/:/var/lib/mysql"
+        - "/mnt/datadisk-1/dentrist/mysqlDatabase/:/docker-entrypoint-initdb.d"
+    environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-wordpress}
+        # MYSQL_USER: wordpress
+        # MYSQL_PASSWORD: wordpress
+        MYSQL_DATABASE: ${MYSQL_DATABASE:-WebApp_Dentrist_Database}
+    networks:
+      - default
+
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   environment:
+  #     - PMA_ARBITRARY=1
+  #   volumes:
+  #     - /sessions
+  #   extra_hosts:
+  #     - "mysql:db"
+  #   networks:
+  #     - default
+  #     deploy:
+  #     labels:
+  #       - com.df.notify=true
+  #       - com.df.distribute=true
+  #       - com.df.servicePath=/phpmyadmin
+  #       - com.df.port=80

@@ -1,0 +1,20 @@
+version: '2.1'
+
+services:
+
+  phpmyadminCommon:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+    volumes:
+      - /sessions
+
+  phpmyadmin:
+    extends:
+      # relative to the position of current file.
+      # file: ./commonConfigs.docker-compose.yml
+      service: phpmyadminCommon
+    container_name: phpmyadmin
+    ports:
+     - 81:80

@@ -1,0 +1,21 @@
+{
+  "name": "appTets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha \"./test.js\"",
+    "localStagingTest": "mocha \"./testHTTPRequest.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "chai": "latest",
+    "chai-http": "latest",
+    "request": "latest"
+  }
+}
