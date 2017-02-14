@@ -1,0 +1,17 @@
+; Settings to change
+
+max_execution_time = 300
+
+max_input_time = 600
+
+max_input_vars = 5000
+
+memory_limit = 256M
+
+# And define wordpress memory limit using define( 'WP_MAX_MEMORY_LIMIT', '256M' ); in wordpress config. & define( 'WP_MEMORY_LIMIT', '96M' );
+
+post_max_size = 1000M
+
+upload_max_filesize = 1000M
+
+max_file_uploads = 50

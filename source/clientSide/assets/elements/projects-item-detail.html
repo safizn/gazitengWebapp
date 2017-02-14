@@ -1,0 +1,254 @@
+<dom-module id="projects-item-detail">
+
+  <template>
+
+    <style>
+    :host {
+    }
+
+    paper-material {
+      height: 100%;
+      border-radius: 3px;
+      overflow: hidden;
+
+    }
+    paper-material:hover {
+       @apply(--shadow-elevation-6dp);
+    }
+    iron-image {
+      height:100%;
+    }
+    #title {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 25px;
+      /*text-shadow:#2e2e2e 0 4px 5px;*/
+    }
+    #title span {
+      background: rgba(255, 255, 255, 0.75);
+      color: black;
+      vertical-align: middle;
+      display: inline;
+      padding: 0.5rem;
+      box-decoration-break: clone;
+      font-weight: bold;
+      padding: 1px 8px;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 30px;
+
+    }
+    #status {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 27px;
+      height: 27px;
+      color: green;
+      stroke: rgb(1, 127, 2);
+      margin: 10px 15px;
+    }
+
+    @media (max-width: 800px) {
+      #title {
+        font-size: 22px;
+      }
+      #title span {
+        line-height: 21px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      #title {
+        font-size: 16px;
+      }
+      #title span {
+        line-height: 18px;
+      }
+
+    }
+
+    .my-gallery {
+      width: 100%;
+    }
+    .my-gallery img {
+      width: 100%;
+      height: auto;
+    }
+    /*.my-gallery figure {
+      display: block;
+      float: left;
+      margin: 0 5px 5px 0;
+      width: 150px;
+    }*/
+    .my-gallery figcaption {
+      display: none;
+    }
+    </style>
+
+    <!-- Large size for detail page. -->
+    <paper-material elevation="1">
+      <div id="title" ><span>{{decodeHtml(item.title.rendered)}}</span></div>
+      <!-- <iron-image style="width:100%; min-height:100px;" sizing="cover" src="{{_getIMG(item)}}"></iron-image> -->
+      <div class="my-gallery horizontal center-justified layout" itemscope itemtype="http://schema.org/ImageGallery" >
+              <template id="imagesRepeater"
+              is="dom-repeat"
+              items="[[item.acf.image_gallery]]"
+              as="imageObject">
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="[[imageObject.sizes.large]]" itemprop="contentUrl"
+                    data-size$="{{getSizeData(imageObject)}}">
+                  <img src="[[imageObject.sizes.thumbnail]]" itemprop="thumbnail" alt="Image description" />
+                  </a>
+                  <figcaption itemprop="caption description">[[imageObject.description]]</figcaption>
+                </figure>
+              </template>
+                  <!-- <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
+                    <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
+                    </a>
+                    <figcaption itemprop="caption description">Image caption  1</figcaption>
+                  </figure>
+                  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+                    <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+                    </a>
+                    <figcaption itemprop="caption description">Image caption 2</figcaption>
+                  </figure>
+                  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
+                    <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
+                    </a>
+                    <figcaption itemprop="caption description">Image caption 3</figcaption>
+                  </figure>
+                  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
+                    <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
+                    </a>
+                    <figcaption itemprop="caption description">Image caption 4</figcaption>
+                  </figure> -->
+      </div>
+      <iron-icon id="status" icon="icons:check"></iron-icon>
+      <p inner-h-t-m-l="[[item.content.rendered]]"></p>
+    </paper-material>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="3" role="dialog" aria-hidden="true" style="z-index: 2500;">
+            <!-- Background of PhotoSwipe.
+            It's a separate element, as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+              <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+              <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+              <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+              </div>
+              <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+              <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <script>
+      System.import(location.protocol +'//'+ window.location.hostname + "/app/javascripts/photoswipe.js");
+    </script>
+
+  </template>
+
+
+  <script>
+  window.SZN = window.SZN || {};
+
+  Polymer({
+    is: 'projects-item-detail',
+
+    behaviors: [SZN.AppBehavior],
+
+    properties: {
+      item: {
+        type: Object
+      },
+      smallsize: {
+         notify: true,
+         type: Boolean,
+         reflectToAttribute: true
+     },
+     detailsize: {
+        notify: true,
+        type: Boolean,
+        reflectToAttribute: true
+      },
+    },
+    ready: function() {
+    },
+    getSizeData: function(imageObject) {
+      return imageObject.sizes['large-width'] + 'x' + imageObject.sizes['large-height'];
+    },
+    // _toggle: function(event, detail, sender) {
+    //   var moreInfo = this.$$('#moreinfo');
+    //   var iconButton = Polymer.dom(event).localTarget;
+    //   iconButton.icon = moreInfo.opened ? 'hardware:keyboard-arrow-up'
+    //                                     : 'hardware:keyboard-arrow-down';
+    //   moreInfo.toggle();
+    // },
+    _getURL: function(item) {
+      return item.link;
+    },
+    _getIMG: function(item) {
+      if(!item.acf.image_gallery) {
+        var defaultPatterns = [
+          'http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/05/7516168-masonry-stone-wall-rock-construction-pattern-texture-background-Stock-Photo.jpg',
+          'http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/05/Beaver_River_Cobble.jpg',
+          'http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/05/478716831.jpg',
+          'http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/05/old_brick.jpg',
+          'http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/05/tekstura_kirpich_stena_svet_82473_1366x768.jpg',
+          'http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/05/wood_planks.jpg'
+        ];
+        var rand = defaultPatterns[Math.floor(Math.random() * defaultPatterns.length)];
+        return rand;
+      } else {
+        if(this.detailsize) {
+          return item.acf.image_gallery[0].sizes.large;
+        } else {
+          return item.acf.image_gallery[0].sizes.medium;
+        }
+      }
+    }
+
+  });
+
+  </script>
+
+</dom-module>

@@ -1,0 +1,2 @@
+[12-Oct-2015 08:04:19 America/Chicago] PHP Fatal error:  Call to undefined function wp_is_mobile() in /home4/dentrist/public_html/wp-content/plugins/SZN_scripts_styles/css/general-custom-styles.css.php on line 52
+[12-Oct-2015 08:04:50 America/Chicago] PHP Fatal error:  Call to undefined function wp_is_mobile() in /home4/dentrist/public_html/wp-content/plugins/SZN_scripts_styles/css/general-custom-styles.css.php on line 52

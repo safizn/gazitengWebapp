@@ -1,0 +1,60 @@
+<dom-module id="projects-data">
+
+  <template>
+		<iron-ajax
+        auto
+				url="{{url}}"
+				headers='{"Content-Type": "application/json;charset=utf-8"}'
+        params='{"per_page":"100"}'
+				handle-as="json"
+				last-response="{{ajaxResponse}}"
+        on-response="responseHandler"
+        on-request="requestHandler"
+        ></iron-ajax>
+
+    <style>
+    </style>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'projects-data',
+      ready: function(){
+      },
+      properties: {
+        projects: {
+          notify: true,
+					type: Object,
+          computed: 'computeAjaxResponse(ajaxResponse)'
+        },
+        ajaxResponse: {
+          notify: true,
+          type: Array,
+        },
+        url: {
+          notify: true,
+          type: String,
+          value: function() {
+            // http://stackoverflow.com/questions/1368264/how-to-extract-the-hostname-portion-of-a-url-in-javascript
+            var url = window.location.origin + '/wp-json/wp/v2/projects/';
+
+            return url;
+          }
+        }
+      },
+      computeAjaxResponse: function(ajaxResponse) {
+        return ajaxResponse;
+      },
+      responseHandler: function(ajaxResponse) {
+        document.getElementById("pagespinner").style.display = "none";
+      }
+      ,
+      requestHandler: function() {
+      },
+
+
+    });
+  </script>
+
+</dom-module>

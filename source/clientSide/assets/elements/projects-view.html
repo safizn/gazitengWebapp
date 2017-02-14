@@ -1,0 +1,103 @@
+<dom-module id="projects-view">
+  <template>
+
+
+        <!-- <app-route
+            route="{{route}}"
+            pattern=""
+            data="{{routeData}}"
+            active="{{listActive}}">
+        </app-route> -->
+        <app-route
+            route="{{route}}"
+            pattern="/:slug"
+            data="{{routeData}}"
+            active="{{slugActive}}">
+        </app-route>
+
+
+        <!-- detail of item -->
+        <template is="dom-if" if="[[slugActive]]">
+            <projects-detail projects="{{projects}}" item="[[_getItem(projects, routeData.slug)]]" class="item"></projects-detail>
+        </template>
+
+        <!-- list of items -->
+        <template is="dom-if" if="{{_isListView(route.path, route.prefix, slugActive)}}">
+          <projects-list projects="{{projects}}" item="[[_getItem(projects, routeData.slug)]]" class="item"></projects-list>
+        </template>
+
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'projects-view',
+      ready: function() {
+      },
+
+      properties: {
+         projects: {
+            notify: true,
+ 					  type: Array
+        },
+
+        route: {
+          type: Object,
+          notify: true,
+          // observer: '_routeChanged'
+
+        },
+        routeData: {
+          type: Object,
+          notify: true
+        },
+        slugActive: {
+          type: Boolean,
+          notify: true
+        }
+
+      },
+      // Element Lifecycle
+      ready: function() {
+        // `ready` is called after all elements have been configured, but
+        // propagates bottom-up. This element's children are ready, but parents
+        // are not.
+        //
+        // This is the point where you should make modifications to the DOM (when
+        // necessary), or kick off any processes the element wants to perform.
+      },
+      attached: function() {
+        // `attached` fires once the element and its parents have been inserted
+        // into a document.
+        //
+        // This is a good place to perform any work related to your element's
+        // visual state or active behavior (measuring sizes, beginning animations,
+        // loading resources, etc).
+      },
+      detached: function() {
+        // The analog to `attached`, `detached` fires when the element has been
+        // removed from a document.
+        //
+        // Use this to clean up anything you did in `attached`.
+      },
+      // Element Behavior
+      _isListView: function(routepath, routeprefix, slugActive) {
+        return (!routepath && (routeprefix == "/initiator" || routeprefix == "/projects")) && !slugActive;
+      },
+
+      _getItem: function(projects, slug) {
+        // encode and decode foreign languages in js - http://www.the-art-of-web.com/javascript/escape/
+        var result = projects.filter(function(project) {
+            return decodeURI(project.slug) == slug;
+        });
+        return result[0];
+      },
+
+      _routeChanged: function() {
+        this.notifyPath('route', this.route);
+      }
+
+
+    });
+  </script>
+</dom-module>

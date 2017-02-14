@@ -1,0 +1,67 @@
+/* =============================================
+					SIDEBAR 
+   ============================================= */
+.sidebar {
+	color: #666;
+	padding-top: 0;
+	opacity: 1;
+	-webkit-transition: opacity .3s linear;  /* Saf3.2+, Chrome */
+    -moz-transition: opacity .3s linear;  /* FF4+ */
+    -ms-transition: opacity .3s linear;  /* IE10? */
+    -o-transition: opacity .3s linear;  /* Opera 10.5+ */
+    transition: opacity .3s linear;
+}
+.sidebar:hover {
+	opacity: 1;
+
+}
+#singlepage-right-sidebar .sidebar {
+	opacity: 0;
+}
+#singlepage-right-sidebar:hover .sidebar {
+	opacity: 1;
+}
+.sidebar:first-child{
+	margin-top:0;
+}
+.sidebar a {
+color: #999;
+}
+.sidebar > ul {
+border-top: 1px solid #e5e5e5;
+border-bottom: 1px solid #fafafa;
+margin: 0;
+}
+.sidebar ul > li {
+border-top: 1px solid #fafafa;
+border-bottom: 1px solid #e5e5e5;
+list-style: none;
+margin: 0;
+padding: 5px 0;
+}
+.sidebar ul > li ul {
+border: none;
+}
+.sidebar ul > li ul li {
+border: none;
+}
+#singlepage-right-sidebar {
+	float: right;
+	width: 250px;
+	text-align: center;
+	margin: 0 5px;
+
+}
+#singlepage-left-sidebar {
+	float: left;
+	width: 250px;
+	height: 100%;
+	min-height: 800px;
+	 position: relative;
+	margin: 20px 5px 10px 10px;
+}
+#singlepage-left-sidebar center {
+	margin-top: 70px;
+	
+	
+}

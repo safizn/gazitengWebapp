@@ -1,0 +1,4 @@
+[07-May-2015 09:51:51 America/Chicago] PHP Fatal error:  Call to undefined function is_mobile() in /home4/dentrist/public_html/wp-content/plugins/SZN_template_system/elements/ads-element/ads-element.php on line 23
+[07-May-2015 09:53:33 America/Chicago] PHP Fatal error:  Call to undefined function plugin_dir_path() in /home4/dentrist/public_html/wp-content/plugins/SZN_template_system/elements/ads-element/ads-element.php on line 23
+[07-May-2015 09:59:32 America/Chicago] PHP Fatal error:  Call to undefined function SZN_ads() in /home4/dentrist/public_html/wp-content/plugins/SZN_template_system/elements/ads-element/ads-element.php on line 26
+[07-May-2015 10:00:20 America/Chicago] PHP Fatal error:  Call to undefined function SZN_ads() in /home4/dentrist/public_html/wp-content/plugins/SZN_template_system/elements/ads-element/ads-element.php on line 4

@@ -1,0 +1,125 @@
+<dom-module id="projects-detail">
+
+  <template>
+
+  <style>
+    :host {
+      @apply(--layout-horizontal);
+      @apply(--layout-wrap);
+      height: calc(100vh - 65px);
+
+    }
+
+    div.detailSection {
+      overflow-y: hidden;
+
+      width: 65%;
+      flex: 1 1 65%;
+
+      background-color: white;
+    }
+    /*Fixed for Flexbox http://stackoverflow.com/questions/29036231/how-can-i-have-a-position-fixed-behaviour-for-a-flexbox-sized-element*/
+    div.listSectionFlexed {
+      overflow-y: auto;
+      flex: 1 1 35%;
+      width: 35%;
+      background-color: #F3F3F3;
+    }
+
+    div.listSubsection {
+
+      /*position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;*/
+      /*overflow-y: auto;*/
+    }
+
+    projects-item {
+      height: 400px;
+      display: block;
+    }
+
+    p {
+      padding: 10px;
+    }
+
+    /**
+     * Desktop small, tablet
+     */
+    @media (max-width: 1200px) {
+      :host {
+        @apply(--layout-center);
+      }
+      div.detailSection {
+        @apply(--layout-flex-none);
+        width: 100%;
+
+      }
+    }
+
+    @media (max-width: 800px) {
+
+
+    }
+
+    /**
+     * Phone
+     */
+    @media (max-width: 400px) {
+      div.detailSection {
+        @apply(--layout-flex-none);
+      }
+      projects-item {
+        height: 30vmax;
+      }
+    }
+
+  </style>
+
+    <div class="detailSection">
+      <projects-item-detail item="{{item}}" class="item"></projects-item-detail>
+    </div>
+
+    <div class="listSectionFlexed" >
+      <div class="listSubsection" >
+        <projects-list projects="{{projects}}" class="item" smallsize></projects-list>
+      </div>
+    </div>
+
+  </template>
+
+
+  <script>
+  window.SZN = window.SZN || {};
+
+  Polymer({
+    is: 'projects-detail',
+
+    behaviors: [SZN.AppBehavior],
+
+    properties: {
+      item: {
+        type: Object
+      },
+      projects: {
+         notify: true,
+         type: Array
+     },
+
+    },
+
+    // _toggle: function(event, detail, sender) {
+    //   var moreInfo = this.$$('#moreinfo');
+    //   var iconButton = Polymer.dom(event).localTarget;
+    //   iconButton.icon = moreInfo.opened ? 'hardware:keyboard-arrow-up'
+    //                                     : 'hardware:keyboard-arrow-down';
+    //   moreInfo.toggle();
+    // },
+
+  });
+
+  </script>
+
+</dom-module>

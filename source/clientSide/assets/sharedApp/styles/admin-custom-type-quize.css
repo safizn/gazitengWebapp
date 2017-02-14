@@ -1,0 +1,8 @@
+
+.column-title {/* Posts edit */
+	display: none;	
+}
+
+.inline.hide-if-no-js {
+	display: none;	
+}

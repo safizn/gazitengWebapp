@@ -1,0 +1,551 @@
+
+
+
+paper-button.colorful {
+	color: #4285f4;
+}
+
+paper-button[raised].colorful {
+	background: #4285f4;
+	color: #fff;
+}
+
+paper-button[toggles] {
+	transition: background-color 0.3s;
+}
+
+paper-button[toggles][active] {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+paper-button[toggles][active].colorful {
+	background-color: rgba(66, 133, 244, 0.25);
+}
+
+paper-button[toggles][active][raised].colorful {
+	background-color: rgba(66, 133, 244, 0.75);
+}
+
+
+/* =============================================
+        SINGLEPAGE-POST
+   ============================================= */
+#singlepage-post-wrapper {
+	margin: 0 265px;
+	min-width: 460px;
+    overflow: hidden;
+}
+.error-wrapper {
+	padding: 15px;
+}
+.post-wrapper .post-content form {
+	padding-bottom: 15px;
+}
+#singlepage-wrapper {
+	width: 100%;
+    overflow: hidden;
+}
+#post-reference p {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+#post-reference p {
+	margin-top: 10px;
+}
+
+.post-wrapper {
+	background: #fff;
+/*	border: 1px solid #e5e5e5;*/
+	margin-bottom: 50px;
+	padding-bottom: 1px;
+	/* BORDER THIN UNDER POST BEFORE COMMENT
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+	*/
+}
+.post-wrapper #post-content-text {
+	width: auto;
+	margin: 0 12px;
+}
+.post-wrapper .h1-wrapper {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 8px;
+	position:relative;
+}
+.post-wrapper .h1-wrapper h1 {
+	font-size: 40px;
+	font-family:"MuseoSlabLight";
+	font-weight: normal;
+	line-height: 1em;
+	margin: 10px 25px 10px 25px;
+	text-align: center;
+	/*word-break: break-all; 	*/
+	line-break: strict;
+	word-wrap : break-word;
+
+}
+.post-wrapper .post-content p, .post-wrapper #post-content-text h3 {
+	max-width: 900px;
+	min-width: 376px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+.post-wrapper .post-content ul, .post-wrapper .post-content  ol{
+	max-width: 850px;
+	min-width: 376px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+
+}
+.post-wrapper .post-content ul {
+}
+.post-wrapper .post-content ul ol{
+	margin-right: inherit;
+	margin-left: inherit;
+}
+.post-wrapper .post-content p:first-child {
+	margin-top: 20px;
+}
+.post-wrapper #post-content-text h3 {
+	font-family: "SourceSansPro-Bold","FreightSansPro","DroidSans","Lucida Sans",Geneva,Verdana,sans-serif;
+	letter-spacing: 0.012em;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1.2;
+	margin-bottom: 4px;
+
+}
+.post-wrapper .post-content p, .post-wrapper .post-content ul, .post-wrapper .post-content ol {
+	font-family: "FreigTexProBook","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	/*  ,"SourceSansPro-Light","Scheherazade","freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif  */
+	color: #333333;
+	color: rgba(0, 0, 0, 0.85);
+	letter-spacing:0.011rem;
+	font-weight:400;
+	font-style:normal;
+	font-size:22px;
+	line-height:1.5;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+.post-wrapper .post-content p > strong {
+/*	margin-bottom: -25px; */
+	font-size: 25px;
+	padding-top: 0px;
+	display:block; * So not to break line
+	width: 100%;
+}
+.post-wrapper .post-content li  {
+	margin-bottom: 10px;
+	margin-left: 25px;
+	line-height:1.5;
+	margin-bottom: 0px;
+}
+.post-wrapper .post-content ol li  {
+}
+.post-wrapper .post-content ul ol, .post-wrapper .post-content  ol  {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.post-wrapper .post-content strong {
+/*	margin-bottom: 25px; */
+}
+.post-wrapper .post-featured-photo {
+	background: #f2f2f2;
+	margin: 25px;
+	text-align: center;
+}
+.post-wrapper .post-content {
+	margin: 0;
+}
+p.image-gallery {
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 15px;
+}
+p.image-gallery a {
+	display: inline-block;
+	margin-left: -4px;
+	padding: 0;
+	border: none;
+}
+.sd-title {
+	display: none;
+}
+
+#sharing-buttons {
+	text-align: center;
+	margin: auto;
+	width: auto;
+}
+.comments_number {
+	color: #AAAAAA;
+}
+#comments_number {
+	font-size: 16px;
+	float:right;
+	margin-right:7px;
+	margin-right:15px;
+}
+#comments_number i.fa-comment {
+	font-size: 17px;
+}
+
+
+
+
+/* Next-Prev Posts NAV*/
+.previous-wrapper i {
+	-webkit-transition: -webkit-transform 0.3s 0.3s;
+	transition: transform 0.3s 0.3s;
+}
+.previous-wrapper {
+	position:absolute;
+	top:0;
+	right:0;
+}
+.previous-wrapper:hover i {
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+.previous-wrapper:hover ~ #brick-previous-post , #brick-previous-post:hover {
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+}
+#brick-previous-post {
+	position: absolute;
+	top: -20px;
+	zoom: 0.7;
+	right: 0;
+	text-align: right;
+	-webkit-transform: translateX(110%);
+	transform: translateX(110%);
+	-webkit-transition: -webkit-transform 0.3s 0.3s;
+	transition: transform 0.3s 0.3s;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	float:right;
+}
+
+
+
+.next-wrapper {
+ 	position:absolute; top:0; left:0;
+}
+.next-wrapper i {
+	-webkit-transition: -webkit-transform 0.3s 0.3s;
+	transition: transform 0.3s 0.3s;
+}
+.next-wrapper:hover i {
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+.next-wrapper:hover ~ #brick-next-post , #brick-next-post:hover{
+	-webkit-transform: translateX(-7px);
+	transform: translateX(-7px);
+}
+#brick-next-post {
+	position: absolute;
+	top: -20px;
+	zoom: 0.7;
+	left: 0;
+	text-align: left;
+	-webkit-transform: translateX(-110%);
+	transform: translateX(-110%);
+	-webkit-transition: -webkit-transform 0.3s 0.3s;
+	transition: transform 0.3s 0.3s;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	float:left;
+}
+
+/* ---------------------------- Author sidebar SHOW MORE ------------------------*/
+
+/*/
+Post author section /*/
+#singlepage-wrapper #singlepage-left-sidebar .wp-about-author-pic {
+	margin: 0 auto;
+	display: inline-block;
+	float: none;
+}
+#singlepage-wrapper #singlepage-left-sidebar .wp-about-author-containter-top{
+	margin: 0;
+	padding: 0;
+	border: none;
+	text-align: center;
+	display: inline-block;
+	background: none;
+	font-family: "ProximaNovaBold";
+	font-size: 17px;
+	font-weight: inherit;
+	color: #636466;
+
+}
+#singlepage-wrapper #singlepage-left-sidebar .wp-about-author-containter-top h3 a, #singlepage-wrapper #singlepage-left-sidebar .wp-about-author-containter-top a {
+	text-transform: uppercase;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"ProximaNovaBold";
+	font-size: 11px;
+	font-weight: inherit;
+	color: #636466;
+}
+#singlepage-wrapper #singlepage-left-sidebar h3, #singlepage-wrapper #singlepage-left-sidebar .wp-about-author-containter-top a {
+	line-height: 17px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+#singlepage-wrapper #single-post-author {
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+#singlepage-wrapper #about-author-description{
+	font-size: 11px;
+}
+#about-author-description p.wpa-nomargin {
+	line-height: 4px;
+}
+#about-author-description p.wpa-nomargin img {
+	width: 40px;
+	height: 40px;
+}
+#singlepage-wrapper #singlepage-left-sidebar #adsbygoogle-left-sidebar {
+	margin-top: 80px;
+	margin-bottom: 20px;
+	width: 160px;
+	height: 600px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* css only show/hide
+
+ */
+
+figure {
+    margin: 0 0 3px 0;
+    -webkit-transition: .125s linear;
+    -moz-transition: .125s linear;
+    -ms-transition: .125s linear;
+    -o-transition: .125s linear;
+    transition: .125s linear;
+}
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+#singlepage-left-sidebar article {
+    position: relative;
+    *zoom: 1;
+	text-align:center;
+}
+article:before, article:after {
+    content: "";
+    display: table;
+}
+article:after { clear: both }
+article figure {
+    float: left;
+    width: 50%;
+}
+article section:first-of-type {
+    float: right;
+	margin-top: 15px;
+    width: 50%;
+	text-align: center;
+}
+article section:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+section {
+    -webkit-transition: .125s linear;
+    -moz-transition: .125s linear;
+    -ms-transition: .125s linear;
+    -o-transition: .125s linear;
+    transition: .125s linear;
+}
+input[type=checkbox] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+[for="read_more"] {
+	display: inline-block;
+	border-radius: 50%;
+    width: 24px;
+	margin: 10px 0 0 0;
+    text-align: center;
+    padding: .65rem;
+    box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), inset -1px -1px rgba(0, 0, 0, 0.1);
+}
+
+[for="read_more"] span:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ section {
+    display: block;
+    visibility: visible;
+    width: 100%;
+	margin-bottom: 8px;
+}
+input[type=checkbox]:checked ~ label { /*  Hide opposite arrow to prevent ads intervention */
+	display: none;
+}
+input[type=checkbox]:checked ~ section.author-name {
+	text-align: center;
+	width: 100%;
+	margin-top: 0;
+	text-align: center;
+}
+
+input[type=checkbox]:checked ~ figure {
+	width: 100%;
+	text-align: center;
+}
+
+input[type=checkbox]:checked ~ [for="read_more"] span:first-of-type {
+    display: none;
+    visibility: hidden;
+	margin: 0;
+	padding:8px 0 0 5px;
+	float: left;
+	width:118px;
+	height: 122px;
+	line-height: 1.5;
+	text-align: left;
+
+}
+input[type=checkbox]:checked ~ [for="read_more"] {
+	margin: 0 auto;
+	float: none;
+}
+input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
+    display: block;
+    visibility: visible;
+}
+
+#post-time-singlepage {
+	margin-top:5px;
+	text-align: center;
+	margin-left:auto;
+	margin-right: auto;
+	font-size:11px;
+	display: inherit;
+	font-family: sans-serif;
+	min-width: 100px;
+}
+#post-time-singlepage i {
+	margin-right: 5px;
+	font-size: 14px;
+}
+
+/* Post LIKE Buttons */
+.watch-action i {
+	font-size: 32px;
+}
+.watch-action .watch-position {
+	word-spacing: 1px;
+}
+.watch-action .action-unlike, .watch-action .action-like{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.lbg-style2, .unlbg-style2{
+	height: 33px;
+	font-size: 32px;
+	text-decoration: none;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.lbg-style2 i, .unlbg-style2 i{
+	width: 28px;
+}
+.lbg-style2 i.fa-thumbs-up, .unlbg-style2  i.fa-thumbs-down{
+	font-size: 34px;
+}
+.lbg-style2 i.fa-thumbs-up, .lbg-style2:hover{
+	color: #33CC66;
+}
+.unlbg-style2 i.fa-thumbs-down, .unlbg-style2:hover {
+	color: #CC3366;
+}
+.lbg-style2:hover , .unlbg-style2:hover {
+	text-decoration: none;
+}
+/* TOggle class of font awesome
+http://stackoverflow.com/questions/19502835/is-it-possible-to-change-between-two-fontawesome-icons-on-hover
+Default have both classes, the other only show
+*/
+* > .fa.fa-hover-show,
+*:hover > .fa.fa-hover-hidden {
+    display: none;
+}
+*:hover > .fa.fa-hover-show {
+    display: inline-block;
+}
+.shareaholic-share-buttons-container li.shareaholic-share-button .share-button-counter {
+
+}
+/* ---------------------------- AUTHOR SIDEBAR SHOW MORE END------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+.post-meta-category-tag {
+	display: inline-block;
+	line-height: 10px;
+}
+div.sharedaddy, .watch-action, ul.image-gallery, .post-meta-category-tag, #navigation, .post-comments {
+	margin-right: 25px;
+	margin-left: 25px;
+}
+ul.image-gallery {
+	margin: 34px 0 35px 0;
+}
+.post-wrapper .post-meta-top {
+	display: inline-block;
+	position: static;
+	line-height: normal;
+	height: 18px;
+	width: 100%;
+	height: auto;
+	margin-top: 5px;
+	margin-right: 7px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 0;
+}
+.post-wrapper .post-comments {
+}
+.post-wrapper .post-comments-wrapper {
+	margin: 15px 0 0 0;
+}

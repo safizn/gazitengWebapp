@@ -1,0 +1,344 @@
+/* =============================================
+			DIFFERENT WIDTH STYLE
+   ============================================= */
+@media (min-width: 1200px) {
+	#commentform .commentform-input {
+	margin-right: 10px;
+	width: 32%;
+	}
+	#masonry .thumb {
+	width: 231px;
+	}
+	#menu-main-menu {
+		margin-left: 8px;
+	}
+	.inner-wrapper .container {
+	margin-right: 5%;
+	margin-left: 5%;
+	}
+
+p, ul, ol {
+	font-family: "FreigTexProBook","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	/*  ,"SourceSansPro-Light","Scheherazade","freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif  */
+	color: #333333;
+	color: rgba(0, 0, 0, 0.85);
+	letter-spacing:0.011rem;
+	font-weight:400;
+	font-style:normal;
+	font-size:22px;
+	line-height:1.5;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+}
+@media (max-width: 979px) {
+	body {
+	}
+	.navbar .container {
+    padding: 0;
+  }
+	#singlepage-right-sidebar .sidebar {
+		opacity: 1;
+	}
+	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+		padding: 0;
+	}
+	#topmenu #nav-main > ul > li {
+	background: none;
+	background: #f7f7f7;
+	border: none;
+	}
+	#topmenu .dropdown-menu {
+	background: #f7f7f7;
+	border: none;
+	}
+	#topmenu .dropdown-menu li a {
+	border-top: 2px solid #fff;
+	border-bottom: none;
+	padding: 8px 8px 8px 25px;
+	}
+	#topmenu .dropdown-menu li a:hover {
+	background: #fbfbfb;
+	color: #333;
+	}
+	#topmenu .dropdown-menu .active > a, #topmenu .dropdown-menu .active > a:hover {
+	background-color: #f7f7f7;
+	background-image: none;
+	}
+	#topmenu .navbar-search .search-query {
+	width: 50%;
+	}
+	.nav-collapse .dropdown-menu {
+	display: block !important;
+	}
+	#topmenu .dropdown-submenu a {
+	margin-right: -30px;
+	}
+	#topmenu .dropdown-submenu ul {
+	padding-left: 20px;
+	}
+	#commentform .commentform-input {
+	margin-right: 14px;
+	width: 100%;
+	}
+	#commentform .commentform-field {
+	width: 98%;
+	}
+	#double-left-column {
+	padding-bottom: 20px;
+	}
+	.sidebar {
+	padding-top:0;
+	}
+	#scrolltotop {
+	right: 5px
+	}
+	#scrolltotop a {
+	padding: 5px 10px;
+	}
+	#masonry .thumb {
+		width: 231px;
+	}
+
+
+	#singlepage-right-sidebar{
+		width: 50%;
+		margin: 0 auto;
+
+	}
+	#singlepage-left-sidebar{
+		width: 50%;
+		margin: 0 auto;
+		text-align: center
+	}
+	#singlepage-post-wrapper {
+		width: 96%;
+		margin: 0 auto;
+	}
+
+ p, ul, ol {
+	font-family: "FreigTexProBook","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	/*  ,"SourceSansPro-Light","Scheherazade","freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif  */
+	color: #333333;
+	color: rgba(0, 0, 0, 0.85);
+	letter-spacing:0.011rem;
+	font-weight:400;
+	font-style:normal;
+	font-size:22px;
+	line-height:1.5;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+}
+
+
+
+.portrait {
+}
+.landscape {
+}
+/* http://stackoverflow.com/questions/11404744/media-queries-max-width-or-max-height */
+@media screen and (max-height: 450px) and (orientation: landscape) {
+	body {
+		width: 100% ;
+		overflow-x: hidden;
+		margin-right:0;
+		margin-left: 0;
+		padding-top: 0px;
+	}
+	#top-menu-secondary, #topmenu {
+		position: static;
+		height: 41px;
+	}
+	#top-menu-secondary .container {
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.navbar #nav-login-wrapper {
+		min-width: inherit;
+	}
+	.wp-about-author-pic {
+		width: 150px;
+		display: inline-block;
+
+	}
+	#push-content {
+		display: none;
+	}
+
+	article section:first-of-type {
+		display: inline-block;
+		max-width: 250px;
+		float: none;
+	}
+	section.author-name a, section.author-name h3 {
+		width: 100%;
+		text-align: center;
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	article {
+		text-align: center;
+	}
+	article figure {
+		float: none;
+		width: 100%;
+		text-align: center;
+		height: 105px;
+	}
+	.wp-about-author-containter-top {
+		display: inline-block;
+		float: none;
+
+	}
+
+ p, ul, ol {
+	font-family: "FreigTexProBook","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	/*  ,"SourceSansPro-Light","Scheherazade","freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif  */
+	color: #333333;
+	color: rgba(0, 0, 0, 0.85);
+	letter-spacing:0.011rem;
+	font-weight:400;
+	font-style:normal;
+	font-size:22px;
+	line-height:1.5;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+}
+
+@media (max-width: 480px) {
+	body {
+		width: 100% ;
+		overflow-x: hidden;
+		margin-right:0;
+		margin-left: 0;
+		padding-top: 0px;
+	}
+	body > div {
+		-webkit-transition: all 1s ease-in-out;
+	}
+	.navbar #nav-login-wrapper {
+		min-width: inherit;
+	}
+	#masonry .thumb {
+		width: 200px;
+		margin:  0 2% 10px 2%;
+	}
+	#infscr-loading img{
+	}
+	.span3 {
+		text-align: center;
+	}
+	#masonry .thumb-holder img:first-child {
+	}
+	#masonry img {
+	height: auto !important;
+	width: 100% !important;
+	}
+	.image-wrap {
+		height: 50px;
+	}
+	#masonry {
+	width: 95%;
+	margin: 8px auto 0 auto;
+	}
+	#masonry .masonry-actionbar {
+	width: 95%;
+	}
+	.post-wrapper .post-content {
+		zoom: 0.7;
+	}
+	.post-wrapper .post-meta-top .pull-right {
+	display: none;
+	}
+  	.navbar .container {
+		padding: 0 ;
+	}
+	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+		margin: 0;
+	}
+	#post-author-right, #post-author-seperator{
+		display:none;
+	}
+	#top-menu-secondary {
+		position: static;
+	}
+	.navbar .btn-navbar{
+		float: none;
+		text-align: center;
+	}
+	#topmenu {
+		height: 41px;
+		position: static;
+	}
+	#nav-main {
+		z-index: 99999;
+	}
+	#top-menu-secondary .container ul {
+		background-color: white;
+	}
+	#scrolltotop {
+		bottom: 46px;
+	}
+	#singlepage-right-sidebar .sidebar {
+		display: none;
+	}
+	#singlepage-left-sidebar .sidebar {
+		opacity: 1;
+	}
+	.post-meta-category-tag {
+		line-height: 15px;
+	}
+	#post-time-singlepage {
+		text-align: center;
+	}
+	#push-content {
+		display: none;
+	}
+	#frame-google-drive {
+		min-width: 95%;
+	}
+
+
+	#singlepage-right-sidebar {
+	float: none;
+	width: 100%;
+	text-align: center;
+	margin: 0 5px;
+	}
+	#singlepage-left-sidebar {
+		float: none;
+		width: 100%;
+		margin: 0 5px;
+	}
+	#singlepage-post-wrapper {
+		margin: 0;
+		overflow: hidden;
+		width: 100%;
+		min-width: 0;
+	}
+	#singlepage-wrapper {
+		width: 100%;
+		overflow: hidden;
+	}
+
+ p, ul, ol {
+	font-family: "FreigTexProBook","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	/*  ,"SourceSansPro-Light","Scheherazade","freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif  */
+	color: #333333;
+	color: rgba(0, 0, 0, 0.85);
+	letter-spacing:0.011rem;
+	font-weight:400;
+	font-style:normal;
+	font-size:16px;
+	line-height:1.5;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+}

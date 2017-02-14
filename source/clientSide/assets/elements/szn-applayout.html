@@ -1,0 +1,468 @@
+<!-- <link rel="import" href="../../app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../../app-drawer/app-drawer.html">
+<link rel="import" href="../../app-header/app-header.html">
+<link rel="import" href="../../app-header-layout/app-header-layout.html">
+<link rel="import" href="../../app-toolbar/app-toolbar.html">
+<link rel="import" href="../../../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../../iron-icons/iron-icons.html">
+<link rel="import" href="../../../iron-media-query/iron-media-query.html">
+<link rel="import" href="../../../paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../../paper-item/paper-item.html">
+<link rel="import" href="../../../paper-menu/paper-menu.html">
+<link rel="import" href="../../../paper-tabs/paper-tabs.html"> -->
+
+<dom-module id="szn-applayout"><template>
+    <style  include="iron-flex iron-flex-alignment">
+      :host a {
+        font-family: 'Roboto', 'Noto', sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        text-decoration: none;
+        color: black;
+        -ms-flex: auto;
+         -webkit-flex: auto;
+         flex: auto;
+         height: auto;
+      }
+
+      :host {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        @apply(--layout-flex);
+        @apply(--layout-vertical);
+        @apply(--layout-fit);
+
+      }
+
+      app-header.mainheader {
+        /*overflow: hidden;*/
+        /*box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);*/
+        /*border-bottom: 1px solid #ddd;*/
+        /*position: fixed;*/
+        background-color: rgba(255, 255, 255, 0.95);
+        --app-header-shadow: {
+          box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
+          height: 10px;
+          bottom: -10px;
+        };
+
+        /*isolation: isolate;*/
+
+        border-bottom: 1px solid #ddd;
+
+      }
+
+      app-toolbar.main-toolbar {
+        background-color: none;
+      }
+
+      app-header:not([shadow]) {
+        border-bottom: 1px solid #ddd;
+      }
+
+      app-drawer {
+        --app-drawer-content-container: {
+          /*background-color: #ffffff;*/
+          background-color: #f3f3f3;
+        };
+        text-align: center;
+      }
+
+      app-toolbar.tabs-bar {
+        /*background-color: green;*/
+        height: 48px;
+      }
+
+      paper-tabs {
+         max-width: 640px;
+         margin: auto;
+
+        --paper-tabs-selection-bar-color: #ff7f27;
+
+      }
+
+      paper-tab {
+        --paper-tab-ink: #ff7f27;
+        font-family: 'almoniDL', 'Roboto', 'Noto', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #7c7c7c;
+
+
+      }
+
+      paper-tabs ::content paper-tab {
+        font-family: 'almoniDL', 'Roboto', 'Noto', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #7c7c7c;
+      }
+      paper-tabs ::content paper-tab.iron-selected {
+        font-weight: 700;
+      }
+
+
+
+      paper-icon-button {
+        --paper-icon-button	{
+          --iron-icon-stroke-color: rgba(253, 253, 253, 0.31);
+        }
+        --paper-icon-button-ink-color: #ff7f27;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .navItem, .headerTools{
+        @apply(--layout-self-start);
+        margin-top: 13px;
+        /*width: 88px;*/
+      }
+
+      .spacer {
+        @apply(--layout);
+        @apply(--layout-flex-auto);
+        @apply(--layout-center-center);
+      }
+
+      .logo {
+        background-image: url('http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/07/-----------1.3-03-1.png');
+        width: 240px;
+        height: 190px;
+        background-size: contain; background-repeat: no-repeat; background-position: center;
+      }
+
+      video#bgVideo {
+        margin: auto;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        /*background-color: red;*/
+      }
+
+      .ContainerBackgroundVideo {
+        overflow: hidden;
+        z-index: -1;
+        position: absolute;        top: 0;
+        /*bottom: -50%;*/
+        left: 0;
+        /*right: 0;*/
+        margin: auto;
+        width: 100%;
+        height: 100%;
+      }
+
+      app-drawer-layout {
+        /*@apply(--layout-fit);
+        @apply(--layout-flex);
+        @apply(--layout-vertical);*/
+
+      }
+
+      app-header-layout {
+        /*@apply(--layout-fit);*/
+
+        /*@apply(--layout-flex);
+        @apply(--layout-vertical);*/
+
+      }
+
+      neon-animated-pages {
+        /*@apply(--layout-fit);*/
+
+        /*@apply(--layout-flex);*/
+        /*@apply(--layout-vertical);*/
+
+      }
+
+      neon-animatable {
+        /*@apply(--layout-flex);
+        @apply(--layout-vertical);*/
+
+      }
+      neon-animated-pages .iron-selected {
+        position: static;
+      }
+
+      :host([slug-active]) .logo {
+        background-image: url('http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/07/-----------1.3-03-1.png');
+        width: 115px;
+        height: 60px;
+        background-size: contain; background-repeat: no-repeat; background-position: center;
+      }
+
+      :host([slug-active]) video {
+        display:none;
+      }
+
+      :host([slug-active]) app-toolbar.main-toolbar {
+        height: 64px;
+      }
+
+      @media (min-width: 800px) {
+        app-toolbar.main-toolbar {
+          height: 460px;
+        }
+        paper-icon-button {
+          border-radius: 20px;
+          background-color: rgba(255, 255, 255, 0.53);
+        }
+
+      }
+
+      /**
+       * Desktop small, tablet
+       */
+      @media (max-width: 800px) {
+        .logo {
+          background-image: url('http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/07/-----------1.3-03-1.png');
+          width: 115px;
+          height: 60px;
+          background-size: contain; background-repeat: no-repeat; background-position: center;
+        }
+        video {
+          display:none;
+        }
+        /*body{
+          background-image:url("image.png");
+        }*/
+
+      }
+
+      /**
+       * Phone
+       */
+      @media (max-width: 400px) {
+        /*paper-tabs {
+          display: none;
+        }*/
+      }
+    </style>
+
+    <app-location route="{{route}}" id="appLocation"></app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{routeTail}}">
+    </app-route>
+    <iron-media-query query="min-width: 600px" query-matches="{{wideLayout}}"></iron-media-query>
+    <app-drawer-layout force-narrow flex>
+      <app-drawer id="drawer" swipe-open>
+        <app-toolbar style="height: auto; display:block;">
+          <div class="logo" style="width: 100%; height: 109px; margin: auto;"></div>
+          <h3 style="background-color: #666666;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+      margin: 6px 0 3px 0;
+      " class="style-scope projects-list"> גזית הנדסה בע"מ </h3>
+      </app-toolbar>
+        <!-- Nav on mobile: side nav menu -->
+        <paper-menu selected="{{routeData.page}}" attr-for-selected="data-page">
+          <template is="dom-repeat" items="[[sections]]" as="section" initial-count="1">
+            <paper-item data-page="[[section.slug]]"><a href="" style="font-size: 18px;">[[section.name]]</a></paper-item>
+          </template>
+          <content select=".side-nav"></content>
+        </paper-menu>
+      </app-drawer>
+      <app-header-layout flex >
+        <app-header id="header" class="mainheader" effects="waterfall" condenses="{{wideLayout}}" fixed>
+          <app-toolbar class="main-toolbar">
+            <div class="navItem leftItem">
+              <paper-icon-button class="menu-button" icon="menu" drawer-toggle hidden$="{{wideLayout}}"></paper-icon-button>
+              <a href="/[[routeData.page]]"><paper-icon-button icon="arrow-back" hidden$="{{!slugActive}}"></paper-icon-button></a>
+            </div>
+            <div class="spacer" style="display:block; text-align:center;">
+              <div class="logo" style="margin:auto;"></div>
+              <h1 hidden$="{{_shouldShowTabs(wideLayout, slugActive)}}" style="text-shadow: rgba(255, 231, 207, 0.58) 0 0 10px; color: rgb(255, 122, 31);">גזית הנדסה בע"מ</h1>
+            </div>
+            <paper-icon-button class="headerTools" icon="communication:phone" on-click="_phoneButton"></paper-icon-button>
+            <paper-menu-button class="headerTools" horizontal-align="right" style="padding:0;" allow-outside-scroll>
+              <paper-icon-button icon="more-vert" class="dropdown-trigger" alt="menu"></paper-icon-button>
+              <paper-menu class="dropdown-content" style="display: block; max-width: 250px; ">
+                <paper-item style="cursor: pointer; display: none;">This is the selected by default, to prevent preselected to appear.</paper-item>
+                <paper-item onclick="window.location.href='http://gaziteng.com/site/wp-admin/'" style="cursor: pointer; ">כניסה למערכת</paper-item>
+              </paper-menu>
+            </paper-menu-button>
+            <!-- <div class="navItem">
+            </div> -->
+            <div class="ContainerBackgroundVideo" hidden$="{{_shouldShowTabs(wideLayout, slugActive)}}" style="background-image: url('http://wallpapercave.com/wp/6IuB9eg.jpg'); background-size: cover;">
+              <video id="bgVideo" autoplay loop poster="">
+                <!-- Video is embedded in the WEBM format -->
+                <!-- <source src="http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/03/videoplayback.mp4" type="video/mp4">
+                <source src="http://gaziteng.com/site/../content/sharedContent/wordpresswebapp/uploads/2016/03/One-of-the-Most-Compelling-Estates-in-Atlanta-Georgia.webm" type="video/webm"> -->
+              </video>
+            </div>
+          </app-toolbar>
+          <app-toolbar style="display: none;">
+            <!-- <video width="1800" height="700" autoplay="" loop="" preload="auto" style="width: 100%; left: 0px;">
+							<source src="http://assalammd.com/content/uploads/2014/12/Lecture-no-audio.mp4" type="video/mp4">
+							<source src="http://assalammd.com/content/uploads/2014/12/Lecture-no-audio.webm" type="video/webm">
+						</video> -->
+          </app-toolbar>
+          <app-toolbar class="tabs-bar" hidden$="{{_shouldShowTabs(wideLayout, slugActive)}}" primary>
+            <paper-tabs class="paper-tabs" selected="{{routeData.page}}" attr-for-selected="data-page" bottom-item>
+              <template is="dom-repeat" items="[[_reverseArray(sections)]]" as="section">
+                <paper-tab class="tabs-bar" data-page="[[section.slug]]">[[section.name]]</paper-tab>
+              </template>
+              <content select=".tabs-bar"></content>
+            </paper-tabs>
+          </app-toolbar>
+        </app-header>
+        <div style="text-align:center;" content style="min-height: 1200px;">
+          <neon-animated-pages
+            selected="{{routeData.page}}"
+            attr-for-selected="data-page"
+            entry-animation="scale-up-animation"
+            exit-animation="fade-out-animation" style="">
+            <neon-animatable data-page="projects" id="projects" style="">
+              <content select=".projects" ></content>
+            </neon-animatable>
+            <neon-animatable data-page="initiator" id="initiator" style="">
+              <content select=".initiator" ></content>
+            </neon-animatable>
+            <neon-animatable data-page="about" id="about" style="">
+              <content select=".about" ></content>
+            </neon-animatable>
+            <neon-animatable data-page="contact" id="contact" style="">
+              <content select=".contact" ></content>
+            </neon-animatable>
+            <!-- <neon-animatable data-page="cranes" id="cranes" style="">
+              <content select=".cranes" ></content>
+            </neon-animatable> -->
+          </neon-animated-pages>
+        </div>
+      </app-header-layout>
+    </app-drawer-layout>
+</template><script>
+(() => { 'use strict';
+const SZN = window.SZN || {};
+class PolymerElement {
+  get behaviors() { // http://www.ericfeminella.com/blog/2016/03/25/polymer-behaviors-in-es6/
+    return this._behaviors || (this._behaviors = []);
+  }
+  set behaviors(value) { this._behaviors = value;}
+  beforeRegister() { // Element setup goes in beforeRegister instead of createdCallback.
+    this.is = 'szn-applayout';
+    this.properties = { // Define the properties object in beforeRegister.
+      sections: {
+        type: Array,
+        notify: true,
+      },
+      selected: {
+        notify: true,
+        value: 'feature',
+        observer: '_selectedChanged'
+      },
+      route: {
+        type: Object,
+        notify: true,
+        observer: '_routeChanged' // Override the default of routeTail to allow in case of no patten to match route.path with tail.prefix.
+      },
+      routeTail: {
+        type: Object,
+        notify: true,
+
+      },
+      routeData: {
+        type: Object,
+        notify: true,
+        // value: {
+        //   page: '/projects'
+        // }
+      },
+
+      wideLayout: {
+        type: Boolean,
+        value: false,
+        // observer: 'onLayoutChange',
+      },
+      slugActive: {
+        type: Boolean,
+        notify: true,
+        reflectToAttribute: true
+      },
+      page: {
+        type: String,
+        reflectToAttribute: true
+      }
+    };
+    this.observers = [
+      '_hashDidChange(route.path)'
+    ];
+  }
+  ready() {
+    // //  Remove this async https://github.com/PolymerElements/carbon-route/issues/44
+    // this.async(function() {
+    // If we do not have an initial URL, we redirect to /search
+    // setTimeout(this._phoneButton(), 3000);
+    // },1);
+  }
+  attached() {
+    this.async(() => { //  if async is called with no wait time then it is executed with "microtask timing", which in Polymer's definition is before the next event/paint. http://stackoverflow.com/questions/30607541/domready-vs-ready-migrating-to-polymer-1-0#
+      if (!this.route.path || this.route.path == '/' || this.route.path == '') {
+        this.set('routeData.page', 'about');
+      }
+    },1)
+    // Polymer.dom.flush(); // to "flush" the DOM before working with it http://stackoverflow.com/questions/21763690/polymer-and-webcomponentsready-event
+    window.addEventListener('WebComponentsReady', function(e) {
+      // imports are loaded and elements have been registered
+    });
+    HTMLImports.whenReady(()=>{
+      // all imports loaded.
+    });
+  }
+  onLayoutChange(wide) {
+    var drawer = this.$.drawer;
+
+    if (wide && drawer.opened) {
+      drawer.opened = false;
+    }
+  }
+  _selectedChanged(newValue, oldValue) {
+    // document.location.href = '#' + newValue;
+    document.body.scrollTop = 0;
+    // this.set('route.path', '/'+ newValue +'/');
+    // this.wideLayout =false;
+  }
+  _routeChanged() {
+    if(!this.routeTail.prefix && this.route.path) {
+      // using set function it will notify and allow template dom-if to change correspondingly, overriding the default values of tail.prefix to allways equal route.path in this case.
+      this.set('routeTail.prefix', this.route.path);
+      // this.notifyPath('routeTail.prefix', this.routeTail.prefix);
+
+    }
+  }
+  _shouldShowTabs(wideLayout, slugActive) {
+    return !wideLayout || slugActive;
+  }
+  _hashDidChange() {
+    // Check that in the future TODO(blasten) Polymer.AppScrollEffects(0);
+    this.$.header._scrollTop = 0;
+    this.$.header.resetLayout();
+    this.$.drawer.close();
+  }
+  _reverseArray(sections) {
+    var array = sections;
+    return array.slice(0).reverse();
+  }
+  _phoneButton() {
+    this.set('route.path', '/contact');
+  }
+}
+// window.addEventListener('WebComponentsReady', ()=>{ // so ready function changes would work.
+// });
+HTMLImports.whenReady(()=>{
+  Polymer(PolymerElement); // Register the element using Polymer's constructor.
+});
+})();
+</script></dom-module>

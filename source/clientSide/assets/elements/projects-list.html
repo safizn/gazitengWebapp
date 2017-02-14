@@ -1,0 +1,158 @@
+<dom-module id="projects-list">
+
+  <template>
+
+  <style>
+    :host {
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .grid {
+      @apply(--layout-horizontal);
+      @apply(--layout-center-center);
+      @apply(--layout-wrap);
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1170px;
+
+    }
+
+    .grid > .item {
+      -webkit-flex: 1 calc(33% - 20px);
+      flex: 1 calc(33% - 20px);
+      max-width: calc(33% - 20px);
+      height: 30vmin;
+      min-height: 160px;
+      margin: 10px;
+      text-decoration: none;
+      background-color: white;
+    }
+
+    :host([smallsize]) .grid > .item {
+      height: 13vmin;
+      min-height: 130px;
+    }
+
+    /**
+     * Desktop small, tablet
+     */
+    @media (max-width: 1200px) {
+      .grid {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.7em;
+      }
+
+      .grid > .item {
+        -webkit-flex: 1 calc(50% - 20px);
+        flex: 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        margin: 10px;
+        text-decoration: none;
+        background-color: white;
+      }
+
+      :host([smallsize]) .grid > .item {
+        -webkit-flex: 1 calc(33% - 20px);
+        flex: 1 calc(33% - 20px);
+        width: calc(33% - 20px);
+        min-width: 130px;
+        max-width: 340px;
+      }
+
+    }
+
+    /**
+     * Phone
+     */
+    @media (max-width: 400px) {
+      .grid, :host([smallsize]) .grid {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .grid > .item, :host([smallsize]) .grid > .item {
+        -webkit-flex: 1 calc(100% - 10px);
+        flex: 1 calc(1000% - 10px);
+        max-width: calc(100% - 10px);
+        margin: 5px;
+        text-decoration: none;
+        background-color: white;
+        height: 30vmin;
+        min-width: 0;
+      }
+      :host([smallsize]) .grid > .item {
+        -webkit-flex: 1 calc(50% - 10px);
+        flex: 1 calc(500% - 10px);
+        max-width: calc(50% - 10px);
+      }
+
+      :host([smallsize]) .grid > .item {
+        height: 14vmin;
+      }
+
+    }
+
+  </style>
+
+    <h1 style="background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+    margin: 30px 0 20px 0; line-height: 20px;
+    " hidden="[[smallsize]]"> פרויקטים </h1>
+
+    <div class="grid">
+      <template id="templateRepeat"
+      is="dom-repeat"
+      items="{{projects}}"
+      as="project">
+        <projects-item item="[[project]]" class="item" smallsize="[[smallsize]]"></projects-item>
+      </template>
+    </div>
+
+  </template>
+
+
+  <script>
+  window.SZN = window.SZN || {};
+
+  Polymer({
+    is: 'projects-list',
+
+    behaviors: [SZN.AppBehavior],
+
+    properties: {
+      item: {
+        type: Object
+      },
+      projects: {
+         notify: true,
+         type: Array
+       },
+       smallsize: {
+          notify: true,
+          type: Boolean,
+          reflectToAttribute: true
+      },
+    },
+
+    // _toggle: function(event, detail, sender) {
+    //   var moreInfo = this.$$('#moreinfo');
+    //   var iconButton = Polymer.dom(event).localTarget;
+    //   iconButton.icon = moreInfo.opened ? 'hardware:keyboard-arrow-up'
+    //                                     : 'hardware:keyboard-arrow-down';
+    //   moreInfo.toggle();
+    // },
+
+  });
+
+  </script>
+
+</dom-module>

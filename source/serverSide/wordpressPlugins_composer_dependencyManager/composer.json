@@ -1,0 +1,65 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "composer/installers": "*",
+    "wpackagist-plugin/acf-to-rest-api": "*",
+    "wpackagist-plugin/adminimize": "*",
+    "wpackagist-plugin/aryo-activity-log": "*",
+    "wpackagist-plugin/auto-post-thumbnail": "*",
+    "wpackagist-plugin/bottom-admin-bar": "*",
+    "wpackagist-plugin/check-email": "*",
+    "wpackagist-plugin/codepress-admin-columns": "*",
+    "wpackagist-plugin/comment-attachment": "*",
+    "wpackagist-plugin/custom-field-suite": "*",
+    "wpackagist-plugin/custom-permalinks": "*",
+    "wpackagist-plugin/custom-post-type-permalinks": "*",
+    "wpackagist-plugin/custom-post-type-ui": "*",
+    "wpackagist-plugin/drag-drop-featured-image": "*",
+    "wpackagist-plugin/easy-image-gallery": "*",
+    "wpackagist-plugin/filters": "*",
+    "wpackagist-plugin/force-first-last": "*",
+    "wpackagist-plugin/google-sitemap-generator": "*",
+    "wpackagist-plugin/tinymce-advanced": "*",
+    "wpackagist-plugin/social-connect": "*",
+    "wpackagist-plugin/shareaholic": "*",
+    "wpackagist-plugin/restrict-categories": "*",
+    "wpackagist-plugin/white-label-cms": "*",
+    "wpackagist-plugin/wp-disable-automatic-updates": "*",
+    "wpackagist-plugin/wp-recaptcha-integration": "*",
+    "wpackagist-plugin/wp-user-avatar": "*",
+    "wpackagist-plugin/yith-custom-login": "*",
+    "wpackagist-plugin/amr-users": "*",
+    "wpackagist-plugin/custom-post-types-relationships-cptr": "*",
+    "wpackagist-plugin/google-universal-analytics": "*",
+    "wpackagist-plugin/groups": "*",
+    "wpackagist-plugin/jetpack-only-for-admins": "*",
+    "wpackagist-plugin/mobble": "*",
+    "wpackagist-plugin/nextgen-facebook": "*",
+    "wpackagist-plugin/oembed-in-comments": "*",
+    "wpackagist-plugin/post-type-archive-links": "*",
+    "wpackagist-plugin/post-types-order": "*",
+    "wpackagist-plugin/user-login-history": "*",
+    "wpackagist-plugin/user-role-editor": "*",
+    "wpackagist-plugin/wordfence": "*",
+    "wpackagist-plugin/wp-optimize": "*",
+    "wpackagist-plugin/wp-email-login": "*",
+    "wpackagist-plugin/cpt-onomies": "*",
+    "wpackagist-plugin/rest-api": "2.0-beta12",
+    "wpackagist-plugin/posts-to-posts": "*",
+    "wpackagist-plugin/jetpack": "*",
+    "wpackagist-plugin/google-analytics-for-wordpress": "*",
+
+    "wpackagist-plugin/akismet": "*"
+  },
+  "extra": {
+        "installer-paths": {
+            "./plugins/{$name}/": ["type:wordpress-plugin"]
+        }
+  }
+}

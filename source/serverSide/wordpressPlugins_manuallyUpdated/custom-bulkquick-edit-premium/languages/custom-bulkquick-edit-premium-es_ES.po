@@ -1,0 +1,270 @@
+# Copyright (C) 2013 Custom Bulk/Quick Edit
+# This file is distributed under the same license as the Custom Bulk/Quick Edit package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Bulk/Quick Edit 1.2.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/custom-bulkquick-edit\n"
+"POT-Creation-Date: 2013-10-28 03:01:05+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-01-22 13:55+0100\n"
+"Last-Translator: jelena kovacevic <jecajeca260@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: custom-bulkquick-edit.php:60
+msgid "Settings"
+msgstr "Configuración"
+
+#: custom-bulkquick-edit.php:142
+msgid ""
+"If your Custom Bulk/Quick Edit display has gone to funky town, please <a "
+"href=\"%s\">read the FAQ</a> about possible CSS fixes."
+msgstr ""
+"Si su pantalla de Lote Personalizado/Edición Rápida se ha vuelto loca, por "
+"favor <a href=\"%s\">lea la FAQ</a> acerca de las posibles correcciones de "
+"CSS."
+
+#: custom-bulkquick-edit.php:151
+msgid ""
+"Please donate $5 towards development and support of this Custom Bulk/Quick "
+"Edit plugin. %s"
+msgstr ""
+"Por favor, done $5 hacia el desarrollo y el apoyo de este plugin de Lote "
+"Personalizado/Edición Rápida %s"
+
+#: custom-bulkquick-edit.php:819 custom-bulkquick-edit.php:864
+msgid "&mdash; Unset &mdash;"
+msgstr "&mdash; Unset &mdash;"
+
+#: custom-bulkquick-edit.php:868
+msgid "&mdash; No Change &mdash;"
+msgstr "&mdash; Sin cambio &mdash;"
+
+#: lib/class-custom-bulkquick-edit-settings.php:101
+msgid "Compatibility & Reset"
+msgstr "Compatibilidad y Reiniciar"
+
+#: lib/class-custom-bulkquick-edit-settings.php:102
+msgid "About Custom Bulk/Quick Edit"
+msgstr "Acerca Lote Personalizado/Edición Rápida"
+
+#: lib/class-custom-bulkquick-edit-settings.php:117
+msgid "TBD"
+msgstr "TBD"
+
+#: lib/class-custom-bulkquick-edit-settings.php:122
+#: lib/class-custom-bulkquick-edit-settings.php:132
+#: lib/class-custom-bulkquick-edit-settings.php:776
+msgid "No"
+msgstr "No"
+
+#: lib/class-custom-bulkquick-edit-settings.php:123
+msgid "As checkbox"
+msgstr "Como casilla"
+
+#: lib/class-custom-bulkquick-edit-settings.php:124
+msgid "As input field"
+msgstr "Como campo de entrada"
+
+#: lib/class-custom-bulkquick-edit-settings.php:125
+msgid "As radio"
+msgstr "Como radio"
+
+#: lib/class-custom-bulkquick-edit-settings.php:126
+msgid "As select"
+msgstr "Como seleccionar"
+
+#: lib/class-custom-bulkquick-edit-settings.php:127
+msgid "As textarea"
+msgstr "Como textarea"
+
+#: lib/class-custom-bulkquick-edit-settings.php:133
+msgid "No, but enable column view"
+msgstr "No, pero habilitar la vista de columna"
+
+#: lib/class-custom-bulkquick-edit-settings.php:134
+msgid "Like categories"
+msgstr "Como categorías"
+
+#: lib/class-custom-bulkquick-edit-settings.php:135
+msgid "Like tags"
+msgstr "Como etiquetas"
+
+#: lib/class-custom-bulkquick-edit-settings.php:139
+msgid ""
+"You may create options formatted like \"the-key|Supremely, Pretty Values\" "
+"seperated by newlines."
+msgstr ""
+"Puede crear opciones de formato como \"la tecla|supremamente, Valores Bonitos"
+"\"  separadas por líneas nuevas"
+
+#: lib/class-custom-bulkquick-edit-settings.php:140
+msgid ""
+"Force making %1$s an editable taxonomy field like checked categories or free-"
+"text tags."
+msgstr ""
+"Forzar hacer %1$s un campo editable de taxonomía como categorías controladas "
+"o etiquetas de texto libre"
+
+#: lib/class-custom-bulkquick-edit-settings.php:141
+msgid "Enable editing of %1$s' excerpt."
+msgstr "Habilitar la edición de %1$s' extracto"
+
+#: lib/class-custom-bulkquick-edit-settings.php:142
+msgid ""
+"During bulk editing, easily remove all of the %1$s' prior relationships and "
+"add new."
+msgstr ""
+"Durante la edición masiva, eliminar fácilmente todos los %1$s' relaciones "
+"anteriores y añadir nuevo."
+
+#: lib/class-custom-bulkquick-edit-settings.php:143
+msgid "Enable editing of %1$s' title."
+msgstr "Activar la edición de título %1$s'"
+
+#: lib/class-custom-bulkquick-edit-settings.php:145
+msgid "%s Configuration"
+msgstr "Configuración %s"
+
+#: lib/class-custom-bulkquick-edit-settings.php:146
+msgid "Edit \"%s\" taxonomy?"
+msgstr "¿Editar \"%s\" taxonomía?"
+
+#: lib/class-custom-bulkquick-edit-settings.php:147
+msgid "Enable \"%s\"?"
+msgstr "¿Habilitar \"%s\"?"
+
+#: lib/class-custom-bulkquick-edit-settings.php:148
+msgid "Excerpt"
+msgstr "Extracto"
+
+#: lib/class-custom-bulkquick-edit-settings.php:149
+msgid "Title"
+msgstr "Título"
+
+#: lib/class-custom-bulkquick-edit-settings.php:150
+msgid "Reset \"%s\" Relations?"
+msgstr "¿Restablecer \"%s\" Relaciones?"
+
+#: lib/class-custom-bulkquick-edit-settings.php:293
+msgid "Export Settings"
+msgstr "Configuración de exportación"
+
+#: lib/class-custom-bulkquick-edit-settings.php:295
+msgid ""
+"These are your current settings in a serialized format. Copy the contents to "
+"make a backup of your settings."
+msgstr ""
+"Estos son los ajustes actuales en un formato serializado. Copie el contenido "
+"para hacer una copia de seguridad de la configuración."
+
+#: lib/class-custom-bulkquick-edit-settings.php:302
+msgid "Import Settings"
+msgstr "Importar Configuración"
+
+#: lib/class-custom-bulkquick-edit-settings.php:304
+msgid ""
+"Paste new serialized settings here to overwrite your current configuration."
+msgstr ""
+"Pegar nueva configuración de serializados aquí para sobrescribir la "
+"configuración actual."
+
+#: lib/class-custom-bulkquick-edit-settings.php:309
+msgid "Remove Plugin Data on Deletion?"
+msgstr "¿Eliminar datos del plugin después de la Eliminación?"
+
+#: lib/class-custom-bulkquick-edit-settings.php:312
+msgid ""
+"Delete all Custom Bulk/Quick Edit data and options from database on plugin "
+"deletion"
+msgstr ""
+"Eliminar toda la información de Lote Personalizado/Edición Rápida y opciones "
+"de base de datos después de eliminar el plugin"
+
+#: lib/class-custom-bulkquick-edit-settings.php:317
+msgid "Reset to Defaults?"
+msgstr "¿Restablecer los valores predeterminados?"
+
+#: lib/class-custom-bulkquick-edit-settings.php:320
+msgid "Check this box to reset options to their defaults"
+msgstr ""
+"Marcar esta casilla para restablecer las opciones a sus valores "
+"predeterminados"
+
+#: lib/class-custom-bulkquick-edit-settings.php:382
+msgid "Custom Bulk/Quick Settings"
+msgstr "Lote Personalizado/Edición Rápida"
+
+#: lib/class-custom-bulkquick-edit-settings.php:382
+msgid "Custom Bulk/Quick"
+msgstr "Lote Personalizado/Edición Rápida"
+
+#: lib/class-custom-bulkquick-edit-settings.php:420
+msgid "Custom Bulk/Quick Edit Settings"
+msgstr "Configuración Lote Personalizado/Edición Rápida"
+
+#: lib/class-custom-bulkquick-edit-settings.php:437
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+#: lib/class-custom-bulkquick-edit-settings.php:447
+msgid ""
+"If you like this plugin, please <a href=\"%1$s\" title=\"Donate for Good "
+"Karma\"><img src=\"%2$s\" border=\"0\" alt=\"Donate for Good Karma\" /></a> "
+"or <a href=\"%3$s\" title=\"purchase Custom Bulk/Quick Edit Premium"
+"\">purchase Custom Bulk/Quick Edit Premium</a> to help fund further "
+"development and <a href=\"%4$s\" title=\"Support forums\">support</a>."
+msgstr ""
+"Si te gusta este plugin, por favor, <a href=\"%1$s\" title=\"Done para un "
+"Buen  Karma\"><img src=\"%2$s\" border=\"0\" alt=\"Done para un Buen Karma"
+"\" /></a> or <a href=\"%3$s\" title=\"comprar Configuración Lote "
+"Personalizado/Edición Rápida Premium\">comprar Configuración Lote "
+"Personalizado/Edición Rápida Premium</a> para ayudar a financiar más "
+"desarrollo y <a href=\"%4$s\" title=\"Foros de soporte\">soporte</a>."
+
+#: lib/class-custom-bulkquick-edit-settings.php:456
+msgid "Copyright &copy;%1$s %2$s."
+msgstr "Derechos Reservados &copy;%1$s %2$s."
+
+#: lib/class-custom-bulkquick-edit-settings.php:768
+msgid "Enable"
+msgstr "Habilitar"
+
+#: lib/class-custom-bulkquick-edit-settings.php:774
+msgid "Yes"
+msgstr "Sí"
+
+#: lib/class-custom-bulkquick-edit-settings.php:778
+msgid "Where's the beef?"
+msgstr "¿Dónde está la carne?"
+
+#: lib/class-custom-bulkquick-edit-settings.php:880
+msgid "Required"
+msgstr "Requerida"
+
+#. Plugin Name of the plugin/theme
+msgid "Custom Bulk/Quick Edit"
+msgstr "Lote Personalizado/Edición Rápida"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/custom-bulkquick-edit/"
+msgstr "http://wordpress.org/extend/plugins/custom-bulkquick  Usuario/"
+
+#. Description of the plugin/theme
+msgid ""
+"Custom Bulk/Quick Edit plugin allows you to easily add previously defined "
+"custom fields to the edit screen bulk and quick edit panels."
+msgstr ""
+"El plugin Lote Personalizado/Edición Rápida le permite añadir fácilmente "
+"campos personalizados definidos previamente a la pantalla de edición y los "
+"paneles de edición rápida."
+
+#. Author of the plugin/theme
+msgid "Michael Cannon"
+msgstr "Michael Cannon"
+
+#. Author URI of the plugin/theme
+msgid "http://aihr.us/about-aihrus/michael-cannon-resume/"
+msgstr "http://aihr.us/about-aihrus/michael-cannon-resume/"
