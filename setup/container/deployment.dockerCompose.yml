@@ -6,6 +6,7 @@ services:
     
     deploymentEnvironment:
         image: myuserindocker/deployment-environment:latest
+        # command: bash -c "sleep 100000"
 
     buildDistributionCode: # Build source code & download project dependencies.
         extends: deploymentEnvironment

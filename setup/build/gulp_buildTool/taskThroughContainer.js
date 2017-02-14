@@ -17,12 +17,17 @@ gulp.task('copy:sourceToDistribution',
 
 // Build assets
 gulp.task('build:css', require(path.join(config.TaskImplementationPath, 'stylesheet.js')) );
-gulp.task('build:js', require(path.join(config.TaskImplementationPath, 'javascript.js')) );
+// gulp.task('build:js', require(path.join(config.TaskImplementationPath, 'javascript.js')) );
 gulp.task('build:html', require(path.join(config.TaskImplementationPath, 'html.js')) );
 gulp.task('buildSourceCode', 
 	gulp.series(
 		'copy:assetsFiles', 
-		gulp.parallel('build:css', 'build:html', 'build:js')
+			'build:css'
+		// gulp.parallel(
+		// 	'build:css'
+		// 	// 'build:js',
+		// 	// 'build:html'
+		// )
 	)
 );
 
@@ -59,9 +64,9 @@ gulp.task('watch:source', ()=> {
 		gulp.series(
 			'copy:assetsFiles', 
 			gulp.parallel(
-				'build:css',
-				'build:html',
-				'build:js'
+				'build:css'
+				// 'build:html',
+				// 'build:js'
 			)
 		)
 	);

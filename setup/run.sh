@@ -71,8 +71,7 @@ deployment.buildImage() { # ⭐
     # export DEPLOYMENT=development
 
     # 2. create and add privateRepository content in volumes:
-    mkdir -p ./volume/sslCertificate
-    mkdir -p ./volume/wordpressConfiguration
+    mkdir -p ./privateRepository/wordpressConfiguration
 
     # 3. Build Source COde:
     ./setup/run.sh deployment.buildDistribution

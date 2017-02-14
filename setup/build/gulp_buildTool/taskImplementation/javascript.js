@@ -12,7 +12,7 @@ let destination = subpath => { return joinPath(config.DestinationPath, subpath) 
 module.exports = ()=> {
 	return javascriptUglifyTask(
 		// chaged because it causes errors
-		source('clientSide/assets/javascripts/admin-script.js'),
+		source('clientSide/assets/javascripts/*.nothingToPreventError.js'),
 		destination('clientSide/assets/javascripts')
 	);
 };

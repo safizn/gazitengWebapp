@@ -10,6 +10,12 @@ let filesystem = require('fs');
 // configurations:
 let config = require('./config.js');
 
+// TODO: Find solution for debug problem when using eval. like other option to use vm module: http://stackoverflow.com/questions/5797852/in-node-js-how-do-i-include-functions-from-my-other-files
+// function include2(path) {
+//     var code = fs.readFileSync(path, 'utf-8');
+//     vm.runInThisContext(code, path);
+// }
+
 // Task & Utility Modules:
 let include = (file)=> { eval(filesystem.readFileSync(file) + '') }; // Execute file code as if written locally.
 let joinPath = require(path.join(config.UtilityModulePath, 'joinPath.js'));
