@@ -11,7 +11,7 @@
             </div>
         </div>
     <!-- Error img -->
-    <img src="http://dentrist.com/wp-content/uploads/2014/05/Error-page.png"  style="text-align: center;display: block; margin-left: auto; margin-right: auto;" width="166" height="204" longdesc="http://dentrist.com/wp-content/uploads/2014/05/Error-page.png" />
+    <img src="https://gaziteng.com/content/uploads/2014/05/Error-page.png"  style="text-align: center;display: block; margin-left: auto; margin-right: auto;" width="166" height="204" longdesc="https://gaziteng.com/content/uploads/2014/05/Error-page.png" />
     </div>
     <div class="span3"></div>
 </div>
