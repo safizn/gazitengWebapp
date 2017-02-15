@@ -15,7 +15,7 @@ services:
   wordpress:
     image: myuserindocker/gaziteng-webapp:latest
     # ports:
-    #   - 80:80
+    #   - 8030:80
     #   - 443:443
     volumes:
       # - "/app"
