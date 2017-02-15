@@ -78,7 +78,7 @@ deployment.buildImage() { # ⭐
 
     # 4.
     # Problem cannot pass arguments to dockerfile
-    docker-compose -f ./setup/container/deployment.dockerCompose.yml build buildImage
+    docker-compose -f ./setup/container/deployment.dockerCompose.yml build --no-cache buildImage
 
     # Docker CLI implimentation :
     # context is relative to current working directory not like in compose which is relative.
