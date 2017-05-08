@@ -5,7 +5,7 @@ version: '2.1'
 services:
     
     deploymentEnvironment:
-        image: myuserindocker/deployment-environment:latest
+        image: myuserindocker/deployment-environment:1.0
         # command: bash -c "sleep 100000"
 
     buildDistributionCode: # Build source code & download project dependencies.
