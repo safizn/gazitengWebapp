@@ -3,7 +3,7 @@ version: '3'
 networks: 
   default:
     external: false
-  proxy_default:
+  proxy:
     external: true
 
 # volumes: 
@@ -43,7 +43,7 @@ services:
         - com.df.reqMode=tcp
     networks:
       - default
-      - proxy_default
+      - proxy
 
   mysql:
     image: mysql:latest
