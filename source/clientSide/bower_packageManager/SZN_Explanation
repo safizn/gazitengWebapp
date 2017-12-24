@@ -1,1 +1,0 @@
-#Bower Package Manager for WebComponents and Libraries as JS. The two are depended of each other, i.e. a webcomponent may reference a JS library in it's code. Therefore having them in the same folder maked reference easier.
