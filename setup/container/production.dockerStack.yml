@@ -1,7 +1,7 @@
 version: '3.3'
 
 networks: 
-  default:
+  internal:
     external: false
   proxy:
     external: true
@@ -12,28 +12,26 @@ networks:
 
 services:
 
-  # https://hub.docker.com/r/myuserindocker/taleb-webapp/tags/
   # internal ports = 80, 443
   nodejs:
-    image: myuserindocker/taleb-webapp:latest
+    image: myuserindocker/gaziteng-webapp:latest
     environment:
       DEPLOYMENT: production
-      HOST: taleb.io
+      HOST: gaziteng.com
     deploy:
       replicas: 1
       update_config:
         parallelism: 1
         delay: 10s
     networks:
-      - default
+      - internal
       - proxy
   
-  # RethinkDB - https://hub.docker.com/r/library/rethinkdb/tags/
   # internal port = 8080
   rethinkdb:
     image: rethinkdb:2.3.6
     volumes:
-      - "/mnt/datadisk-1/taleb/rethinkdbData:/data/rethinkdb_data/"
+      - "/mnt/datadisk-1/gaziteng/rethinkdbData:/data/rethinkdb_data/"
     networks:
-      - default
+      - internal
       - proxy
