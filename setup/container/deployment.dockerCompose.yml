@@ -5,8 +5,7 @@ version: '2.1'
 services:
     
     deploymentEnvironment:
-        image: myuserindocker/deployment-environment:1.0
-        # command: bash -c "sleep 100000"
+        image: myuserindocker/deployment-environment:latest
 
     buildDistributionCode: # Build source code & download project dependencies.
         extends: deploymentEnvironment
@@ -14,50 +13,48 @@ services:
         environment:
             DEPLOYMENT: ${DEPLOYMENT:-production}
         volumes:
-          - ../../source:/tmp/source/
-          - ../../setup/container/shellScript:/tmp/shellScript/
-          - ../../setup/build:/tmp/build/
-          - ../../distribution:/app/
-        working_dir: /tmp/build/gulp_buildTool/
-        entrypoint: /tmp/shellScript/buildSourceCode.entrypoint.sh
+          - ../../source:/project/application/source/
+          - ../../setup/container/shellScript:/project/application/setup/container/shellScript/
+          - ../../setup/build:/project/application/setup/build/
+          - ../../setup/utility:/project/application/setup/utility/
+          - ../../setup/configuration/configuration.json:/project/application/setup/configuration/configuration.json
+          - ../../dependency/appDeploymentLifecycle:/project/dependency/appDeploymentLifecycle/
+          - ../../distribution:/project/application/distribution/
+        working_dir: /project/application/setup/build/
+        entrypoint: /project/application/setup/container/shellScript/buildSourceCode.entrypoint.sh
         # command: bash -c "sleep 100000"
 
-    localUnitTest:
-        extends: deploymentEnvironment
-        container_name: unit
-        volumes:
-          - ../../distribution:/app/
-          - ../../setup/container/shellScript:/tmp/shellScript/
-          - ../../setup/test/:/tmp/test/
-        working_dir: /tmp/test/
-        # entrypoint allows cd command to work, in command: bash it doesn't.
-        # entrypoint: /tmp/shellScript/localUnitTest.sh
-        command: bash -c "npm install; npm run test;"
+    # localUnitTest:
+    #     extends: deploymentEnvironment
+    #     container_name: unit
+    #     volumes:
+    #       - ../../distribution:/app/
+    #       - ../../setup/container/shellScript:/tmp/shellScript/
+    #       - ../../setup/test/:/tmp/test/
+    #     working_dir: /tmp/test/
+    #     # entrypoint allows cd command to work, in command: bash it doesn't.
+    #     # entrypoint: /tmp/shellScript/localUnitTest.sh
+    #     command: bash -c "npm install; npm run test;"
 
-    localStagingTest:
-        extends: deploymentEnvironment
-        container_name: staging
-        volumes:
-          - ../../setup/container/shellScript:/tmp/shellScript/
-          - ../../setup/test/:/tmp/test/
-        # Other option is to use links instead of connecting to localhost.
-        # depends_on:
-        #     - wordpress
-        # links:
-        #     - wordpress
-        # environment:
-        #     - HOST_IP=wordpress:443
-        environment:
-            - HOST_IP=localhost:80
-        network_mode: host
-        working_dir: /tmp/test/
-        # entrypoint: /tmp/shellScript/localStagingTest.sh
-        # command: bash -c "printenv"
-        command: bash -c "npm install; npm run localStagingTest;"
+    # localStagingTest:
+    #     extends: deploymentEnvironment
+    #     container_name: staging
+    #     volumes:
+    #       - ../../setup/container/shellScript:/tmp/shellScript/
+    #       - ../../setup/test/:/tmp/test/
+    #     environment:
+    #         - HOST_IP=localhost:80
+    #     network_mode: host
+    #     working_dir: /tmp/test/
+    #     # entrypoint: /tmp/shellScript/localStagingTest.sh
+    #     # command: bash -c "printenv"
+    #     command: bash -c "npm install; npm run localStagingTest;"
 
     # Used only to build image.
     buildImage:
-        extends:
-            # relative to the position of current file.
-            file: ./wordpress.dockerCompose.yml
-            service: wordpressBuild
+        build:
+            context: ../../
+            dockerfile: ./setup/container/service.dockerfile
+            args:
+                - DEPLOYMENT=${DEPLOYMENT:-production}
+        image: myuserindocker/gaziteng-webapp:latest # tag for created/built image # name of local image to be built

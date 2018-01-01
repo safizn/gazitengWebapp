@@ -1,3 +1,0 @@
-2 problematic plugins which should be deactivated before symlinking:
- - posts-to-posts
- - rest-api

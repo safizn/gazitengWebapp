@@ -1,47 +1,45 @@
 {
-  "name": "app",
-  "description": "Dentrist Components",
-  "main": "",
-  "moduleType": [],
-  "keywords": [
-    "Polymer",
-    "Web-Components"
-  ],
+  "name": "webapp",
   "authors": [
     "SZN"
   ],
-  "license": "MIT",
-  "homepage": "webapp.run",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "./bower_components/",
-    "test",
-    "tests"
-  ],
+  "license": "https://polymer.github.io/LICENSE.txt",
   "dependencies": {
-    "gold-elements": "PolymerElements/gold-elements#^1.0.1",
-    "google-web-components": "GoogleWebComponents/google-web-components#^1.0.1",
-    "iron-a11y-keys": "PolymerElements/iron-a11y-keys#^1.0.0",
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "iron-demo-helpers": "polymerelements/iron-demo-helpers#^1.0.0",
-    "iron-elements": "PolymerElements/iron-elements#^1.0.8",
-    "iron-page-url": "PolymerElements/iron-page-url#~0.7.0",
-    "molecules": "PolymerElements/molecules#^1.0.0",
-    "neon-elements": "PolymerElements/neon-elements#^1.0.0",
-    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
-    "platinum-elements": "PolymerElements/platinum-elements#^2.0.0",
-    "test-fixture": "polymerelements/test-fixture#^1.0.0",
-    "time-elements": "~0.4.0",
-    "app-route": "PolymerElements/app-route#^0.9.1",
-    "app-localize-behavior": "PolymerElements/app-localize-behavior#^0.9.1",
-    "app-pouchdb": "PolymerElements/app-pouchdb#^0.9.1",
-    "app-storage": "PolymerElements/app-storage#^0.9.3",
-    "app-layout": "^0.9.1",
-    "polymerfire": "firebase/polymerfire#^0.9.2"
+    "app-layout": "PolymerElements/app-layout",
+    "app-route": "PolymerElements/app-route",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout",
+    "iron-icon": "PolymerElements/iron-icon",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg",
+    "iron-localstorage": "PolymerElements/iron-localstorage",
+    "iron-media-query": "PolymerElements/iron-media-query",
+    "iron-pages": "PolymerElements/iron-pages",
+    "iron-selector": "PolymerElements/iron-selector",
+    "paper-icon-button": "PolymerElements/paper-icon-button",
+    "paper-tabs": "PolymerElements/paper-tabs",
+    "iron-icons": "PolymerElements/iron-icons",
+    "paper-header-panel": "PolymerElements/paper-header-panel",
+    "paper-button": "PolymerElements/paper-button",
+    "paper-card": "PolymerElements/paper-card",
+    "neon-animation": "PolymerElements/neon-animation",
+    "paper-fab": "PolymerElements/paper-fab",
+    "paper-dialog": "PolymerElements/paper-dialog",
+    "paper-radio-group": "PolymerElements/paper-radio-group",
+    "paper-item": "PolymerElements/paper-item",
+    "google-code-prettify": "^1.0.5",
+    "web-animations-js": "^2.2.5",
+    "paper-material": "PolymerElements/paper-material",
+    "paper-dialog-behavior": "PolymerElements/paper-dialog-behavior",
+    "iron-overlay-behavior": "PolymerElements/iron-overlay-behavior",
+    "iron-collapse": "PolymerElements/iron-collapse",
+    "iron-fit-behavior": "PolymerElements/iron-fit-behavior",
+    "paper-listbox": "PolymerElements/paper-listbox",
+    "shadycss": "webcomponents/shadycss",
+    "polymer": "Polymer/polymer",
+    "webcomponentsjs": "webcomponents/webcomponentsjs",
+    "paper-spinner": "PolymerElements/paper-spinner"
   },
-  "resolutions": {
-    "firebase": "^3.0"
-  }
+  "devDependencies": {
+    "web-component-tester": "^4.0.0"
+  },
+  "private": true
 }
