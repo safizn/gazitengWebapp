@@ -57,4 +57,4 @@ services:
             dockerfile: ./setup/container/service.dockerfile
             args:
                 - DEPLOYMENT=${DEPLOYMENT:-production}
-        image: myuserindocker/taleb-webapp:latest # tag for created/built image # name of local image to be built
+        image: myuserindocker/gaziteng-webapp:latest # tag for created/built image # name of local image to be built
