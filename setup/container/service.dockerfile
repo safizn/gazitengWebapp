@@ -6,6 +6,7 @@ FROM node:9.3.0
 
 # project folder path 
 ARG PROJECT="/project" 
+ENV PROJECT=${PROJECT}
 
 ARG DEPLOYMENT=production
 ENV DEPLOYMENT ${DEPLOYMENT}
@@ -14,4 +15,4 @@ COPY ./distribution $PROJECT/application/
 COPY ./setup $PROJECT/setup
 
 WORKDIR $PROJECT/application/serverSide
-ENTRYPOINT ./entrypoint.sh run
+ENTRYPOINT $PROJECT/application/serverSide/entrypoint.sh run
