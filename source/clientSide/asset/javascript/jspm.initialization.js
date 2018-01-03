@@ -5,7 +5,7 @@
     let script;
     script = document.createElement('script');
     script.async = true;
-    script.src = '/asset/javascript/jspm_packages/system.js';
+    script.src = '/asset/javascript/js.package/system.js';
     document.head.appendChild(script);
     script.onload = () => {
 

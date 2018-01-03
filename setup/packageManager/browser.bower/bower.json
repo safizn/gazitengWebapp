@@ -5,6 +5,7 @@
   ],
   "license": "https://polymer.github.io/LICENSE.txt",
   "dependencies": {
+    "polymer": "Polymer/polymer",
     "app-layout": "PolymerElements/app-layout",
     "app-route": "PolymerElements/app-route",
     "iron-flex-layout": "PolymerElements/iron-flex-layout",
@@ -25,18 +26,19 @@
     "paper-dialog": "PolymerElements/paper-dialog",
     "paper-radio-group": "PolymerElements/paper-radio-group",
     "paper-item": "PolymerElements/paper-item",
-    "google-code-prettify": "^1.0.5",
-    "web-animations-js": "^2.2.5",
     "paper-material": "PolymerElements/paper-material",
     "paper-dialog-behavior": "PolymerElements/paper-dialog-behavior",
     "iron-overlay-behavior": "PolymerElements/iron-overlay-behavior",
     "iron-collapse": "PolymerElements/iron-collapse",
     "iron-fit-behavior": "PolymerElements/iron-fit-behavior",
     "paper-listbox": "PolymerElements/paper-listbox",
+    "paper-spinner": "PolymerElements/paper-spinner",
     "shadycss": "webcomponents/shadycss",
-    "polymer": "Polymer/polymer",
     "webcomponentsjs": "webcomponents/webcomponentsjs",
-    "paper-spinner": "PolymerElements/paper-spinner"
+    
+    
+    "google-code-prettify": "^1.0.5",
+    "web-animations-js": "^2.2.5"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

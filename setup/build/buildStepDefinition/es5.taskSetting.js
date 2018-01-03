@@ -44,7 +44,7 @@ const FileSource = [
                 [
                     source(`clientSide/**/*.json`),
                     `!` + source(`clientSide/asset/webcomponent/bower_components/**/*.json`),
-                    `!` + source(`clientSide/asset/javascript/jspm_packages/**/*.json`),
+                    `!` + source(`clientSide/asset/javascript/js.package/**/*.json`),
                 ],
                 destination(`clientSide-${prefix}/`)
 			]
@@ -125,7 +125,7 @@ const FileSource = [
 				[
 					source(`clientSide/asset/javascript/**/*.js`),
 					source('clientSide/jspm_packageManager/**/*.js'),
-                    `!`+ source(`clientSide/asset/javascript/jspm_packages/**/*.js`),
+                    `!`+ source(`clientSide/asset/javascript/js.package/**/*.js`),
                     '!'+ source('**/node_modules/**/*.js'),                    
 				],
 				destination(`clientSide-${prefix}/asset/javascript`),
@@ -141,7 +141,7 @@ const FileSource = [
     //             [
     //                 source(`clientSide/**/*.js`),
     //                 `!`+ source(`clientSide/asset/webcomponent/bower_components/**/*.js`),
-    //                 `!`+ source(`clientSide/asset/javascript/jspm_packages/**/*.js`)
+    //                 `!`+ source(`clientSide/asset/javascript/js.package/**/*.js`)
     //             ],	
     //             destination(`clientSide/`),
     //             config.GulpPath

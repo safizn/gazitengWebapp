@@ -8,6 +8,7 @@ distribution
 Thumbs.db
 privateRepository
 bower_components
-jspm_packages
+js.package
 npm-debug.log
 source/serverSide/yarn-error\.log
+*.package

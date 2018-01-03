@@ -7,7 +7,8 @@ console.log(process.argv)
 
 /*
  * Usage:
- * • ./entrypoint.sh run 
+ * • ./entrypoint.sh run
+ * • ./entrypoint.sh run sleep // run app with no command, but sleep to keep the container running
  * • ./entrypoint.sh run debug
  * • ./entrypoint.sh run distribution
  * • ./entrypoint.sh run distribution debug
@@ -49,7 +50,7 @@ switch (process.argv[0]) {
     default:
         debug = (process.argv[1] == 'debug' || process.argv[2] == 'debug') ? '--inspect=localhost:9229 --debug-brk' : '';
         let appEntrypointPath = (process.argv[1] == 'distribution') ? `${applicationPath}/distribution/serverSide/entrypoint.js`: `${applicationPath}/source/serverSide/entrypoint.js`;
-        command = `node ${debug} ${appEntrypointPath}`
+        command = (process.argv[0] == 'sleep' || process.argv[1] == 'sleep') ? 'sleep 100000' : `node ${debug} ${appEntrypointPath}`;
         environmentVariable = {
             DEPLOYMENT: "development",
             SZN_DEBUG: false,

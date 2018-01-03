@@ -50,9 +50,9 @@ services:
     environment:
         DEPLOYMENT: ${DEPLOYMENT:-development}
     working_dir: /
-    volumes:
+    # volumes:
       # volume inside docker-machine not through Windows volume. because it causes problems otherwise.
-      - /mnt/datadisk-1/taleb/rethinkdbData:/data/rethinkdb_data/
+      # - /mnt/datadisk-1/taleb/rethinkdbData:/data/rethinkdb_data/
     networks:
         default:
             aliases:
