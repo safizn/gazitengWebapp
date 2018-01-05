@@ -16,19 +16,11 @@ let data = [
         }
     },
     {
-        key: 'homePage-view3',
-        layout: 'webapp-layout-list',
-        page: {
-            selectorName: 'view-view3',
-            file: 'view-view3.html'
-        }
-    },
-    {
-        key: 'homePage-view404',
+        key: 'view-state404',
         layout: 'webapp-layout-toolbar',
         page: {
-            selectorName: 'view-view404',
-            file: 'view-view404.html'
+            selectorName: 'viewState404',
+            file: 'view-state404/view-state404.html$'
         }
     },
     {
@@ -70,14 +62,6 @@ let data = [
             selectorName: 'studyfieldSingleArticle',
             file: 'view-article.html' 
         }
-    },
-    {
-        key: 'step',
-        layout: 'webapp-layout-step',
-        // page: {
-        //     selectorName: 'step1',
-        //     file: 'view-article.html' 
-        // }
     },
     {
         key: 'frontpage',
