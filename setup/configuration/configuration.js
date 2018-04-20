@@ -9,10 +9,16 @@ module.exports = {
     SourceCodePath: `${projectPath}/application/source`,
     DestinationPath: `${projectPath}/application/distribution`,
     dockerImageName: 'gaziteng-webapp',
+    domain: 'gaziteng.com',
+    hostStorageFolderName: 'gaziteng', // remote production folder
+    stackName: 'gazitengwebapp',
     entrypoint: {
         build: {
             file: `${appDeploymentLifecyclePath}/entrypoint/build/build.js`,
             argument: {}
+        },
+        production: {
+            file: `${appDeploymentLifecyclePath}/entrypoint/production/deployProduction.js`,
         },
         run: {
             file: `${appDeploymentLifecyclePath}/entrypoint/run/run.js`,

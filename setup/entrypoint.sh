@@ -9,7 +9,9 @@ echo host path: $applicationHostPath
 
 docker run \
     --volume $applicationHostPath:/project/application \
+    --volume $HOME/.ssh:/project/.ssh \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     --env "hostPath=$applicationHostPath" \
+    --env "sshUsername=$(whoami)" \
     myuserindocker/container-manager:latest \
     containerCommand "$@"
