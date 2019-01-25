@@ -2,7 +2,9 @@ const projectPath = "/project",
       appDeploymentLifecyclePath = `${projectPath}/application/dependency/appDeploymentLifecycle`
 
 module.exports = {
-    projectPath, 
+    directory: {
+        projectPath
+    },
     appDeploymentLifecyclePath,
     databaseVersion: 1,
     GulpPath: `${projectPath}/application/setup/build`, // TODO: is it actually needed. remove if possible.
