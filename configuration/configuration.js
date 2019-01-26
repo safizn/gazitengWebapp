@@ -1,11 +1,17 @@
-const projectPath = "/project",
-      appDeploymentLifecyclePath = `${projectPath}/application/dependency/appDeploymentLifecycle`
-
+const path = require('path')
+const   projectPath = "/project",
+        resolvedModule = {
+            deploymentScript = `${projectPath}/application/dependency/deploymentScript`
+        }
+      
 module.exports = {
     directory: {
+        application: {
+            rootPath: path.normalize(`${__dirname}/..`)
+        }, 
         projectPath
     },
-    appDeploymentLifecyclePath,
+    deploymentScriptPath: resolvedModule.deploymentScript,
     databaseVersion: 1,
     GulpPath: `${projectPath}/application/setup/build`, // TODO: is it actually needed. remove if possible.
     SourceCodePath: `${projectPath}/application/source`,
@@ -14,19 +20,23 @@ module.exports = {
     domain: 'gaziteng.com',
     hostStorageFolderName: 'gaziteng', // remote production folder
     stackName: 'gazitengwebapp',
-    entrypoint: {
-        build: {
-            file: `${appDeploymentLifecyclePath}/entrypoint/build/build.js`,
+    script: [
+        {
+            key: 'build',
+            file: `${resolvedModule.deploymentScript}/entrypoint/build/build.js`,
             argument: {}
         },
-        production: {
-            file: `${appDeploymentLifecyclePath}/entrypoint/production/deployProduction.js`,
+        {
+            key: 'production',
+            file: `${resolvedModule.deploymentScript}/entrypoint/production/deployProduction.js`,
         },
-        run: {
-            file: `${appDeploymentLifecyclePath}/entrypoint/run/run.js`,
+        {
+            key: 'run',
+            file: `${resolvedModule.deploymentScript}/entrypoint/run/run.js`,
         },
-        test: {
-            file: `${appDeploymentLifecyclePath}/entrypoint/test/test.js`,
+        {
+            key: 'test',
+            file: `${resolvedModule.deploymentScript}/entrypoint/test/test.js`,
         },
-    }
+    ]
 }
