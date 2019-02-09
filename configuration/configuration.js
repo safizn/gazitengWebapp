@@ -6,8 +6,7 @@ const   projectPath = "/project",
       
 module.exports = {
     directory: {
-        root: path.normalize(`${__dirname}/..`),
-        projectPath
+        root: path.normalize(`${__dirname}/..`
     },
     deploymentScriptPath: resolvedModule.deploymentScript,
     databaseVersion: 1,
