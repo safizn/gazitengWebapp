@@ -3,47 +3,47 @@
     "name": "webapp",
     "main": "app.js",
     "directories": {
-      "packages": "../../clientSide/asset/javascript/js.package",
+      "packages": "../../clientSide/asset/javascript/@package-jspm",
       "baseURL": "../.."
     },
     "configFiles": {
       "jspm": "jspm.config.js"
     },
     "dependencies": {
-      "css": "github:systemjs/plugin-css@^0.1.32",
-      "engine.io-client": "npm:engine.io-client@^3.1.1",
+      "css": "github:systemjs/plugin-css@~0.1.32",
+      "engine.io-client": "^3.1.1",
       "html": "github:Hypercubed/systemjs-plugin-html@^0.0.8",
-      "json": "github:systemjs/plugin-json@^0.3.0",
-      "underscore": "npm:underscore@^1.8.3"
+      "json": "github:systemjs/plugin-json@~0.3.0",
+      "underscore": "^1.8.3"
     },
     "devDependencies": {
-      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.21"
+      "@jspm/core": "^1.0.4",
+      "plugin-babel": "systemjs-plugin-babel@^0.0.21"
     },
     "peerDependencies": {
-      "assert": "npm:jspm-nodelibs-assert@^0.2.0",
-      "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
-      "child_process": "npm:jspm-nodelibs-child_process@^0.2.0",
-      "constants": "npm:jspm-nodelibs-constants@^0.2.0",
-      "crypto": "npm:jspm-nodelibs-crypto@^0.2.0",
-      "events": "npm:jspm-nodelibs-events@^0.2.0",
-      "fs": "npm:jspm-nodelibs-fs@^0.2.0",
-      "http": "npm:jspm-nodelibs-http@^0.2.0",
-      "https": "npm:jspm-nodelibs-https@^0.2.0",
-      "os": "npm:jspm-nodelibs-os@^0.2.0",
-      "path": "npm:jspm-nodelibs-path@^0.2.0",
-      "process": "npm:jspm-nodelibs-process@^0.2.0",
-      "stream": "npm:jspm-nodelibs-stream@^0.2.0",
-      "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.0",
-      "url": "npm:jspm-nodelibs-url@^0.2.0",
-      "util": "npm:jspm-nodelibs-util@^0.2.0",
-      "vm": "npm:jspm-nodelibs-vm@^0.2.0",
-      "zlib": "npm:jspm-nodelibs-zlib@^0.2.0"
+      "assert": "jspm-nodelibs-assert@~0.2.0",
+      "buffer": "jspm-nodelibs-buffer@~0.2.0",
+      "child_process": "jspm-nodelibs-child_process@~0.2.0",
+      "constants": "jspm-nodelibs-constants@~0.2.0",
+      "crypto": "jspm-nodelibs-crypto@~0.2.0",
+      "events": "jspm-nodelibs-events@~0.2.0",
+      "fs": "jspm-nodelibs-fs@~0.2.0",
+      "http": "jspm-nodelibs-http@~0.2.0",
+      "https": "jspm-nodelibs-https@~0.2.0",
+      "os": "jspm-nodelibs-os@~0.2.0",
+      "path": "jspm-nodelibs-path@~0.2.0",
+      "process": "jspm-nodelibs-process@~0.2.0",
+      "stream": "jspm-nodelibs-stream@~0.2.0",
+      "string_decoder": "jspm-nodelibs-string_decoder@~0.2.0",
+      "url": "jspm-nodelibs-url@~0.2.0",
+      "util": "jspm-nodelibs-util@~0.2.0",
+      "vm": "jspm-nodelibs-vm@~0.2.0",
+      "zlib": "jspm-nodelibs-zlib@~0.2.0"
     },
     "overrides": {
-      "npm:browserify-zlib@0.1.4": {
+      "npm:browserify-zlib@~0.1.4": {
         "dependencies": {
-          "readable-stream": "^2.0.2",
-          "pako": "~0.2.0"
+          "readable-stream": ":readable-stream@^2.0.2"
         },
         "map": {
           "_stream_transform": "readable-stream/transform"
@@ -51,8 +51,6 @@
       },
       "npm:debug@2.6.8": {
         "main": "src/browser.js",
-        "jspmNodeConversion": false,
-        "format": "cjs",
         "map": {
           "./src/browser.js": {
             "node": "./src/node.js"
@@ -66,22 +64,33 @@
           "util": "@node/util"
         }
       },
-      "npm:inherits@2.0.3": {
-        "ignore": [
-          "test.js"
-        ]
+      "npm:inherits@2.0.3": {},
+      "npm:jspm-nodelibs-http@~0.2.0": {
+        "dependencies": {
+          "http-browserify": ":stream-http@^2.0.2"
+        }
       },
       "npm:pbkdf2@3.0.13": {
         "main": "browser.js"
       },
       "npm:safe-buffer@5.0.1": {
-        "browser": "index.js"
+        "main": "index.js",
+        "map": {
+          "./index.js": {
+            "browser": "index.js"
+          }
+        }
       },
       "npm:safe-buffer@5.1.1": {
-        "browser": "index.js"
+        "main": "index.js",
+        "map": {
+          "./index.js": {
+            "browser": "index.js"
+          }
+        }
       }
     }
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "type": "module"
 }
-
