@@ -4,7 +4,7 @@
     "main": ".",
     "bin": {},
     "scripts": {
-        "build": "yarn run scriptManager shouldCompileScript=true buildSourceCode \".build({})\""
+        "build": "yarn run scriptManager shouldCompileScript=true JSProject/buildSourceCode \".webappProject({})\""
     },
     "dependencies": {},
     "devDependencies": {
