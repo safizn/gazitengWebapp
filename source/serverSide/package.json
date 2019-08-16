@@ -4,7 +4,6 @@
   "main": "./app.js",
   "scripts": {},
   "dependencies": {
-    "appscript": "https://github.com/AppScriptIO/appscript",
-    "babel-runtime": "^6.26.0"
+    "@dependency/appscript": "https://github.com/AppScriptIO/appscript#semver:^1.x.x"
   }
 }

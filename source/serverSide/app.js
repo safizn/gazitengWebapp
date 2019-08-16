@@ -1,8 +1,8 @@
 process.env.SZN_DEBUG = true // show/hide console messages.
 
 import configuration from '../../configuration'
-import { microservice } from 'appscript'
-import databaseData from '../databaseData/databaseData.js'
+import { microservice } from '@dependency/appscript'
+import databaseData from '../../resource/databaseData/databaseData.js'
 
 microservice({
   configuration,

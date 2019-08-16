@@ -28,7 +28,7 @@ const ownConfig = {
   },
   entrypoint: {
     get programmaticAPI() {
-      return path.join(ownConfig.directory.serverSide)
+      return path.relative(ownConfig.directory.source, ownConfig.directory.serverSide)
     },
   },
   distribution: {

@@ -6,7 +6,7 @@ let dataArray = ['client', 'token', 'user']
  * {Array of Objects}
  */
 export default databaseNestedUnitDataAggregator({
-    localPath: __dirname,
-    implementation,
-    dataArray
+  localPath: __dirname,
+  implementation,
+  dataArray,
 })

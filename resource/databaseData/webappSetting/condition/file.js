@@ -1,4 +1,3 @@
-let data = [];
-
+let data = []
 
 export default data

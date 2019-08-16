@@ -6,7 +6,7 @@ let dataArray = ['documentBackend', 'documentFrontend', 'file', 'unit', 'nestedU
  * {Array of Objects}
  */
 export default databaseNestedUnitDataAggregator({
-    localPath: __dirname,
-    implementation,
-    dataArray
+  localPath: __dirname,
+  implementation,
+  dataArray,
 })

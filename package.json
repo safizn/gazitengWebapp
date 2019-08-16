@@ -4,11 +4,12 @@
     "main": "./entrypoint/programmaticAPI",
     "bin": {},
     "workspaces": [
-        "packageManager/library.server.yarn"
+        "./source/serverSide"
     ],
     "flat": false,
     "private": true,
     "scripts": {
+        "run": "node ./entrypoint/programmaticAPI",
         "install": "yarn workspaces run install && (cd ./source/clientSide/packageManager && yarn workspaces run install)"
     },
     "dependencies": {},
