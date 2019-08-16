@@ -1,10 +1,15 @@
 {
-    "name": "@application/gazitengwebapp",
+    "name": "@application/gazitengWebapp",
     "version": "1.0.0",
-    "main": ".",
+    "main": "./entrypoint/programmaticAPI",
     "bin": {},
+    "workspaces": [
+        "packageManager/library.server.yarn"
+    ],
+    "flat": false,
+    "private": true,
     "scripts": {
-        "build": "yarn run scriptManager shouldCompileScript=true JSProject/buildSourceCode \".webappProject({})\""
+        "install": "yarn workspaces run install && (cd ./source/clientSide/packageManager && yarn workspaces run install)"
     },
     "dependencies": {},
     "devDependencies": {

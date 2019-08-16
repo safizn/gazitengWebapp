@@ -1,9 +1,18 @@
 {
+  "name": "@packageManager/jspm",
+  "version": "1.0.0",
+  "main": ".",
+  "scripts": {
+    "postinstall": "yarn run jspm install"
+  },
+  "dependencies": {
+    "jspm": "^2.0.0-beta.7"
+  },
   "jspm": {
     "name": "webapp",
     "main": "app.js",
     "directories": {
-      "packages": "../../clientSide/asset/javascript/@package-jspm",
+      "packages": "../../asset/javascript/@package-jspm",
       "baseURL": "../.."
     },
     "configFiles": {
@@ -91,6 +100,5 @@
       }
     }
   },
-  "devDependencies": {},
   "type": "module"
 }

@@ -1,50 +1,60 @@
 const path = require('path')
 const { script } = require('./script.config.js')
 
-const clientSide = { folderName: 'clientSide' },
-  serverSide = { folderName: `` }
-const distribution = {
-  serverSide: { folderName: serverSide.folderName },
-}
-
-const ownConfiguration = {
+const ownConfig = {
   directory: {
     root: path.normalize(`${__dirname}/..`),
     get deploymentScript() {
       return path.dirname(require.resolve(`@dependency/deploymentScript/package.json`))
     },
     get source() {
-      return path.join(ownConfiguration.directory.root, './source')
+      return path.join(ownConfig.directory.root, './source')
     },
     get distribution() {
-      return path.join(ownConfiguration.directory.root, './distribution')
+      return path.join(ownConfig.directory.root, './distribution')
     },
     get clientSide() {
-      return path.join(ownConfiguration.directory.source, './clientSide')
+      return path.join(ownConfig.directory.source, './clientSide')
     },
     get serverSide() {
-      return path.join(ownConfiguration.directory.source, './serverSide')
+      return path.join(ownConfig.directory.source, './serverSide')
+    },
+    get resource() {
+      return path.join(ownConfig.directory.root, './resource')
     },
   },
-  script,
+  get script() {
+    return [...script, ...[{ type: 'directory', path: ownConfig.directory.script }]]
+  },
+  entrypoint: {
+    get programmaticAPI() {
+      return path.join(ownConfig.directory.serverSide)
+    },
+  },
   distribution: {
     clientSide: {
       get native() {
-        return path.join(ownConfiguration.directory.distribution, 'nativeClientSide')
+        return path.join(ownConfig.directory.distribution, 'nativeClientSide')
       },
       get polyfill() {
-        return path.join(ownConfiguration.directory.distribution, 'polyfillClientSide')
+        return path.join(ownConfig.directory.distribution, 'polyfillClientSide')
       },
     },
     get serverSide() {
-      return path.join(ownConfiguration.directory.distribution, 'serverSide')
+      return path.join(ownConfig.directory.distribution, 'serverSide')
     },
+  },
+  build: {
+    get compile() {
+      return [path.relative(ownConfig.directory.root, ownConfig.directory.resource)]
+    },
+    repositoryURL: 'https://github.com/AppScriptIO/gazitengWebapp',
   },
   transpilation: {
     babelConfigKey: 'serverRuntime.BabelConfig.js',
     get babelConfig() {
       const { getBabelConfig } = require('@dependency/javascriptTranspilation')
-      return getBabelConfig(ownConfiguration.transpilation.babelConfigKey, { configType: 'json' })
+      return getBabelConfig(ownConfig.transpilation.babelConfigKey, { configType: 'json' })
     },
   },
   container: {
@@ -52,19 +62,19 @@ const ownConfiguration = {
     dockerImageName: 'gaziteng-webapp',
     stackName: 'gazitengwebapp',
     get SourceCodePath() {
-      return `${ownConfiguration.container.projectPath}/application/source`
+      return `${ownConfig.container.projectPath}/application/source`
     },
     get DestinationPath() {
-      return `${ownConfiguration.container.projectPath}/application/distribution`
+      return `${ownConfig.container.projectPath}/application/distribution`
     },
-  },
-  reverseProxy: {
-    domain: 'gaziteng.com',
   },
   production: {
     hostStorageFolderName: 'gaziteng', // remote production folder
+    reverseProxy: {
+      domain: 'gaziteng.com',
+    },
   },
   databaseVersion: 1,
 }
 
-module.exports = ownConfiguration
+module.exports = ownConfig

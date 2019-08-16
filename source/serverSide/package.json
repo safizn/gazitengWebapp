@@ -1,0 +1,10 @@
+{
+  "name": "@library/server",
+  "version": "1.0.0",
+  "main": "./app.js",
+  "scripts": {},
+  "dependencies": {
+    "appscript": "https://github.com/AppScriptIO/appscript",
+    "babel-runtime": "^6.26.0"
+  }
+}

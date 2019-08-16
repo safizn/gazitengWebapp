@@ -7,14 +7,9 @@ const resolvedModule = {
 
 module.exports = {
   script: [
-    // TODO: add - production, run, test
     {
       type: 'directory',
       path: `${resolvedModule.deploymentScript}/script/JSProject`,
-    },
-    {
-      type: 'directory',
-      path: './script',
     },
   ],
 }

@@ -1,0 +1,13 @@
+{
+    "name": "@package/packageManager",
+    "version": "1.0.0",
+    "main": ".",
+    "bin": {},
+    "scripts": {},
+    "workspaces": [
+        "./*"
+    ],
+    "flat": true,
+    "private": true,
+    "dependencies": {}
+}
