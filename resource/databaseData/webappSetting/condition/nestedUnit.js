@@ -1,23 +1,4 @@
 let data = [
-  {
-    children: [
-      // 24a2ae9b-f63f-41fc-8d68-fc6e4641c3d4
-      {
-        /**
-         * Port: WebappUI
-         */
-        unitKey: {
-          key: '9c6dd381-0f9b-4d6d-9a96-bf9beb3d3108',
-          label: {
-            name: 'URL: /google276dc830e9fade0c.html',
-          },
-          expectedReturn: 'google276dc830e9fade0c.html',
-          fileKey: '956a0f0f-437a-4cdf-9bcd-f205fc8336f9',
-        },
-      },
-    ],
-  },
-
   /**
    * Port: StaticContent
    */
