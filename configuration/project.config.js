@@ -10,6 +10,9 @@ const ownConfig = {
     get source() {
       return path.join(ownConfig.directory.root, './source')
     },
+    get script() {
+      return path.join(ownConfig.directory.root, './script')
+    },
     get distribution() {
       return path.join(ownConfig.directory.root, './distribution')
     },

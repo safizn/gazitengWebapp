@@ -9,7 +9,7 @@ module.exports = {
   script: [
     {
       type: 'directory',
-      path: `${resolvedModule.deploymentScript}/script/JSProject`,
+      path: `${resolvedModule.deploymentScript}/script`,
     },
   ],
 }
