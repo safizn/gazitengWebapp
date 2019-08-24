@@ -3,6 +3,8 @@ import { webappUserInterface } from '@dependency/appscript'
 
 // initialize services
 ;(async () => {
+  //TODO: load graph data and deal with NodeReferences
+
   console.groupCollapsed('• Run services:')
   await webappUserInterface.initialize({ targetProjectConfig: ownProjectConfig })
   // await oAuthInitializePortServer()()
