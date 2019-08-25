@@ -1,1 +1,450 @@
-{"node":[{"identity":5967,"labels":["NodeReference"],"properties":{"key":"0c01c061-92d4-44ad-8cda-098352c107ea"}},{"identity":5965,"labels":["NodeReference"],"properties":{"key":"20c4b7dd-66de-4b89-9188-f1601f9fc217"}},{"identity":5961,"labels":["NodeReference"],"properties":{"key":"20f0e914-e22b-4a07-83d0-1ff2c1d51902"}},{"identity":5969,"labels":["NodeReference"],"properties":{"key":"3544ab32-f236-4e66-aacd-6fdf20df069b"}},{"identity":5970,"labels":["NodeReference"],"properties":{"key":"366b44e7-1c26-478c-86b7-70f9504f7586"}},{"identity":5972,"labels":["Process"],"properties":{"arguments":"\"{\"filePath\":\"/template/root/google276dc830e9fade0c.html\",\"urlPath\":\"/google276dc830e9fade0c.html\",\"options\":{\"gzip\":true}}\"","executionType":"regularFunction","key":"5588048b-2b2b-414e-8a5a-6de1bd4bf9e9","name":"Google verification"}},{"identity":5968,"labels":["Stage","Port"],"properties":{"handlePropagationImplementation":"chronological","key":"59d8b53a-dcf2-4bcc-aa5c-b77aaf6c0600","name":"WebappUI container middleware"}},{"identity":5966,"labels":["SubgraphTemplate"],"properties":{"key":"6bb34692-01cd-4ce5-9f8d-d3ec79c8763a","name":"WebappUI"}},{"identity":5973,"labels":["NodeReference"],"properties":{"key":"81902e75-17a0-41a1-a12d-e5d4446e85d9"}},{"identity":5962,"labels":["Process"],"properties":{"arguments":"\"{\"documentKey\":\"0d65c113-acce-4f01-8eea-ab6cb7152405\"}\"","handlePropagationImplementation":"regularFunction","key":"8fe340df-7164-4499-bf1a-198ff23e0074","name":"RenderTemplateDocument: Main page"}},{"identity":5964,"labels":["Stage","Port"],"properties":{"handlePropagationImplementation":"chronological","key":"b6c5862f-ccd9-42cf-bb44-f415faf6cb49","name":"Static root file"}},{"identity":5971,"labels":["Stage"],"properties":{"key":"d24bbfe9-3010-4198-9d66-76bf1354dfae","name":"Google verification"}},{"identity":5963,"labels":["Stage"],"properties":{"description":"fallback middleware, in case the file was not found","key":"ef6ffafa-3409-4a2c-abb7-47cbe112549c","name":"renderTemplateDocument - homepage"}}],"edge":[{"identity":9677,"start":5968,"end":5967,"type":"NEXT","properties":{"key":"ppp2-713b-4522-ad92-d4421b51e4a5","order":1}},{"identity":9673,"start":5964,"end":5965,"type":"EXECUTE","properties":{"key":"aad4d8fd-204e-4201-a118-e7e7ac8ce8a1"}},{"identity":9678,"start":5968,"end":5969,"type":"EXECUTE","properties":{"key":"cab343d8-842d-4f8b-ab63-a34b6317e195"}},{"identity":9679,"start":5968,"end":5970,"type":"NEXT","properties":{"key":"f8301b01-c3d6-463b-86ef-ebcb265bb981","order":2}},{"identity":9682,"start":5971,"end":5972,"type":"EXECUTE","properties":{"key":"a8c2205d-f1cd-4380-8b8d-05c4ace2eef7"}},{"identity":9683,"start":5973,"end":5972,"type":"RESOURCE","properties":{"context":"filesystemReference","key":"37c1835b-9d56-423a-9407-dd1578f0ab19"}},{"identity":9676,"start":5966,"end":5968,"type":"ROOT","properties":{"key":"1a799cca-8a2a-4844-8838-8ef07ae4b8aa"}},{"identity":9680,"start":5968,"end":5968,"type":"FORK","properties":{"key":"e1c30bbe-6edc-4a7e-a9df-e475d8df9fc2"}},{"identity":9670,"start":5961,"end":5962,"type":"RESOURCE","properties":{"context":"filesystemReference","key":"22d0fbac-0701-4b92-8c54-19bbbe8e6d50"}},{"identity":9671,"start":5963,"end":5962,"type":"EXECUTE","properties":{"key":"67064c86-eb9c-4d69-8230-5f452a51547d"}},{"identity":9674,"start":5968,"end":5964,"type":"NEXT","properties":{"key":"f41a4a79-3cd4-47c4-8e06-9c1d2c46119c","order":4}},{"identity":9675,"start":5964,"end":5964,"type":"FORK","properties":{"key":"89d8b1bf-303e-4a23-be2c-3d7060ef744d"}},{"identity":9681,"start":5968,"end":5971,"type":"NEXT","properties":{"key":"880569b4-f3d7-4738-9c0d-59f6c2f4ab3a","order":3}},{"identity":9672,"start":5964,"end":5963,"type":"NEXT","properties":{"key":"d68d6b61-4fb7-4754-bf42-a783c813d7de","order":1}}]}
+{
+  "node": [{
+    "identity": 5993,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "c639cd53-c764-4967-b052-1e1652107923"
+    }
+  }, {
+    "identity": 5983,
+    "labels": ["Evaluation"],
+    "properties": {
+      "key": "6f74cae4-14e8-4a3d-b39c-6b7da08ef53a"
+    }
+  }, {
+    "identity": 5994,
+    "labels": ["Configuration"],
+    "properties": {
+      "aggregation": "process&include",
+      "key": "d9ca0198-4534-4011-ac5d-a03b30b8a63b",
+      "propagation": "continue"
+    }
+  }, {
+    "identity": 5979,
+    "labels": ["Configuration"],
+    "properties": {
+      "aggregation": "skipProcess",
+      "key": "2e2d06d9-a682-4c19-b833-0ae8562f00b8",
+      "propagation": "break"
+    }
+  }, {
+    "identity": 5986,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "956a0f0f-437a-4cdf-9bcd-f205fc8336f9"
+    }
+  }, {
+    "identity": 5984,
+    "labels": ["SubgraphTemplate"],
+    "properties": {
+      "key": "7c5de67c-3f91-4fcf-aebf-a86805827ded",
+      "name": "WebappUI Condition"
+    }
+  }, {
+    "identity": 5997,
+    "labels": ["Stage", "Process"],
+    "properties": {
+      "key": "default",
+      "name": "GET",
+      "value": "\"{\"name\":\"0d65c113-acce-4f01-8eea-ab6cb7152405\",\"type\":\"document\"}\""
+    }
+  }, {
+    "identity": 5999,
+    "labels": ["Port"],
+    "properties": {
+      "handlePropagationImplementation": "raceFirstPromise",
+      "key": "ea240bb2-c595-4215-be7b-e81e2d7af78c"
+    }
+  }, {
+    "identity": 5989,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "ab9c2538-cd9e-40d6-9a93-5296db445035"
+    }
+  }, {
+    "identity": 5977,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "25f4a639-3fcf-4378-9c04-60cf245cd916"
+    }
+  }, {
+    "identity": 5985,
+    "labels": ["Port"],
+    "properties": {
+      "handlePropagationImplementation": "raceFirstPromise",
+      "key": "86737c7e-b1a8-49e8-ac0c-01c7d44f4381"
+    }
+  }, {
+    "identity": 5998,
+    "labels": ["Evaluation", "Process"],
+    "properties": {
+      "key": "e8e04365-822d-4778-bc78-4a6050e29a62"
+    }
+  }, {
+    "identity": 5976,
+    "labels": ["Stage", "Process"],
+    "properties": {
+      "key": "24a2ae9b-f63f-41fc-8d68-fc6e4641c3d4",
+      "name": "URL: /google276dc830e9fade0c.html",
+      "value": "\"{\"name\":\"7acf5873-630c-41a7-84c4-4b0d52706981\",\"type\":\"middlewareNestedUnit\"}\""
+    }
+  }, {
+    "identity": 5967,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "0c01c061-92d4-44ad-8cda-098352c107ea"
+    }
+  }, {
+    "identity": 5965,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "20c4b7dd-66de-4b89-9188-f1601f9fc217"
+    }
+  }, {
+    "identity": 5961,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "20f0e914-e22b-4a07-83d0-1ff2c1d51902"
+    }
+  }, {
+    "identity": 5969,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "3544ab32-f236-4e66-aacd-6fdf20df069b"
+    }
+  }, {
+    "identity": 5970,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "366b44e7-1c26-478c-86b7-70f9504f7586"
+    }
+  }, {
+    "identity": 5972,
+    "labels": ["Process"],
+    "properties": {
+      "arguments": "\"{\"filePath\":\"/template/root/google276dc830e9fade0c.html\",\"urlPath\":\"/google276dc830e9fade0c.html\",\"options\":{\"gzip\":true}}\"",
+      "executionType": "regularFunction",
+      "key": "5588048b-2b2b-414e-8a5a-6de1bd4bf9e9",
+      "name": "Google verification"
+    }
+  }, {
+    "identity": 5968,
+    "labels": ["Stage", "Port"],
+    "properties": {
+      "handlePropagationImplementation": "chronological",
+      "key": "59d8b53a-dcf2-4bcc-aa5c-b77aaf6c0600",
+      "name": "WebappUI container middleware"
+    }
+  }, {
+    "identity": 5966,
+    "labels": ["SubgraphTemplate"],
+    "properties": {
+      "key": "6bb34692-01cd-4ce5-9f8d-d3ec79c8763a",
+      "name": "WebappUI Middleware"
+    }
+  }, {
+    "identity": 5973,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "81902e75-17a0-41a1-a12d-e5d4446e85d9"
+    }
+  }, {
+    "identity": 5962,
+    "labels": ["Process"],
+    "properties": {
+      "arguments": "\"{\"documentKey\":\"0d65c113-acce-4f01-8eea-ab6cb7152405\"}\"",
+      "handlePropagationImplementation": "regularFunction",
+      "key": "8fe340df-7164-4499-bf1a-198ff23e0074",
+      "name": "RenderTemplateDocument: Main page"
+    }
+  }, {
+    "identity": 5964,
+    "labels": ["Stage", "Port"],
+    "properties": {
+      "handlePropagationImplementation": "chronological",
+      "key": "b6c5862f-ccd9-42cf-bb44-f415faf6cb49",
+      "name": "Static root file"
+    }
+  }, {
+    "identity": 5971,
+    "labels": ["Stage"],
+    "properties": {
+      "key": "d24bbfe9-3010-4198-9d66-76bf1354dfae",
+      "name": "Google verification"
+    }
+  }, {
+    "identity": 5963,
+    "labels": ["Stage"],
+    "properties": {
+      "description": "fallback middleware, in case the file was not found",
+      "key": "ef6ffafa-3409-4a2c-abb7-47cbe112549c",
+      "name": "renderTemplateDocument - homepage"
+    }
+  }],
+  "edge": [{
+    "identity": 9709,
+    "start": 5983,
+    "end": 5993,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "5bc48a8c-c4f5-497c-ab67-9db8e11bdc6f"
+    }
+  }, {
+    "identity": 9694,
+    "start": 5983,
+    "end": 5979,
+    "type": "DEFAULT",
+    "properties": {
+      "key": "1e0ba98d-e876-4581-a1f9-b02748b3d25b"
+    }
+  }, {
+    "identity": 9710,
+    "start": 5983,
+    "end": 5994,
+    "type": "CASE",
+    "properties": {
+      "expected": "GET",
+      "key": "6ff50b49-5bb9-42ab-b2c3-693846f9e070"
+    }
+  }, {
+    "identity": 9717,
+    "start": 5983,
+    "end": 5997,
+    "type": "CONFIGURE",
+    "properties": {
+      "depthAffected": 0,
+      "key": "f5425181-1d68-451a-bd05-4786c080167e"
+    }
+  }, {
+    "identity": 9711,
+    "start": 5998,
+    "end": 5994,
+    "type": "CASE",
+    "properties": {
+      "expected": "google276dc830e9fade0c.html",
+      "key": "1a467ab8-8a93-441b-b80a-d19564165c03"
+    }
+  }, {
+    "identity": 9693,
+    "start": 5998,
+    "end": 5979,
+    "type": "DEFAULT",
+    "properties": {
+      "key": "d9830da7-c9f4-483f-b55c-b903bd5644f7"
+    }
+  }, {
+    "identity": 9720,
+    "start": 5986,
+    "end": 5998,
+    "type": "RESOURCE",
+    "properties": {
+      "context": "filesystemReference",
+      "key": "c1dad1ca-823b-4f26-9d6e-b2a71c774daa"
+    }
+  }, {
+    "identity": 9719,
+    "start": 5984,
+    "end": 5997,
+    "type": "ROOT",
+    "properties": {
+      "key": "0ec20287-e09f-4253-9e04-960cd4195171"
+    }
+  }, {
+    "identity": 9703,
+    "start": 5997,
+    "end": 5985,
+    "type": "FORK",
+    "properties": {
+      "key": "1ff44829-3bfa-490e-b034-d0de04ff8356",
+      "order": 1
+    }
+  }, {
+    "identity": 9718,
+    "start": 5997,
+    "end": 5997,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "6be15e05-a998-4e60-ba15-d4065dc14299"
+    }
+  }, {
+    "identity": 9722,
+    "start": 5997,
+    "end": 5999,
+    "type": "FORK",
+    "properties": {
+      "key": "a51f536c-b550-436c-b036-01ee1d4bd218",
+      "order": 2
+    }
+  }, {
+    "identity": 9705,
+    "start": 5999,
+    "end": 5989,
+    "type": "NEXT",
+    "properties": {
+      "key": "481d7f81-ec2f-4ccc-917d-c1502aeaec48",
+      "order": 1
+    }
+  }, {
+    "identity": 9689,
+    "start": 5985,
+    "end": 5977,
+    "type": "NEXT",
+    "properties": {
+      "key": "6f5c2cd7-5259-46a5-a11c-0633be123321",
+      "order": 2
+    }
+  }, {
+    "identity": 9688,
+    "start": 5985,
+    "end": 5976,
+    "type": "NEXT",
+    "properties": {
+      "key": "3ccafb6c-d52e-49ec-bf03-908115fb1bad",
+      "order": 1
+    }
+  }, {
+    "identity": 9686,
+    "start": 5998,
+    "end": 5976,
+    "type": "CONFIGURE",
+    "properties": {
+      "depthAffected": 0,
+      "key": "6ca87dc3-e87d-4953-b731-0941734cc9d1"
+    }
+  }, {
+    "identity": 9721,
+    "start": 5998,
+    "end": 5998,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "aece23f0-a504-4453-b223-7e8e2322b871"
+    }
+  }, {
+    "identity": 9687,
+    "start": 5976,
+    "end": 5976,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "3bf6bd0d-2a32-4715-b289-69cb95831ea6"
+    }
+  }, {
+    "identity": 9677,
+    "start": 5968,
+    "end": 5967,
+    "type": "NEXT",
+    "properties": {
+      "key": "ppp2-713b-4522-ad92-d4421b51e4a5",
+      "order": 1
+    }
+  }, {
+    "identity": 9673,
+    "start": 5964,
+    "end": 5965,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "aad4d8fd-204e-4201-a118-e7e7ac8ce8a1"
+    }
+  }, {
+    "identity": 9678,
+    "start": 5968,
+    "end": 5969,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "cab343d8-842d-4f8b-ab63-a34b6317e195"
+    }
+  }, {
+    "identity": 9679,
+    "start": 5968,
+    "end": 5970,
+    "type": "NEXT",
+    "properties": {
+      "key": "f8301b01-c3d6-463b-86ef-ebcb265bb981",
+      "order": 2
+    }
+  }, {
+    "identity": 9682,
+    "start": 5971,
+    "end": 5972,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "a8c2205d-f1cd-4380-8b8d-05c4ace2eef7"
+    }
+  }, {
+    "identity": 9683,
+    "start": 5973,
+    "end": 5972,
+    "type": "RESOURCE",
+    "properties": {
+      "context": "filesystemReference",
+      "key": "37c1835b-9d56-423a-9407-dd1578f0ab19"
+    }
+  }, {
+    "identity": 9676,
+    "start": 5966,
+    "end": 5968,
+    "type": "ROOT",
+    "properties": {
+      "key": "1a799cca-8a2a-4844-8838-8ef07ae4b8aa"
+    }
+  }, {
+    "identity": 9680,
+    "start": 5968,
+    "end": 5968,
+    "type": "FORK",
+    "properties": {
+      "key": "e1c30bbe-6edc-4a7e-a9df-e475d8df9fc2"
+    }
+  }, {
+    "identity": 9670,
+    "start": 5961,
+    "end": 5962,
+    "type": "RESOURCE",
+    "properties": {
+      "context": "filesystemReference",
+      "key": "22d0fbac-0701-4b92-8c54-19bbbe8e6d50"
+    }
+  }, {
+    "identity": 9671,
+    "start": 5963,
+    "end": 5962,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "67064c86-eb9c-4d69-8230-5f452a51547d"
+    }
+  }, {
+    "identity": 9674,
+    "start": 5968,
+    "end": 5964,
+    "type": "NEXT",
+    "properties": {
+      "key": "f41a4a79-3cd4-47c4-8e06-9c1d2c46119c",
+      "order": 4
+    }
+  }, {
+    "identity": 9675,
+    "start": 5964,
+    "end": 5964,
+    "type": "FORK",
+    "properties": {
+      "key": "89d8b1bf-303e-4a23-be2c-3d7060ef744d"
+    }
+  }, {
+    "identity": 9681,
+    "start": 5968,
+    "end": 5971,
+    "type": "NEXT",
+    "properties": {
+      "key": "880569b4-f3d7-4738-9c0d-59f6c2f4ab3a",
+      "order": 3
+    }
+  }, {
+    "identity": 9672,
+    "start": 5964,
+    "end": 5963,
+    "type": "NEXT",
+    "properties": {
+      "key": "d68d6b61-4fb7-4754-bf42-a783c813d7de",
+      "order": 1
+    }
+  }]
+}

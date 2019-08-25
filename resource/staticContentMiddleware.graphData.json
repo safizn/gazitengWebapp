@@ -1,1 +1,486 @@
-{"node":[{"identity":5780,"labels":["NodeReference"],"properties":{"key":"0c01c061-92d4-44ad-8cda-098352c107ea"}},{"identity":5774,"labels":["Stage","Port"],"properties":{"handlePropagationImplementation":"chronological","key":"2f841f16-f26d-405c-92df-0b0142a1e5bc","name":"StaticContent container middleware"}},{"identity":5782,"labels":["NodeReference"],"properties":{"key":"3544ab32-f236-4e66-aacd-6fdf20df069b"}},{"identity":5781,"labels":["NodeReference"],"properties":{"key":"68fb59e3-af0b-4ea2-800e-7e7e37d7cc31"}},{"identity":5777,"labels":["Process"],"properties":{"arguments":"\"{\"filePath\":\"/jspm_packageManager/jspm.config.js\",\"urlPath\":\"/asset/javascript/jspm.config.js\",\"options\":{\"gzip\":true}}\"","classification":"Middleware","executionType":"regularFunction","key":"6d9388bd-6817-4540-a1be-161fbfbecd21","name":"jspm.config.js static file"}},{"identity":5776,"labels":["NodeReference"],"properties":{"key":"81902e75-17a0-41a1-a12d-e5d4446e85d9"}},{"identity":5779,"labels":["NodeReference"],"properties":{"key":"81cc5f3a-ff61-454f-b6bb-49713c841c29"}},{"identity":5778,"labels":["NodeReference"],"properties":{"key":"a7912856-ad5a-46b0-b980-67fb500af399"}},{"identity":5783,"labels":["NodeReference"],"properties":{"key":"da18242e-792e-4e44-a12b-b280f6331b7c"}},{"identity":5775,"labels":["SubgraphTemplate"],"properties":{"key":"e92fb16c-6b06-45b0-bcaf-a00548301b05","name":"StaticContent"}}],"edge":[{"identity":9464,"start":5774,"end":5780,"type":"NEXT","properties":{"key":"c1abcd3f-cc6d-4bc4-911b-a07c8bddd3f5","order":1}},{"identity":9465,"start":5774,"end":5774,"type":"FORK","properties":{"key":"1b0e644f-1d54-44f4-ad57-3f2b901f1361"}},{"identity":9471,"start":5775,"end":5774,"type":"ROOT","properties":{"key":"51a078d3-8e9c-4519-b818-75d4532e0725"}},{"identity":9466,"start":5774,"end":5782,"type":"EXECUTE","properties":{"key":"9da91935-89fc-4f64-837f-243f6f01a020"}},{"identity":9467,"start":5774,"end":5781,"type":"NEXT","properties":{"key":"bb58cb10-9c77-42c6-9d2d-2f65e727a842","order":2}},{"identity":9472,"start":5776,"end":5777,"type":"RESOURCE","properties":{"context":"filesystemReference","key":"6c5e1a1e-46ba-4d75-8dc4-f65e871e0eae"}},{"identity":9468,"start":5774,"end":5779,"type":"NEXT","properties":{"key":"90009e4e-b41b-4a2e-82fb-e958d20a5b7b","order":5}},{"identity":9469,"start":5774,"end":5778,"type":"NEXT","properties":{"key":"32b529b7-54d6-4629-a179-e2912bd18472","order":4}},{"identity":9470,"start":5774,"end":5783,"type":"NEXT","properties":{"key":"9bc7daf5-24f8-402d-abe2-b29035b4e8ef","order":3}}]}
+{
+  "node": [{
+    "identity": 5993,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "c639cd53-c764-4967-b052-1e1652107923"
+    }
+  }, {
+    "identity": 5983,
+    "labels": ["Evaluation"],
+    "properties": {
+      "key": "6f74cae4-14e8-4a3d-b39c-6b7da08ef53a"
+    }
+  }, {
+    "identity": 5994,
+    "labels": ["Configuration"],
+    "properties": {
+      "aggregation": "process&include",
+      "key": "d9ca0198-4534-4011-ac5d-a03b30b8a63b",
+      "propagation": "continue"
+    }
+  }, {
+    "identity": 5979,
+    "labels": ["Configuration"],
+    "properties": {
+      "aggregation": "skipProcess",
+      "key": "2e2d06d9-a682-4c19-b833-0ae8562f00b8",
+      "propagation": "break"
+    }
+  }, {
+    "identity": 5986,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "956a0f0f-437a-4cdf-9bcd-f205fc8336f9"
+    }
+  }, {
+    "identity": 5987,
+    "labels": ["SubgraphTemplate"],
+    "properties": {
+      "key": "968d1e8c-5f2c-41eb-9d0c-597d987ed44c",
+      "name": "StaticContent Condition"
+    }
+  }, {
+    "identity": 5980,
+    "labels": ["Stage", "Process"],
+    "properties": {
+      "key": "35b45b5f-ccfc-41dd-9349-8c089142b4fa",
+      "name": "GET",
+      "value": "\"{\"name\":\"XXX\",\"type\":\"XXX\"}\""
+    }
+  }, {
+    "identity": 5995,
+    "labels": ["Port"],
+    "properties": {
+      "handlePropagationImplementation": "raceFirstPromise",
+      "key": "de7e8a9f-24b4-4777-8fb8-32c70f4f672e"
+    }
+  }, {
+    "identity": 5988,
+    "labels": ["Port"],
+    "properties": {
+      "handlePropagationImplementation": "raceFirstPromise",
+      "key": "a39675a3-3142-47af-95ce-111a2252e6ed"
+    }
+  }, {
+    "identity": 5992,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "c5a01ebf-8902-437c-a6e1-4a7082f3b28e"
+    }
+  }, {
+    "identity": 5982,
+    "labels": ["Stage", "Process"],
+    "properties": {
+      "key": "50b350fd-d426-4905-80c3-1f80979956af",
+      "name": "URL: /asset",
+      "value": "\"{\"name\":\"da18242e-792e-4e44-a12b-b280f6331b7c\",\"type\":\"middlewareNestedUnit\"}\""
+    }
+  }, {
+    "identity": 5981,
+    "labels": ["Evaluation"],
+    "properties": {
+      "key": "4ded41c7-ce07-4492-afdf-b7488112a1dd"
+    }
+  }, {
+    "identity": 5990,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "af30c7db-4d26-4e4c-bab9-a4a5cc666edb"
+    }
+  }, {
+    "identity": 5975,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "182fb317-3361-46dd-9058-5dffd973edb0"
+    }
+  }, {
+    "identity": 5991,
+    "labels": ["Port"],
+    "properties": {
+      "handlePropagationImplementation": "raceFirstPromise",
+      "key": "b1de7827-9d3a-417a-a556-8b8d9a137d66"
+    }
+  }, {
+    "identity": 5974,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "15a01ebf-8902-437c-a6e1-4a7082f3b281"
+    }
+  }, {
+    "identity": 5978,
+    "labels": ["Stage", "Process"],
+    "properties": {
+      "key": "2911ba04-4a2f-418b-9bad-7a56f3a4ac94",
+      "name": "URL: /asset/javascript/jspm.config.js",
+      "value": "\"{\"name\":\"68fb59e3-af0b-4ea2-800e-7e7e37d7cc31\",\"type\":\"middlewareNestedUnit\"}\""
+    }
+  }, {
+    "identity": 5996,
+    "labels": ["Evaluation", "Process"],
+    "properties": {
+      "key": "def642ce-7f63-40b7-8aeb-611c1a799455"
+    }
+  }, {
+    "identity": 5780,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "0c01c061-92d4-44ad-8cda-098352c107ea"
+    }
+  }, {
+    "identity": 5774,
+    "labels": ["Stage", "Port"],
+    "properties": {
+      "handlePropagationImplementation": "chronological",
+      "key": "2f841f16-f26d-405c-92df-0b0142a1e5bc",
+      "name": "StaticContent container middleware"
+    }
+  }, {
+    "identity": 5782,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "3544ab32-f236-4e66-aacd-6fdf20df069b"
+    }
+  }, {
+    "identity": 5781,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "68fb59e3-af0b-4ea2-800e-7e7e37d7cc31"
+    }
+  }, {
+    "identity": 5777,
+    "labels": ["Process"],
+    "properties": {
+      "arguments": "\"{\"filePath\":\"/jspm_packageManager/jspm.config.js\",\"urlPath\":\"/asset/javascript/jspm.config.js\",\"options\":{\"gzip\":true}}\"",
+      "classification": "Middleware",
+      "executionType": "regularFunction",
+      "key": "6d9388bd-6817-4540-a1be-161fbfbecd21",
+      "name": "jspm.config.js static file"
+    }
+  }, {
+    "identity": 5776,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "81902e75-17a0-41a1-a12d-e5d4446e85d9"
+    }
+  }, {
+    "identity": 5779,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "81cc5f3a-ff61-454f-b6bb-49713c841c29"
+    }
+  }, {
+    "identity": 5778,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "a7912856-ad5a-46b0-b980-67fb500af399"
+    }
+  }, {
+    "identity": 5783,
+    "labels": ["NodeReference"],
+    "properties": {
+      "key": "da18242e-792e-4e44-a12b-b280f6331b7c"
+    }
+  }, {
+    "identity": 5775,
+    "labels": ["SubgraphTemplate"],
+    "properties": {
+      "key": "e92fb16c-6b06-45b0-bcaf-a00548301b05",
+      "name": "StaticContent Middleware"
+    }
+  }],
+  "edge": [{
+    "identity": 9464,
+    "start": 5774,
+    "end": 5780,
+    "type": "NEXT",
+    "properties": {
+      "key": "c1abcd3f-cc6d-4bc4-911b-a07c8bddd3f5",
+      "order": 1
+    }
+  }, {
+    "identity": 9465,
+    "start": 5774,
+    "end": 5774,
+    "type": "FORK",
+    "properties": {
+      "key": "1b0e644f-1d54-44f4-ad57-3f2b901f1361"
+    }
+  }, {
+    "identity": 9471,
+    "start": 5775,
+    "end": 5774,
+    "type": "ROOT",
+    "properties": {
+      "key": "51a078d3-8e9c-4519-b818-75d4532e0725"
+    }
+  }, {
+    "identity": 9466,
+    "start": 5774,
+    "end": 5782,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "9da91935-89fc-4f64-837f-243f6f01a020"
+    }
+  }, {
+    "identity": 9467,
+    "start": 5774,
+    "end": 5781,
+    "type": "NEXT",
+    "properties": {
+      "key": "bb58cb10-9c77-42c6-9d2d-2f65e727a842",
+      "order": 2
+    }
+  }, {
+    "identity": 9472,
+    "start": 5776,
+    "end": 5777,
+    "type": "RESOURCE",
+    "properties": {
+      "context": "filesystemReference",
+      "key": "6c5e1a1e-46ba-4d75-8dc4-f65e871e0eae"
+    }
+  }, {
+    "identity": 9468,
+    "start": 5774,
+    "end": 5779,
+    "type": "NEXT",
+    "properties": {
+      "key": "90009e4e-b41b-4a2e-82fb-e958d20a5b7b",
+      "order": 5
+    }
+  }, {
+    "identity": 9469,
+    "start": 5774,
+    "end": 5778,
+    "type": "NEXT",
+    "properties": {
+      "key": "32b529b7-54d6-4629-a179-e2912bd18472",
+      "order": 4
+    }
+  }, {
+    "identity": 9470,
+    "start": 5774,
+    "end": 5783,
+    "type": "NEXT",
+    "properties": {
+      "key": "9bc7daf5-24f8-402d-abe2-b29035b4e8ef",
+      "order": 3
+    }
+  }, {
+    "identity": 9709,
+    "start": 5983,
+    "end": 5993,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "5bc48a8c-c4f5-497c-ab67-9db8e11bdc6f"
+    }
+  }, {
+    "identity": 9694,
+    "start": 5983,
+    "end": 5979,
+    "type": "DEFAULT",
+    "properties": {
+      "key": "1e0ba98d-e876-4581-a1f9-b02748b3d25b"
+    }
+  }, {
+    "identity": 9697,
+    "start": 5983,
+    "end": 5980,
+    "type": "CONFIGURE",
+    "properties": {
+      "depthAffected": 0,
+      "key": "fc48cc18-f638-4c51-b0bc-f9e68adbb322"
+    }
+  }, {
+    "identity": 9710,
+    "start": 5983,
+    "end": 5994,
+    "type": "CASE",
+    "properties": {
+      "expected": "GET",
+      "key": "6ff50b49-5bb9-42ab-b2c3-693846f9e070"
+    }
+  }, {
+    "identity": 9712,
+    "start": 5981,
+    "end": 5994,
+    "type": "CASE",
+    "properties": {
+      "expected": "asset",
+      "key": "bd5f6884-9538-4650-a3eb-bab12a20fb55"
+    }
+  }, {
+    "identity": 9713,
+    "start": 5996,
+    "end": 5994,
+    "type": "CASE",
+    "properties": {
+      "expected": "asset/javascript/jspm.config.js",
+      "key": "67b05248-66ee-4430-a2c5-85a78c662783"
+    }
+  }, {
+    "identity": 9696,
+    "start": 5981,
+    "end": 5979,
+    "type": "DEFAULT",
+    "properties": {
+      "key": "3d48abd3-9e4b-4518-a277-053ccfc5bce3"
+    }
+  }, {
+    "identity": 9695,
+    "start": 5996,
+    "end": 5979,
+    "type": "DEFAULT",
+    "properties": {
+      "key": "bfb02936-59c3-48d3-9bb8-c609b9159250"
+    }
+  }, {
+    "identity": 9716,
+    "start": 5986,
+    "end": 5996,
+    "type": "RESOURCE",
+    "properties": {
+      "context": "filesystemReference",
+      "key": "01c06c93-d02c-4ac4-8068-5d4457e94983"
+    }
+  }, {
+    "identity": 9698,
+    "start": 5987,
+    "end": 5980,
+    "type": "ROOT",
+    "properties": {
+      "key": "9fa94821-f740-4eba-a9e8-9b8d8659b077"
+    }
+  }, {
+    "identity": 9699,
+    "start": 5980,
+    "end": 5980,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "23fbccf6-ace5-4174-8162-f5ed37fbc843"
+    }
+  }, {
+    "identity": 9704,
+    "start": 5980,
+    "end": 5988,
+    "type": "FORK",
+    "properties": {
+      "key": "40b22012-36f0-4ce9-9d63-352dac1867d6",
+      "order": 1
+    }
+  }, {
+    "identity": 9714,
+    "start": 5980,
+    "end": 5995,
+    "type": "FORK",
+    "properties": {
+      "key": "025a537c-8b40-4bbd-a2ad-2120d8305ac3",
+      "order": 2
+    }
+  }, {
+    "identity": 9685,
+    "start": 5988,
+    "end": 5975,
+    "type": "NEXT",
+    "properties": {
+      "key": "50624f2e-292a-49fd-817b-a241233f737d",
+      "order": 2
+    }
+  }, {
+    "identity": 9701,
+    "start": 5988,
+    "end": 5982,
+    "type": "NEXT",
+    "properties": {
+      "key": "d92a5736-faab-4f3f-817b-30c7a7c451b6",
+      "order": 3
+    }
+  }, {
+    "identity": 9708,
+    "start": 5988,
+    "end": 5992,
+    "type": "NEXT",
+    "properties": {
+      "key": "5f645424-a705-4d4a-8c3c-9d8856aea7c2",
+      "order": 1
+    }
+  }, {
+    "identity": 9700,
+    "start": 5981,
+    "end": 5982,
+    "type": "CONFIGURE",
+    "properties": {
+      "depthAffected": 0,
+      "key": "f457c668-d2ac-47b2-8d6d-6eed569a262d"
+    }
+  }, {
+    "identity": 9702,
+    "start": 5982,
+    "end": 5982,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "027badf6-0035-4502-a465-045e642cf95e"
+    }
+  }, {
+    "identity": 9707,
+    "start": 5982,
+    "end": 5991,
+    "type": "FORK",
+    "properties": {
+      "key": "0c8dec02-85f1-4240-81bd-a95c441c8d33",
+      "order": 1
+    }
+  }, {
+    "identity": 9706,
+    "start": 5981,
+    "end": 5990,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "077601d6-c055-43b3-a5ad-ae56103df6f9"
+    }
+  }, {
+    "identity": 9684,
+    "start": 5991,
+    "end": 5974,
+    "type": "NEXT",
+    "properties": {
+      "key": "b8a8c55d-5a16-4927-8a28-321bc54160ce",
+      "order": 2
+    }
+  }, {
+    "identity": 9690,
+    "start": 5991,
+    "end": 5978,
+    "type": "NEXT",
+    "properties": {
+      "key": "8cce2513-e82f-4f8a-b9a4-fddbd5501859",
+      "order": 1
+    }
+  }, {
+    "identity": 9691,
+    "start": 5978,
+    "end": 5978,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "22e17ccc-d7d0-4b9c-9aa9-843ca7c4c9be"
+    }
+  }, {
+    "identity": 9692,
+    "start": 5996,
+    "end": 5978,
+    "type": "CONFIGURE",
+    "properties": {
+      "depthAffected": 0,
+      "key": "52146093-8bdf-4535-b820-37972d5249e2"
+    }
+  }, {
+    "identity": 9715,
+    "start": 5996,
+    "end": 5996,
+    "type": "EXECUTE",
+    "properties": {
+      "key": "446b542c-743c-4deb-ba10-552bc0e35fc3"
+    }
+  }]
+}
