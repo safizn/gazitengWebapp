@@ -10,7 +10,8 @@
     "private": true,
     "scripts": {
         "post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
-        "run": "node ."
+        "run": "node .",
+        "buildAndRelease": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildAndRelease.moduleProject({})\""
     },
     "dependencies": {},
     "devDependencies": {
