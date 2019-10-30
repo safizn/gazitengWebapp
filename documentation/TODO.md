@@ -1,2 +1,0 @@
-- TODO: change base url and access-control-allow-origin header according to DEPLOYMENT environment
-- TODO: Custom Dataset Schema/structure/blueprint, data document, csustom dataset type, custom fields, custom content type.

@@ -1,84 +1,81 @@
-var data = []
+"use strict";var data = [];
 data.customDatasetSchema = [
+{
+  key: 'fed4f371-fcf9-4219-8acd-7e3c19037d9c',
+  label: {
+    name: 'university',
+    description: 'University institutes.' },
+
+  blueprint: [
   {
-    key: 'fed4f371-fcf9-4219-8acd-7e3c19037d9c',
-    label: {
-      name: 'university',
-      description: 'University institutes.',
-    },
-    blueprint: [
-      {
-        label: 'name',
-        fieldDataTypeKey: 'String',
-      },
-      {
-        label: 'longName',
-        fieldDataTypeKey: 'String',
-      },
-    ],
-  },
-]
+    label: 'name',
+    fieldDataTypeKey: 'String' },
 
-r.db('webapp')
-  .table('setting')
-  .get('customDatasetSchema')
-  .update({ customDatasetSchema: data.customDatasetSchema }, { nonAtomic: true })
+  {
+    label: 'longName',
+    fieldDataTypeKey: 'String' }] }];
 
-// examples:
+
+
+
+
+r.db('webapp').
+table('setting').
+get('customDatasetSchema').
+update({ customDatasetSchema: data.customDatasetSchema }, { nonAtomic: true });
+
+
 
 let universities = [
+{
+  Key: '1',
+  name: {
+    short: '',
+    long: '' },
+
+  logo: '',
+  gallery: [
   {
-    Key: '1',
-    name: {
-      short: '',
-      long: '',
-    },
-    logo: '',
-    gallery: [
-      {
-        imageTitle: '',
-        imageURL: '',
-      },
-      {
-        imageTitle: '',
-        imageURL: '',
-      },
-    ],
-  },
+    imageTitle: '',
+    imageURL: '' },
+
   {
-    Key: '1',
-    name: {
-      short: 'Universitatea de Bucharest',
-      long: 'USMF',
-    },
-    logo: 'http://localhost/image3',
-    gallery: [
-      {
-        imageTitle: 'Main office building',
-        imageURL: 'http://localhost/image1',
-      },
-      {
-        imageTitle: 'logo',
-        imageURL: 'http://localhost/image2',
-      },
-    ],
-  },
+    imageTitle: '',
+    imageURL: '' }] },
+
+
+
+{
+  Key: '1',
+  name: {
+    short: 'Universitatea de Bucharest',
+    long: 'USMF' },
+
+  logo: 'http://localhost/image3',
+  gallery: [
   {
-    Key: '2',
-    name: {
-      short: 'Iasi University',
-      long: 'USMU',
-    },
-    logo: 'http://localhost/image3',
-    gallery: [
-      {
-        imageTitle: 'Main office building',
-        imageURL: 'http://localhost/image1',
-      },
-      {
-        imageTitle: 'logo',
-        imageURL: 'http://localhost/image2',
-      },
-    ],
-  },
-]
+    imageTitle: 'Main office building',
+    imageURL: 'http://localhost/image1' },
+
+  {
+    imageTitle: 'logo',
+    imageURL: 'http://localhost/image2' }] },
+
+
+
+{
+  Key: '2',
+  name: {
+    short: 'Iasi University',
+    long: 'USMU' },
+
+  logo: 'http://localhost/image3',
+  gallery: [
+  {
+    imageTitle: 'Main office building',
+    imageURL: 'http://localhost/image1' },
+
+  {
+    imageTitle: 'logo',
+    imageURL: 'http://localhost/image2' }] }];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Jlc291cmNlL2RhdGFiYXNlRGF0YS9kYXRhdHlwZS9jdXN0b21EYXRhc2V0U2NoZW1hLmpzIl0sIm5hbWVzIjpbImRhdGEiLCJjdXN0b21EYXRhc2V0U2NoZW1hIiwia2V5IiwibGFiZWwiLCJuYW1lIiwiZGVzY3JpcHRpb24iLCJibHVlcHJpbnQiLCJmaWVsZERhdGFUeXBlS2V5IiwiciIsImRiIiwidGFibGUiLCJnZXQiLCJ1cGRhdGUiLCJub25BdG9taWMiLCJ1bml2ZXJzaXRpZXMiLCJLZXkiLCJzaG9ydCIsImxvbmciLCJsb2dvIiwiZ2FsbGVyeSIsImltYWdlVGl0bGUiLCJpbWFnZVVSTCJdLCJtYXBwaW5ncyI6ImFBQUEsSUFBSUEsSUFBSSxHQUFHLEVBQVg7QUFDQUEsSUFBSSxDQUFDQyxtQkFBTCxHQUEyQjtBQUN6QjtBQUNFQyxFQUFBQSxHQUFHLEVBQUUsc0NBRFA7QUFFRUMsRUFBQUEsS0FBSyxFQUFFO0FBQ0xDLElBQUFBLElBQUksRUFBRSxZQUREO0FBRUxDLElBQUFBLFdBQVcsRUFBRSx3QkFGUixFQUZUOztBQU1FQyxFQUFBQSxTQUFTLEVBQUU7QUFDVDtBQUNFSCxJQUFBQSxLQUFLLEVBQUUsTUFEVDtBQUVFSSxJQUFBQSxnQkFBZ0IsRUFBRSxRQUZwQixFQURTOztBQUtUO0FBQ0VKLElBQUFBLEtBQUssRUFBRSxVQURUO0FBRUVJLElBQUFBLGdCQUFnQixFQUFFLFFBRnBCLEVBTFMsQ0FOYixFQUR5QixDQUEzQjs7Ozs7O0FBb0JBQyxDQUFDLENBQUNDLEVBQUYsQ0FBSyxRQUFMO0FBQ0dDLEtBREgsQ0FDUyxTQURUO0FBRUdDLEdBRkgsQ0FFTyxxQkFGUDtBQUdHQyxNQUhILENBR1UsRUFBRVgsbUJBQW1CLEVBQUVELElBQUksQ0FBQ0MsbUJBQTVCLEVBSFYsRUFHNkQsRUFBRVksU0FBUyxFQUFFLElBQWIsRUFIN0Q7Ozs7QUFPQSxJQUFJQyxZQUFZLEdBQUc7QUFDakI7QUFDRUMsRUFBQUEsR0FBRyxFQUFFLEdBRFA7QUFFRVgsRUFBQUEsSUFBSSxFQUFFO0FBQ0pZLElBQUFBLEtBQUssRUFBRSxFQURIO0FBRUpDLElBQUFBLElBQUksRUFBRSxFQUZGLEVBRlI7O0FBTUVDLEVBQUFBLElBQUksRUFBRSxFQU5SO0FBT0VDLEVBQUFBLE9BQU8sRUFBRTtBQUNQO0FBQ0VDLElBQUFBLFVBQVUsRUFBRSxFQURkO0FBRUVDLElBQUFBLFFBQVEsRUFBRSxFQUZaLEVBRE87O0FBS1A7QUFDRUQsSUFBQUEsVUFBVSxFQUFFLEVBRGQ7QUFFRUMsSUFBQUEsUUFBUSxFQUFFLEVBRlosRUFMTyxDQVBYLEVBRGlCOzs7O0FBbUJqQjtBQUNFTixFQUFBQSxHQUFHLEVBQUUsR0FEUDtBQUVFWCxFQUFBQSxJQUFJLEVBQUU7QUFDSlksSUFBQUEsS0FBSyxFQUFFLDRCQURIO0FBRUpDLElBQUFBLElBQUksRUFBRSxNQUZGLEVBRlI7O0FBTUVDLEVBQUFBLElBQUksRUFBRSx5QkFOUjtBQU9FQyxFQUFBQSxPQUFPLEVBQUU7QUFDUDtBQUNFQyxJQUFBQSxVQUFVLEVBQUUsc0JBRGQ7QUFFRUMsSUFBQUEsUUFBUSxFQUFFLHlCQUZaLEVBRE87O0FBS1A7QUFDRUQsSUFBQUEsVUFBVSxFQUFFLE1BRGQ7QUFFRUMsSUFBQUEsUUFBUSxFQUFFLHlCQUZaLEVBTE8sQ0FQWCxFQW5CaUI7Ozs7QUFxQ2pCO0FBQ0VOLEVBQUFBLEdBQUcsRUFBRSxHQURQO0FBRUVYLEVBQUFBLElBQUksRUFBRTtBQUNKWSxJQUFBQSxLQUFLLEVBQUUsaUJBREg7QUFFSkMsSUFBQUEsSUFBSSxFQUFFLE1BRkYsRUFGUjs7QUFNRUMsRUFBQUEsSUFBSSxFQUFFLHlCQU5SO0FBT0VDLEVBQUFBLE9BQU8sRUFBRTtBQUNQO0FBQ0VDLElBQUFBLFVBQVUsRUFBRSxzQkFEZDtBQUVFQyxJQUFBQSxRQUFRLEVBQUUseUJBRlosRUFETzs7QUFLUDtBQUNFRCxJQUFBQSxVQUFVLEVBQUUsTUFEZDtBQUVFQyxJQUFBQSxRQUFRLEVBQUUseUJBRlosRUFMTyxDQVBYLEVBckNpQixDQUFuQiIsInNvdXJjZXNDb250ZW50IjpbInZhciBkYXRhID0gW11cbmRhdGEuY3VzdG9tRGF0YXNldFNjaGVtYSA9IFtcbiAge1xuICAgIGtleTogJ2ZlZDRmMzcxLWZjZjktNDIxOS04YWNkLTdlM2MxOTAzN2Q5YycsXG4gICAgbGFiZWw6IHtcbiAgICAgIG5hbWU6ICd1bml2ZXJzaXR5JyxcbiAgICAgIGRlc2NyaXB0aW9uOiAnVW5pdmVyc2l0eSBpbnN0aXR1dGVzLicsXG4gICAgfSxcbiAgICBibHVlcHJpbnQ6IFtcbiAgICAgIHtcbiAgICAgICAgbGFiZWw6ICduYW1lJyxcbiAgICAgICAgZmllbGREYXRhVHlwZUtleTogJ1N0cmluZycsXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICBsYWJlbDogJ2xvbmdOYW1lJyxcbiAgICAgICAgZmllbGREYXRhVHlwZUtleTogJ1N0cmluZycsXG4gICAgICB9LFxuICAgIF0sXG4gIH0sXG5dXG5cbnIuZGIoJ3dlYmFwcCcpXG4gIC50YWJsZSgnc2V0dGluZycpXG4gIC5nZXQoJ2N1c3RvbURhdGFzZXRTY2hlbWEnKVxuICAudXBkYXRlKHsgY3VzdG9tRGF0YXNldFNjaGVtYTogZGF0YS5jdXN0b21EYXRhc2V0U2NoZW1hIH0sIHsgbm9uQXRvbWljOiB0cnVlIH0pXG5cbi8vIGV4YW1wbGVzOlxuXG5sZXQgdW5pdmVyc2l0aWVzID0gW1xuICB7XG4gICAgS2V5OiAnMScsXG4gICAgbmFtZToge1xuICAgICAgc2hvcnQ6ICcnLFxuICAgICAgbG9uZzogJycsXG4gICAgfSxcbiAgICBsb2dvOiAnJyxcbiAgICBnYWxsZXJ5OiBbXG4gICAgICB7XG4gICAgICAgIGltYWdlVGl0bGU6ICcnLFxuICAgICAgICBpbWFnZVVSTDogJycsXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICBpbWFnZVRpdGxlOiAnJyxcbiAgICAgICAgaW1hZ2VVUkw6ICcnLFxuICAgICAgfSxcbiAgICBdLFxuICB9LFxuICB7XG4gICAgS2V5OiAnMScsXG4gICAgbmFtZToge1xuICAgICAgc2hvcnQ6ICdVbml2ZXJzaXRhdGVhIGRlIEJ1Y2hhcmVzdCcsXG4gICAgICBsb25nOiAnVVNNRicsXG4gICAgfSxcbiAgICBsb2dvOiAnaHR0cDovL2xvY2FsaG9zdC9pbWFnZTMnLFxuICAgIGdhbGxlcnk6IFtcbiAgICAgIHtcbiAgICAgICAgaW1hZ2VUaXRsZTogJ01haW4gb2ZmaWNlIGJ1aWxkaW5nJyxcbiAgICAgICAgaW1hZ2VVUkw6ICdodHRwOi8vbG9jYWxob3N0L2ltYWdlMScsXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICBpbWFnZVRpdGxlOiAnbG9nbycsXG4gICAgICAgIGltYWdlVVJMOiAnaHR0cDovL2xvY2FsaG9zdC9pbWFnZTInLFxuICAgICAgfSxcbiAgICBdLFxuICB9LFxuICB7XG4gICAgS2V5OiAnMicsXG4gICAgbmFtZToge1xuICAgICAgc2hvcnQ6ICdJYXNpIFVuaXZlcnNpdHknLFxuICAgICAgbG9uZzogJ1VTTVUnLFxuICAgIH0sXG4gICAgbG9nbzogJ2h0dHA6Ly9sb2NhbGhvc3QvaW1hZ2UzJyxcbiAgICBnYWxsZXJ5OiBbXG4gICAgICB7XG4gICAgICAgIGltYWdlVGl0bGU6ICdNYWluIG9mZmljZSBidWlsZGluZycsXG4gICAgICAgIGltYWdlVVJMOiAnaHR0cDovL2xvY2FsaG9zdC9pbWFnZTEnLFxuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgaW1hZ2VUaXRsZTogJ2xvZ28nLFxuICAgICAgICBpbWFnZVVSTDogJ2h0dHA6Ly9sb2NhbGhvc3QvaW1hZ2UyJyxcbiAgICAgIH0sXG4gICAgXSxcbiAgfSxcbl1cbiJdfQ==

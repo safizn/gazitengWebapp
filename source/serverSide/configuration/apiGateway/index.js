@@ -1,47 +1,46 @@
-import filesystem from 'fs'
-import path from 'path'
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _fs = _interopRequireDefault(require("fs"));
+var _path = _interopRequireDefault(require("path"));
 
 let PROTOCOL = 'http://',
-  HOST = 'localhost'
+HOST = 'localhost';var _default =
 
-export default [
-  {
-    port: 8088,
-    targetService: 'oAuth',
-  },
-  {
-    port: 8084,
-    targetService: 'openIdConnect',
-  },
-  {
-    port: 8082,
-    targetService: 'apiEndpoint',
-    url: `${PROTOCOL}api.${HOST}/`,
-  },
-  {
-    port: 8081,
-    targetService: 'staticContent',
-    url: `${PROTOCOL}cdn.${HOST}`,
-  },
-  {
-    // reverse proxy http
-    port: 80,
-    targetService: 'webappUserInterface',
-  },
-  {
-    // expose as encrypted https
-    port: 443,
-    ssl: {
-      key: filesystem.readFileSync(path.join(__dirname, '../../../test/asset/sampleSSL/server.key')),
-      cert: filesystem.readFileSync(path.join(__dirname, '../../../test/asset/sampleSSL/server.crt')),
-    },
-    targetService: 'webappUserInterface',
-    callback: () => {
-      if (serviceConfig.ssl)
-        https
-          .createServer({ key: serviceConfig.ssl.key, cert: serviceConfig.ssl.cert }, serverKoa.callback())
-          .on('connection', socket => socket.setTimeout(120))
-          .listen(443, () => console.log(`☕%c ${serviceConfig.targetService} listening on port 443`, consoleLogStyle.green))
-    },
-  },
-]
+[
+{
+  port: 8088,
+  targetService: 'oAuth' },
+
+{
+  port: 8084,
+  targetService: 'openIdConnect' },
+
+{
+  port: 8082,
+  targetService: 'apiEndpoint',
+  url: `${PROTOCOL}api.${HOST}/` },
+
+{
+  port: 8081,
+  targetService: 'staticContent',
+  url: `${PROTOCOL}cdn.${HOST}` },
+
+{
+
+  port: 80,
+  targetService: 'webappUserInterface' },
+
+{
+
+  port: 443,
+  ssl: {
+    key: _fs.default.readFileSync(_path.default.join(__dirname, '../../../test/asset/sampleSSL/server.key')),
+    cert: _fs.default.readFileSync(_path.default.join(__dirname, '../../../test/asset/sampleSSL/server.crt')) },
+
+  targetService: 'webappUserInterface',
+  callback: () => {
+    if (serviceConfig.ssl)
+    https.
+    createServer({ key: serviceConfig.ssl.key, cert: serviceConfig.ssl.cert }, serverKoa.callback()).
+    on('connection', socket => socket.setTimeout(120)).
+    listen(443, () => console.log(`☕%c ${serviceConfig.targetService} listening on port 443`, consoleLogStyle.green));
+  } }];exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3NvdXJjZS9zZXJ2ZXJTaWRlL2NvbmZpZ3VyYXRpb24vYXBpR2F0ZXdheS9pbmRleC5qcyJdLCJuYW1lcyI6WyJQUk9UT0NPTCIsIkhPU1QiLCJwb3J0IiwidGFyZ2V0U2VydmljZSIsInVybCIsInNzbCIsImtleSIsImZpbGVzeXN0ZW0iLCJyZWFkRmlsZVN5bmMiLCJwYXRoIiwiam9pbiIsIl9fZGlybmFtZSIsImNlcnQiLCJjYWxsYmFjayIsInNlcnZpY2VDb25maWciLCJodHRwcyIsImNyZWF0ZVNlcnZlciIsInNlcnZlcktvYSIsIm9uIiwic29ja2V0Iiwic2V0VGltZW91dCIsImxpc3RlbiIsImNvbnNvbGUiLCJsb2ciLCJjb25zb2xlTG9nU3R5bGUiLCJncmVlbiJdLCJtYXBwaW5ncyI6InlMQUFBO0FBQ0E7O0FBRUEsSUFBSUEsUUFBUSxHQUFHLFNBQWY7QUFDRUMsSUFBSSxHQUFHLFdBRFQsQzs7QUFHZTtBQUNiO0FBQ0VDLEVBQUFBLElBQUksRUFBRSxJQURSO0FBRUVDLEVBQUFBLGFBQWEsRUFBRSxPQUZqQixFQURhOztBQUtiO0FBQ0VELEVBQUFBLElBQUksRUFBRSxJQURSO0FBRUVDLEVBQUFBLGFBQWEsRUFBRSxlQUZqQixFQUxhOztBQVNiO0FBQ0VELEVBQUFBLElBQUksRUFBRSxJQURSO0FBRUVDLEVBQUFBLGFBQWEsRUFBRSxhQUZqQjtBQUdFQyxFQUFBQSxHQUFHLEVBQUcsR0FBRUosUUFBUyxPQUFNQyxJQUFLLEdBSDlCLEVBVGE7O0FBY2I7QUFDRUMsRUFBQUEsSUFBSSxFQUFFLElBRFI7QUFFRUMsRUFBQUEsYUFBYSxFQUFFLGVBRmpCO0FBR0VDLEVBQUFBLEdBQUcsRUFBRyxHQUFFSixRQUFTLE9BQU1DLElBQUssRUFIOUIsRUFkYTs7QUFtQmI7O0FBRUVDLEVBQUFBLElBQUksRUFBRSxFQUZSO0FBR0VDLEVBQUFBLGFBQWEsRUFBRSxxQkFIakIsRUFuQmE7O0FBd0JiOztBQUVFRCxFQUFBQSxJQUFJLEVBQUUsR0FGUjtBQUdFRyxFQUFBQSxHQUFHLEVBQUU7QUFDSEMsSUFBQUEsR0FBRyxFQUFFQyxZQUFXQyxZQUFYLENBQXdCQyxjQUFLQyxJQUFMLENBQVVDLFNBQVYsRUFBcUIsMENBQXJCLENBQXhCLENBREY7QUFFSEMsSUFBQUEsSUFBSSxFQUFFTCxZQUFXQyxZQUFYLENBQXdCQyxjQUFLQyxJQUFMLENBQVVDLFNBQVYsRUFBcUIsMENBQXJCLENBQXhCLENBRkgsRUFIUDs7QUFPRVIsRUFBQUEsYUFBYSxFQUFFLHFCQVBqQjtBQVFFVSxFQUFBQSxRQUFRLEVBQUUsTUFBTTtBQUNkLFFBQUlDLGFBQWEsQ0FBQ1QsR0FBbEI7QUFDRVUsSUFBQUEsS0FBSztBQUNGQyxJQUFBQSxZQURILENBQ2dCLEVBQUVWLEdBQUcsRUFBRVEsYUFBYSxDQUFDVCxHQUFkLENBQWtCQyxHQUF6QixFQUE4Qk0sSUFBSSxFQUFFRSxhQUFhLENBQUNULEdBQWQsQ0FBa0JPLElBQXRELEVBRGhCLEVBQzhFSyxTQUFTLENBQUNKLFFBQVYsRUFEOUU7QUFFR0ssSUFBQUEsRUFGSCxDQUVNLFlBRk4sRUFFb0JDLE1BQU0sSUFBSUEsTUFBTSxDQUFDQyxVQUFQLENBQWtCLEdBQWxCLENBRjlCO0FBR0dDLElBQUFBLE1BSEgsQ0FHVSxHQUhWLEVBR2UsTUFBTUMsT0FBTyxDQUFDQyxHQUFSLENBQWEsT0FBTVQsYUFBYSxDQUFDWCxhQUFjLHdCQUEvQyxFQUF3RXFCLGVBQWUsQ0FBQ0MsS0FBeEYsQ0FIckI7QUFJSCxHQWRILEVBeEJhLEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZmlsZXN5c3RlbSBmcm9tICdmcydcbmltcG9ydCBwYXRoIGZyb20gJ3BhdGgnXG5cbmxldCBQUk9UT0NPTCA9ICdodHRwOi8vJyxcbiAgSE9TVCA9ICdsb2NhbGhvc3QnXG5cbmV4cG9ydCBkZWZhdWx0IFtcbiAge1xuICAgIHBvcnQ6IDgwODgsXG4gICAgdGFyZ2V0U2VydmljZTogJ29BdXRoJyxcbiAgfSxcbiAge1xuICAgIHBvcnQ6IDgwODQsXG4gICAgdGFyZ2V0U2VydmljZTogJ29wZW5JZENvbm5lY3QnLFxuICB9LFxuICB7XG4gICAgcG9ydDogODA4MixcbiAgICB0YXJnZXRTZXJ2aWNlOiAnYXBpRW5kcG9pbnQnLFxuICAgIHVybDogYCR7UFJPVE9DT0x9YXBpLiR7SE9TVH0vYCxcbiAgfSxcbiAge1xuICAgIHBvcnQ6IDgwODEsXG4gICAgdGFyZ2V0U2VydmljZTogJ3N0YXRpY0NvbnRlbnQnLFxuICAgIHVybDogYCR7UFJPVE9DT0x9Y2RuLiR7SE9TVH1gLFxuICB9LFxuICB7XG4gICAgLy8gcmV2ZXJzZSBwcm94eSBodHRwXG4gICAgcG9ydDogODAsXG4gICAgdGFyZ2V0U2VydmljZTogJ3dlYmFwcFVzZXJJbnRlcmZhY2UnLFxuICB9LFxuICB7XG4gICAgLy8gZXhwb3NlIGFzIGVuY3J5cHRlZCBodHRwc1xuICAgIHBvcnQ6IDQ0MyxcbiAgICBzc2w6IHtcbiAgICAgIGtleTogZmlsZXN5c3RlbS5yZWFkRmlsZVN5bmMocGF0aC5qb2luKF9fZGlybmFtZSwgJy4uLy4uLy4uL3Rlc3QvYXNzZXQvc2FtcGxlU1NML3NlcnZlci5rZXknKSksXG4gICAgICBjZXJ0OiBmaWxlc3lzdGVtLnJlYWRGaWxlU3luYyhwYXRoLmpvaW4oX19kaXJuYW1lLCAnLi4vLi4vLi4vdGVzdC9hc3NldC9zYW1wbGVTU0wvc2VydmVyLmNydCcpKSxcbiAgICB9LFxuICAgIHRhcmdldFNlcnZpY2U6ICd3ZWJhcHBVc2VySW50ZXJmYWNlJyxcbiAgICBjYWxsYmFjazogKCkgPT4ge1xuICAgICAgaWYgKHNlcnZpY2VDb25maWcuc3NsKVxuICAgICAgICBodHRwc1xuICAgICAgICAgIC5jcmVhdGVTZXJ2ZXIoeyBrZXk6IHNlcnZpY2VDb25maWcuc3NsLmtleSwgY2VydDogc2VydmljZUNvbmZpZy5zc2wuY2VydCB9LCBzZXJ2ZXJLb2EuY2FsbGJhY2soKSlcbiAgICAgICAgICAub24oJ2Nvbm5lY3Rpb24nLCBzb2NrZXQgPT4gc29ja2V0LnNldFRpbWVvdXQoMTIwKSlcbiAgICAgICAgICAubGlzdGVuKDQ0MywgKCkgPT4gY29uc29sZS5sb2coYOKYlSVjICR7c2VydmljZUNvbmZpZy50YXJnZXRTZXJ2aWNlfSBsaXN0ZW5pbmcgb24gcG9ydCA0NDNgLCBjb25zb2xlTG9nU3R5bGUuZ3JlZW4pKVxuICAgIH0sXG4gIH0sXG5dXG4iXX0=

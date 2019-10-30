@@ -1,4 +1,4 @@
-
+"use strict";
 console.info(
-  '☕ Service worker disabled for development, will be generated at build time.'
-);
+'☕ Service worker disabled for development, will be generated at build time.');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL3NvdXJjZS9jbGllbnRTaWRlL2Fzc2V0L2phdmFzY3JpcHQvc2VydmljZVdvcmtlci9zZXJ2aWNlV29ya2VyLmpzIl0sIm5hbWVzIjpbImNvbnNvbGUiLCJpbmZvIl0sIm1hcHBpbmdzIjoiO0FBQ0FBLE9BQU8sQ0FBQ0MsSUFBUjtBQUNFLDZFQURGIiwic291cmNlc0NvbnRlbnQiOlsiXG5jb25zb2xlLmluZm8oXG4gICfimJUgU2VydmljZSB3b3JrZXIgZGlzYWJsZWQgZm9yIGRldmVsb3BtZW50LCB3aWxsIGJlIGdlbmVyYXRlZCBhdCBidWlsZCB0aW1lLidcbik7XG4iXX0=
