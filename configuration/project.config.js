@@ -49,7 +49,7 @@ const ownConfig = {
   },
   build: {
     get compile() {
-      return [path.relative(ownConfig.directory.root, ownConfig.directory.resource)]
+      return [path.relative(ownConfig.directory.root, ownConfig.directory.source), path.relative(ownConfig.directory.root, ownConfig.directory.resource)]
     },
     repositoryURL: 'https://github.com/AppScriptIO/gazitengWebapp',
   },
