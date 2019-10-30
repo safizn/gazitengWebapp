@@ -7,12 +7,12 @@ import {
   // webappUserInterface,
   // webSocket
 } from '@dependency/appscript'
-import { runDockerContainer } from '@dependency/deploymentScript/script/graphDatabase/memgraphContainer.js'
+import { memgraphContainer } from '@dependency/deploymentProvisioning'
 
 // initialize services
 ;(async () => {
   console.groupCollapsed('• Run prerequisite containers:')
-  runDockerContainer() // temporary solution
+  memgraphContainer.runDockerContainer() // temporary solution
   console.groupEnd()
 
   console.groupCollapsed('• Run services:')
