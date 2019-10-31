@@ -52,7 +52,7 @@ const ownConfig = {
       return [
         path.relative(ownConfig.directory.root, ownConfig.directory.source),
         path.relative(ownConfig.directory.root, ownConfig.directory.resource),
-        path.relative(ownConfig.directory.root, 'configuration'),
+        path.relative(ownConfig.directory.root, 'configuration'), // TODO: the graph data must be updated in order to include 'configuration' folder.
       ]
     },
     repositoryURL: 'https://github.com/AppScriptIO/gazitengWebapp',
