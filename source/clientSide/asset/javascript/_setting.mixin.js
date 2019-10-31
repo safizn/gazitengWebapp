@@ -1,22 +1,23 @@
-const mixin = superclass => class extends superclass {
-    
-    constructor(...args) {
-        // mixins should either 1) not define a constructor, 2) require a specific
-        // constructor signature, or 3) pass along all arguments.
-        super(...args);
-    }
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;const mixin = superclass => class extends superclass {
 
-    static get properties() {
-        return {
-            setting: {
-                location: {
-                    routeBasePath: "http://localhost"
-                }
-            }
-        };
-    }
+  constructor(...args) {
 
-}
 
-// window.settingMixin = settingMixin
-export default mixin
+    super(...args);
+  }
+
+  static get properties() {
+    return {
+      setting: {
+        location: {
+          routeBasePath: "http://localhost" } } };
+
+
+
+  }};var _default =
+
+
+
+
+mixin;exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3NvdXJjZS9jbGllbnRTaWRlL2Fzc2V0L2phdmFzY3JpcHQvX3NldHRpbmcubWl4aW4uanMiXSwibmFtZXMiOlsibWl4aW4iLCJzdXBlcmNsYXNzIiwiY29uc3RydWN0b3IiLCJhcmdzIiwicHJvcGVydGllcyIsInNldHRpbmciLCJsb2NhdGlvbiIsInJvdXRlQmFzZVBhdGgiXSwibWFwcGluZ3MiOiJvR0FBQSxNQUFNQSxLQUFLLEdBQUdDLFVBQVUsSUFBSSxjQUFjQSxVQUFkLENBQXlCOztBQUVqREMsRUFBQUEsV0FBVyxDQUFDLEdBQUdDLElBQUosRUFBVTs7O0FBR2pCLFVBQU0sR0FBR0EsSUFBVDtBQUNIOztBQUVELGFBQVdDLFVBQVgsR0FBd0I7QUFDcEIsV0FBTztBQUNIQyxNQUFBQSxPQUFPLEVBQUU7QUFDTEMsUUFBQUEsUUFBUSxFQUFFO0FBQ05DLFVBQUFBLGFBQWEsRUFBRSxrQkFEVCxFQURMLEVBRE4sRUFBUDs7OztBQU9ILEdBaEJnRCxDQUFyRCxDOzs7OztBQXFCZVAsSyIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IG1peGluID0gc3VwZXJjbGFzcyA9PiBjbGFzcyBleHRlbmRzIHN1cGVyY2xhc3Mge1xuICAgIFxuICAgIGNvbnN0cnVjdG9yKC4uLmFyZ3MpIHtcbiAgICAgICAgLy8gbWl4aW5zIHNob3VsZCBlaXRoZXIgMSkgbm90IGRlZmluZSBhIGNvbnN0cnVjdG9yLCAyKSByZXF1aXJlIGEgc3BlY2lmaWNcbiAgICAgICAgLy8gY29uc3RydWN0b3Igc2lnbmF0dXJlLCBvciAzKSBwYXNzIGFsb25nIGFsbCBhcmd1bWVudHMuXG4gICAgICAgIHN1cGVyKC4uLmFyZ3MpO1xuICAgIH1cblxuICAgIHN0YXRpYyBnZXQgcHJvcGVydGllcygpIHtcbiAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgIHNldHRpbmc6IHtcbiAgICAgICAgICAgICAgICBsb2NhdGlvbjoge1xuICAgICAgICAgICAgICAgICAgICByb3V0ZUJhc2VQYXRoOiBcImh0dHA6Ly9sb2NhbGhvc3RcIlxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgfTtcbiAgICB9XG5cbn1cblxuLy8gd2luZG93LnNldHRpbmdNaXhpbiA9IHNldHRpbmdNaXhpblxuZXhwb3J0IGRlZmF1bHQgbWl4aW4iXX0=

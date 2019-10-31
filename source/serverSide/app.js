@@ -1,28 +1,29 @@
-import ownProjectConfig from '../../configuration'
-import {
-  apiEndpoint,
-  // oAuth,
-  // openIdConnect,
-  // staticContent,
-  // webappUserInterface,
-  // webSocket
-} from '@dependency/appscript'
-import { memgraphContainer } from '@dependency/deploymentProvisioning'
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");var _configuration = _interopRequireDefault(require("../../configuration"));
+var _appscript = require("@dependency/appscript");
 
-// initialize services
-;(async () => {
-  console.groupCollapsed('• Run prerequisite containers:')
-  memgraphContainer.runDockerContainer() // temporary solution
-  console.groupEnd()
 
-  console.groupCollapsed('• Run services:')
-  await apiEndpoint.initialize({ targetProjectConfig: ownProjectConfig })
-  // await oAuth.initialize({ targetProjectConfig: ownProjectConfig })
-  // await openIdConnect.initialize({ targetProjectConfig: ownProjectConfig })
-  // await staticContent.initialize({ targetProjectConfig: ownProjectConfig, entrypointConditionKey: '78f91938-f9cf-4cbf-9bc8-f97836ff23dd' })
-  // await webappUserInterface.initialize({ targetProjectConfig: ownProjectConfig })
-  // await webSocket.initialize({ targetProjectConfig: ownProjectConfig })
-  console.groupEnd()
 
-  console.log('• WebApp up & running !')
-})()
+
+
+
+
+var _deploymentProvisioning = require("@dependency/deploymentProvisioning");
+
+
+(async () => {
+  console.groupCollapsed('• Run prerequisite containers:');
+  _deploymentProvisioning.memgraphContainer.runDockerContainer();
+  console.groupEnd();
+
+  console.groupCollapsed('• Run services:');
+  await _appscript.apiEndpoint.initialize({ targetProjectConfig: _configuration.default });
+
+
+
+
+
+  console.groupEnd();
+
+  console.log('• WebApp up & running !');
+})();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9zZXJ2ZXJTaWRlL2FwcC5qcyJdLCJuYW1lcyI6WyJjb25zb2xlIiwiZ3JvdXBDb2xsYXBzZWQiLCJtZW1ncmFwaENvbnRhaW5lciIsInJ1bkRvY2tlckNvbnRhaW5lciIsImdyb3VwRW5kIiwiYXBpRW5kcG9pbnQiLCJpbml0aWFsaXplIiwidGFyZ2V0UHJvamVjdENvbmZpZyIsIm93blByb2plY3RDb25maWciLCJsb2ciXSwibWFwcGluZ3MiOiJrR0FBQTtBQUNBOzs7Ozs7OztBQVFBOzs7QUFHQyxDQUFDLFlBQVk7QUFDWkEsRUFBQUEsT0FBTyxDQUFDQyxjQUFSLENBQXVCLGdDQUF2QjtBQUNBQyw0Q0FBa0JDLGtCQUFsQjtBQUNBSCxFQUFBQSxPQUFPLENBQUNJLFFBQVI7O0FBRUFKLEVBQUFBLE9BQU8sQ0FBQ0MsY0FBUixDQUF1QixpQkFBdkI7QUFDQSxRQUFNSSx1QkFBWUMsVUFBWixDQUF1QixFQUFFQyxtQkFBbUIsRUFBRUMsc0JBQXZCLEVBQXZCLENBQU47Ozs7OztBQU1BUixFQUFBQSxPQUFPLENBQUNJLFFBQVI7O0FBRUFKLEVBQUFBLE9BQU8sQ0FBQ1MsR0FBUixDQUFZLHlCQUFaO0FBQ0QsQ0FmQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBvd25Qcm9qZWN0Q29uZmlnIGZyb20gJy4uLy4uL2NvbmZpZ3VyYXRpb24nXG5pbXBvcnQge1xuICBhcGlFbmRwb2ludCxcbiAgLy8gb0F1dGgsXG4gIC8vIG9wZW5JZENvbm5lY3QsXG4gIC8vIHN0YXRpY0NvbnRlbnQsXG4gIC8vIHdlYmFwcFVzZXJJbnRlcmZhY2UsXG4gIC8vIHdlYlNvY2tldFxufSBmcm9tICdAZGVwZW5kZW5jeS9hcHBzY3JpcHQnXG5pbXBvcnQgeyBtZW1ncmFwaENvbnRhaW5lciB9IGZyb20gJ0BkZXBlbmRlbmN5L2RlcGxveW1lbnRQcm92aXNpb25pbmcnXG5cbi8vIGluaXRpYWxpemUgc2VydmljZXNcbjsoYXN5bmMgKCkgPT4ge1xuICBjb25zb2xlLmdyb3VwQ29sbGFwc2VkKCfigKIgUnVuIHByZXJlcXVpc2l0ZSBjb250YWluZXJzOicpXG4gIG1lbWdyYXBoQ29udGFpbmVyLnJ1bkRvY2tlckNvbnRhaW5lcigpIC8vIHRlbXBvcmFyeSBzb2x1dGlvblxuICBjb25zb2xlLmdyb3VwRW5kKClcblxuICBjb25zb2xlLmdyb3VwQ29sbGFwc2VkKCfigKIgUnVuIHNlcnZpY2VzOicpXG4gIGF3YWl0IGFwaUVuZHBvaW50LmluaXRpYWxpemUoeyB0YXJnZXRQcm9qZWN0Q29uZmlnOiBvd25Qcm9qZWN0Q29uZmlnIH0pXG4gIC8vIGF3YWl0IG9BdXRoLmluaXRpYWxpemUoeyB0YXJnZXRQcm9qZWN0Q29uZmlnOiBvd25Qcm9qZWN0Q29uZmlnIH0pXG4gIC8vIGF3YWl0IG9wZW5JZENvbm5lY3QuaW5pdGlhbGl6ZSh7IHRhcmdldFByb2plY3RDb25maWc6IG93blByb2plY3RDb25maWcgfSlcbiAgLy8gYXdhaXQgc3RhdGljQ29udGVudC5pbml0aWFsaXplKHsgdGFyZ2V0UHJvamVjdENvbmZpZzogb3duUHJvamVjdENvbmZpZywgZW50cnlwb2ludENvbmRpdGlvbktleTogJzc4ZjkxOTM4LWY5Y2YtNGNiZi05YmM4LWY5NzgzNmZmMjNkZCcgfSlcbiAgLy8gYXdhaXQgd2ViYXBwVXNlckludGVyZmFjZS5pbml0aWFsaXplKHsgdGFyZ2V0UHJvamVjdENvbmZpZzogb3duUHJvamVjdENvbmZpZyB9KVxuICAvLyBhd2FpdCB3ZWJTb2NrZXQuaW5pdGlhbGl6ZSh7IHRhcmdldFByb2plY3RDb25maWc6IG93blByb2plY3RDb25maWcgfSlcbiAgY29uc29sZS5ncm91cEVuZCgpXG5cbiAgY29uc29sZS5sb2coJ+KAoiBXZWJBcHAgdXAgJiBydW5uaW5nICEnKVxufSkoKVxuIl19

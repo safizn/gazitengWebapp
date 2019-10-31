@@ -1,16 +1,17 @@
-let settingProperty = {
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;let settingProperty = {
   location: {
-    routeBasePath: `${App.config.PROTOCOL}${App.config.HOST}`
-  }
-}
+    routeBasePath: `${App.config.PROTOCOL}${App.config.HOST}` } };
 
- const behavior = {
-    properties: {
-      setting: {
-        type: Object,
-        value: () => settingProperty
-      },
-    },
-};
 
-export default behavior
+
+const behavior = {
+  properties: {
+    setting: {
+      type: Object,
+      value: () => settingProperty } } };var _default =
+
+
+
+
+behavior;exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3NvdXJjZS9jbGllbnRTaWRlL2Fzc2V0L2phdmFzY3JpcHQvX3NldHRpbmcuYmVoYXZpb3IuanMiXSwibmFtZXMiOlsic2V0dGluZ1Byb3BlcnR5IiwibG9jYXRpb24iLCJyb3V0ZUJhc2VQYXRoIiwiQXBwIiwiY29uZmlnIiwiUFJPVE9DT0wiLCJIT1NUIiwiYmVoYXZpb3IiLCJwcm9wZXJ0aWVzIiwic2V0dGluZyIsInR5cGUiLCJPYmplY3QiLCJ2YWx1ZSJdLCJtYXBwaW5ncyI6Im9HQUFBLElBQUlBLGVBQWUsR0FBRztBQUNwQkMsRUFBQUEsUUFBUSxFQUFFO0FBQ1JDLElBQUFBLGFBQWEsRUFBRyxHQUFFQyxHQUFHLENBQUNDLE1BQUosQ0FBV0MsUUFBUyxHQUFFRixHQUFHLENBQUNDLE1BQUosQ0FBV0UsSUFBSyxFQURoRCxFQURVLEVBQXRCOzs7O0FBTUMsTUFBTUMsUUFBUSxHQUFHO0FBQ2RDLEVBQUFBLFVBQVUsRUFBRTtBQUNWQyxJQUFBQSxPQUFPLEVBQUU7QUFDUEMsTUFBQUEsSUFBSSxFQUFFQyxNQURDO0FBRVBDLE1BQUFBLEtBQUssRUFBRSxNQUFNWixlQUZOLEVBREMsRUFERSxFQUFqQixDOzs7OztBQVNjTyxRIiwic291cmNlc0NvbnRlbnQiOlsibGV0IHNldHRpbmdQcm9wZXJ0eSA9IHtcbiAgbG9jYXRpb246IHtcbiAgICByb3V0ZUJhc2VQYXRoOiBgJHtBcHAuY29uZmlnLlBST1RPQ09MfSR7QXBwLmNvbmZpZy5IT1NUfWBcbiAgfVxufVxuXG4gY29uc3QgYmVoYXZpb3IgPSB7XG4gICAgcHJvcGVydGllczoge1xuICAgICAgc2V0dGluZzoge1xuICAgICAgICB0eXBlOiBPYmplY3QsXG4gICAgICAgIHZhbHVlOiAoKSA9PiBzZXR0aW5nUHJvcGVydHlcbiAgICAgIH0sXG4gICAgfSxcbn07XG5cbmV4cG9ydCBkZWZhdWx0IGJlaGF2aW9yIl19

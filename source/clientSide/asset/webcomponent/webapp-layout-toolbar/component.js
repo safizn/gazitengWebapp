@@ -1,72 +1,73 @@
-{
-// window.addEventListener('WebComponentsReady', function() {
-    class Element extends Polymer.Element {
-    static get is() { return 'webapp-layout-toolbar'; }
+"use strict";{
+
+  class Element extends Polymer.Element {
+    static get is() {return 'webapp-layout-toolbar';}
     static get properties() {
-        return { /* properties metadata */ 
+      return {
         route: Object,
         app: Object,
         page: {
-            type: Object,
-            notify: true,
-            reflectToAttribute: true,
-            observer: '_pageChanged',
-        },
-        // showspinner: {
-        //     type: Boolean,
-        //     notify: true,
-        //     reflectToAttribute: true,
-        //     observer: 'toggleSpinner',
-        // },
-        }
+          type: Object,
+          notify: true,
+          reflectToAttribute: true,
+          observer: '_pageChanged' } };
+
+
+
+
+
+
+
+
     }
 
-    static get observers() { return [ /* observer descriptors */
-    ] }
+    static get observers() {return [];
+    }
 
     constructor() {
-        super();
+      super();
     }
 
     connectedCallback() {
-        super.connectedCallback();
+      super.connectedCallback();
     }
 
     ready() {
-        super.ready();
-        if('ontouchstart' in window) this.$.drawer.swipeOpen = true // allow open swipe on drawer for touchscreen devices.
+      super.ready();
+      if ('ontouchstart' in window) this.$.drawer.swipeOpen = true;
     }
 
     _pageChanged(page, oldView) {
-        // Load page import on demand. Show 404 page if fails
-        if (page.selectorName != null) {
-            console.log(page.selectorName)
-            // let callbackOnload = this.hideSpinner;
-            let resolvedPageUrl = this.resolveUrl(`../${page.file}`);
-            let callbackError = this._showPage404;
-            Polymer.importHref(resolvedPageUrl, null, callbackError, true);
-        }
 
-        if (!this.$.drawer.persistent) {
-            this.$.drawer.close();  
-        }
+      if (page.selectorName != null) {
+        console.log(page.selectorName);
+
+        let resolvedPageUrl = this.resolveUrl(`../${page.file}`);
+        let callbackError = this._showPage404;
+        Polymer.importHref(resolvedPageUrl, null, callbackError, true);
+      }
+
+      if (!this.$.drawer.persistent) {
+        this.$.drawer.close();
+      }
     }
 
-    // hideSpinner() {
-    //   this.showspinner = false;
-    // }
 
-    // toggleSpinner(newValue, oldValue) {
-    //   console.log(this.$.spinner)
-    //   (newValue == true) ? this.$.spinner.setAttribute('active', "") : this.$.spinner.removeProperty("active");
-    // }
+
+
+
+
+
+
+
 
     _showPage404() {
-        this.page.selectorName = 'viewState404';
-    }
+      this.page.selectorName = 'viewState404';
+    }}
 
-    }
-    // Register custom element definition using standard platform API
-    customElements.define(Element.is, Element);
-// })
+
+
+  customElements.define(Element.is, Element);
+
 }
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL3NvdXJjZS9jbGllbnRTaWRlL2Fzc2V0L3dlYmNvbXBvbmVudC93ZWJhcHAtbGF5b3V0LXRvb2xiYXIvY29tcG9uZW50LmpzIl0sIm5hbWVzIjpbIkVsZW1lbnQiLCJQb2x5bWVyIiwiaXMiLCJwcm9wZXJ0aWVzIiwicm91dGUiLCJPYmplY3QiLCJhcHAiLCJwYWdlIiwidHlwZSIsIm5vdGlmeSIsInJlZmxlY3RUb0F0dHJpYnV0ZSIsIm9ic2VydmVyIiwib2JzZXJ2ZXJzIiwiY29uc3RydWN0b3IiLCJjb25uZWN0ZWRDYWxsYmFjayIsInJlYWR5Iiwid2luZG93IiwiJCIsImRyYXdlciIsInN3aXBlT3BlbiIsIl9wYWdlQ2hhbmdlZCIsIm9sZFZpZXciLCJzZWxlY3Rvck5hbWUiLCJjb25zb2xlIiwibG9nIiwicmVzb2x2ZWRQYWdlVXJsIiwicmVzb2x2ZVVybCIsImZpbGUiLCJjYWxsYmFja0Vycm9yIiwiX3Nob3dQYWdlNDA0IiwiaW1wb3J0SHJlZiIsInBlcnNpc3RlbnQiLCJjbG9zZSIsImN1c3RvbUVsZW1lbnRzIiwiZGVmaW5lIl0sIm1hcHBpbmdzIjoiYUFBQTs7QUFFSSxRQUFNQSxPQUFOLFNBQXNCQyxPQUFPLENBQUNELE9BQTlCLENBQXNDO0FBQ3RDLGVBQVdFLEVBQVgsR0FBZ0IsQ0FBRSxPQUFPLHVCQUFQLENBQWlDO0FBQ25ELGVBQVdDLFVBQVgsR0FBd0I7QUFDcEIsYUFBTztBQUNQQyxRQUFBQSxLQUFLLEVBQUVDLE1BREE7QUFFUEMsUUFBQUEsR0FBRyxFQUFFRCxNQUZFO0FBR1BFLFFBQUFBLElBQUksRUFBRTtBQUNGQyxVQUFBQSxJQUFJLEVBQUVILE1BREo7QUFFRkksVUFBQUEsTUFBTSxFQUFFLElBRk47QUFHRkMsVUFBQUEsa0JBQWtCLEVBQUUsSUFIbEI7QUFJRkMsVUFBQUEsUUFBUSxFQUFFLGNBSlIsRUFIQyxFQUFQOzs7Ozs7Ozs7QUFnQkg7O0FBRUQsZUFBV0MsU0FBWCxHQUF1QixDQUFFLE9BQU8sRUFBUDtBQUN0Qjs7QUFFSEMsSUFBQUEsV0FBVyxHQUFHO0FBQ1Y7QUFDSDs7QUFFREMsSUFBQUEsaUJBQWlCLEdBQUc7QUFDaEIsWUFBTUEsaUJBQU47QUFDSDs7QUFFREMsSUFBQUEsS0FBSyxHQUFHO0FBQ0osWUFBTUEsS0FBTjtBQUNBLFVBQUcsa0JBQWtCQyxNQUFyQixFQUE2QixLQUFLQyxDQUFMLENBQU9DLE1BQVAsQ0FBY0MsU0FBZCxHQUEwQixJQUExQjtBQUNoQzs7QUFFREMsSUFBQUEsWUFBWSxDQUFDYixJQUFELEVBQU9jLE9BQVAsRUFBZ0I7O0FBRXhCLFVBQUlkLElBQUksQ0FBQ2UsWUFBTCxJQUFxQixJQUF6QixFQUErQjtBQUMzQkMsUUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlqQixJQUFJLENBQUNlLFlBQWpCOztBQUVBLFlBQUlHLGVBQWUsR0FBRyxLQUFLQyxVQUFMLENBQWlCLE1BQUtuQixJQUFJLENBQUNvQixJQUFLLEVBQWhDLENBQXRCO0FBQ0EsWUFBSUMsYUFBYSxHQUFHLEtBQUtDLFlBQXpCO0FBQ0E1QixRQUFBQSxPQUFPLENBQUM2QixVQUFSLENBQW1CTCxlQUFuQixFQUFvQyxJQUFwQyxFQUEwQ0csYUFBMUMsRUFBeUQsSUFBekQ7QUFDSDs7QUFFRCxVQUFJLENBQUMsS0FBS1gsQ0FBTCxDQUFPQyxNQUFQLENBQWNhLFVBQW5CLEVBQStCO0FBQzNCLGFBQUtkLENBQUwsQ0FBT0MsTUFBUCxDQUFjYyxLQUFkO0FBQ0g7QUFDSjs7Ozs7Ozs7Ozs7QUFXREgsSUFBQUEsWUFBWSxHQUFHO0FBQ1gsV0FBS3RCLElBQUwsQ0FBVWUsWUFBVixHQUF5QixjQUF6QjtBQUNILEtBL0RxQzs7OztBQW1FdENXLEVBQUFBLGNBQWMsQ0FBQ0MsTUFBZixDQUFzQmxDLE9BQU8sQ0FBQ0UsRUFBOUIsRUFBa0NGLE9BQWxDOztBQUVIIiwic291cmNlc0NvbnRlbnQiOlsie1xuLy8gd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ1dlYkNvbXBvbmVudHNSZWFkeScsIGZ1bmN0aW9uKCkge1xuICAgIGNsYXNzIEVsZW1lbnQgZXh0ZW5kcyBQb2x5bWVyLkVsZW1lbnQge1xuICAgIHN0YXRpYyBnZXQgaXMoKSB7IHJldHVybiAnd2ViYXBwLWxheW91dC10b29sYmFyJzsgfVxuICAgIHN0YXRpYyBnZXQgcHJvcGVydGllcygpIHtcbiAgICAgICAgcmV0dXJuIHsgLyogcHJvcGVydGllcyBtZXRhZGF0YSAqLyBcbiAgICAgICAgcm91dGU6IE9iamVjdCxcbiAgICAgICAgYXBwOiBPYmplY3QsXG4gICAgICAgIHBhZ2U6IHtcbiAgICAgICAgICAgIHR5cGU6IE9iamVjdCxcbiAgICAgICAgICAgIG5vdGlmeTogdHJ1ZSxcbiAgICAgICAgICAgIHJlZmxlY3RUb0F0dHJpYnV0ZTogdHJ1ZSxcbiAgICAgICAgICAgIG9ic2VydmVyOiAnX3BhZ2VDaGFuZ2VkJyxcbiAgICAgICAgfSxcbiAgICAgICAgLy8gc2hvd3NwaW5uZXI6IHtcbiAgICAgICAgLy8gICAgIHR5cGU6IEJvb2xlYW4sXG4gICAgICAgIC8vICAgICBub3RpZnk6IHRydWUsXG4gICAgICAgIC8vICAgICByZWZsZWN0VG9BdHRyaWJ1dGU6IHRydWUsXG4gICAgICAgIC8vICAgICBvYnNlcnZlcjogJ3RvZ2dsZVNwaW5uZXInLFxuICAgICAgICAvLyB9LFxuICAgICAgICB9XG4gICAgfVxuXG4gICAgc3RhdGljIGdldCBvYnNlcnZlcnMoKSB7IHJldHVybiBbIC8qIG9ic2VydmVyIGRlc2NyaXB0b3JzICovXG4gICAgXSB9XG5cbiAgICBjb25zdHJ1Y3RvcigpIHtcbiAgICAgICAgc3VwZXIoKTtcbiAgICB9XG5cbiAgICBjb25uZWN0ZWRDYWxsYmFjaygpIHtcbiAgICAgICAgc3VwZXIuY29ubmVjdGVkQ2FsbGJhY2soKTtcbiAgICB9XG5cbiAgICByZWFkeSgpIHtcbiAgICAgICAgc3VwZXIucmVhZHkoKTtcbiAgICAgICAgaWYoJ29udG91Y2hzdGFydCcgaW4gd2luZG93KSB0aGlzLiQuZHJhd2VyLnN3aXBlT3BlbiA9IHRydWUgLy8gYWxsb3cgb3BlbiBzd2lwZSBvbiBkcmF3ZXIgZm9yIHRvdWNoc2NyZWVuIGRldmljZXMuXG4gICAgfVxuXG4gICAgX3BhZ2VDaGFuZ2VkKHBhZ2UsIG9sZFZpZXcpIHtcbiAgICAgICAgLy8gTG9hZCBwYWdlIGltcG9ydCBvbiBkZW1hbmQuIFNob3cgNDA0IHBhZ2UgaWYgZmFpbHNcbiAgICAgICAgaWYgKHBhZ2Uuc2VsZWN0b3JOYW1lICE9IG51bGwpIHtcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKHBhZ2Uuc2VsZWN0b3JOYW1lKVxuICAgICAgICAgICAgLy8gbGV0IGNhbGxiYWNrT25sb2FkID0gdGhpcy5oaWRlU3Bpbm5lcjtcbiAgICAgICAgICAgIGxldCByZXNvbHZlZFBhZ2VVcmwgPSB0aGlzLnJlc29sdmVVcmwoYC4uLyR7cGFnZS5maWxlfWApO1xuICAgICAgICAgICAgbGV0IGNhbGxiYWNrRXJyb3IgPSB0aGlzLl9zaG93UGFnZTQwNDtcbiAgICAgICAgICAgIFBvbHltZXIuaW1wb3J0SHJlZihyZXNvbHZlZFBhZ2VVcmwsIG51bGwsIGNhbGxiYWNrRXJyb3IsIHRydWUpO1xuICAgICAgICB9XG5cbiAgICAgICAgaWYgKCF0aGlzLiQuZHJhd2VyLnBlcnNpc3RlbnQpIHtcbiAgICAgICAgICAgIHRoaXMuJC5kcmF3ZXIuY2xvc2UoKTsgIFxuICAgICAgICB9XG4gICAgfVxuXG4gICAgLy8gaGlkZVNwaW5uZXIoKSB7XG4gICAgLy8gICB0aGlzLnNob3dzcGlubmVyID0gZmFsc2U7XG4gICAgLy8gfVxuXG4gICAgLy8gdG9nZ2xlU3Bpbm5lcihuZXdWYWx1ZSwgb2xkVmFsdWUpIHtcbiAgICAvLyAgIGNvbnNvbGUubG9nKHRoaXMuJC5zcGlubmVyKVxuICAgIC8vICAgKG5ld1ZhbHVlID09IHRydWUpID8gdGhpcy4kLnNwaW5uZXIuc2V0QXR0cmlidXRlKCdhY3RpdmUnLCBcIlwiKSA6IHRoaXMuJC5zcGlubmVyLnJlbW92ZVByb3BlcnR5KFwiYWN0aXZlXCIpO1xuICAgIC8vIH1cblxuICAgIF9zaG93UGFnZTQwNCgpIHtcbiAgICAgICAgdGhpcy5wYWdlLnNlbGVjdG9yTmFtZSA9ICd2aWV3U3RhdGU0MDQnO1xuICAgIH1cblxuICAgIH1cbiAgICAvLyBSZWdpc3RlciBjdXN0b20gZWxlbWVudCBkZWZpbml0aW9uIHVzaW5nIHN0YW5kYXJkIHBsYXRmb3JtIEFQSVxuICAgIGN1c3RvbUVsZW1lbnRzLmRlZmluZShFbGVtZW50LmlzLCBFbGVtZW50KTtcbi8vIH0pXG59XG4iXX0=

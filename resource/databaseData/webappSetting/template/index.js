@@ -1,4 +1,4 @@
-export default {
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
   implementationName: 'template',
-  dataArray: ['documentBackend', 'documentFrontend'],
-}
+  dataArray: ['documentBackend', 'documentFrontend'] };exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3Jlc291cmNlL2RhdGFiYXNlRGF0YS93ZWJhcHBTZXR0aW5nL3RlbXBsYXRlL2luZGV4LmpzIl0sIm5hbWVzIjpbImltcGxlbWVudGF0aW9uTmFtZSIsImRhdGFBcnJheSJdLCJtYXBwaW5ncyI6Im1IQUFlO0FBQ2JBLEVBQUFBLGtCQUFrQixFQUFFLFVBRFA7QUFFYkMsRUFBQUEsU0FBUyxFQUFFLENBQUMsaUJBQUQsRUFBb0Isa0JBQXBCLENBRkUsRSIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcbiAgaW1wbGVtZW50YXRpb25OYW1lOiAndGVtcGxhdGUnLFxuICBkYXRhQXJyYXk6IFsnZG9jdW1lbnRCYWNrZW5kJywgJ2RvY3VtZW50RnJvbnRlbmQnXSxcbn1cbiJdfQ==

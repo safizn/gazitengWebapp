@@ -1,5 +1,0 @@
-# Location of this file is in the context of dockerfile build command. 
-# Ignore below paths when building image, i.e. the docker engine won't copy these files inside the temporary containers used to build the dockerfile.
-# https://docs.docker.com/engine/reference/builder/#dockerignore-file
-
-*/scriptManager/**/node_modules*
