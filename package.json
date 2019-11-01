@@ -1,25 +1,25 @@
 {
-	"name": "@application/gazitengWebapp",
-	"version": "1.0.2",
-	"main": "./entrypoint/programmaticAPI",
-	"bin": {},
-	"workspaces": [
-		"./source/serverSide"
-	],
-	"flat": false,
-	"private": true,
-	"scripts": {
-		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
-		"run": "node .",
-		"build": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildSourceCode.moduleProject({}, {compile:[/**'./test'*/]})\"",
-		"buildAndRelease": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildAndRelease.moduleProject({})\""
-	},
-	"dependencies": {},
-	"devDependencies": {
-		"@dependency/deploymentScript": "https://github.com/AppScriptIO/deploymentScript#semver:^1.x.x",
-		"@dependency/javascriptStaticAnalysis": "https://github.com/AppScriptIO/javascriptStaticAnalysis#semver:^1.x.x",
-		"@dependency/javascriptTranspilation": "https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x",
-		"@dependency/scriptManager": "https://github.com/AppScriptIO/scriptManager#semver:^1.x.x",
-		"typescript": "^3.3.3333"
-	}
+  "name": "@application/gazitengWebapp",
+  "version": "1.0.2",
+  "main": "./entrypoint/programmaticAPI",
+  "scripts": {
+    "post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
+    "run": "node .",
+    "test": "yarn run scriptManager @dependency/deploymentScript \".test.default({ testPath: ['./test'] })\"",
+    "testBreaK": "export NODE_OPTIONS='--inspect-brk' && yarn run scriptManager @dependency/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: false, shouldCompileTest: true })\"",
+    "build": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildSourceCode.moduleProject({}, {compile:[/**'./test'*/]})\"",
+    "buildAndRelease": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildAndRelease.moduleProject({})\""
+  },
+  "dependencies": {
+    "@dependency/appscript": "https://github.com/AppScriptIO/appscript#semver:^1.x.x",
+    "@dependency/deploymentProvisioning": "https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x"
+  },
+  "devDependencies": {
+    "@dependency/deploymentScript": "https://github.com/AppScriptIO/deploymentScript#semver:^1.x.x",
+    "@dependency/javascriptStaticAnalysis": "https://github.com/AppScriptIO/javascriptStaticAnalysis#semver:^1.x.x",
+    "@dependency/javascriptTranspilation": "https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x",
+    "@dependency/scriptManager": "https://github.com/AppScriptIO/scriptManager#semver:^1.x.x",
+    "typescript": "^3.3.3333"
+  },
+  "flat": false
 }
