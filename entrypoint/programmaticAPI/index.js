@@ -4,6 +4,7 @@ const projectConfig = require('../../configuration'),
 
 // • Run
 if (filesystem.existsSync(projectConfig.directory.distribution)) {
+  projectConfig.runtimeVariable.DISTRIBUTION = true // set DISTRIBUTION variable
   module.exports = require(projectConfig.directory.distribution)
 } else {
   // • Transpilation (babelJSCompiler)

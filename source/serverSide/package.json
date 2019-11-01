@@ -1,9 +1,0 @@
-{
-  "name": "@library/server",
-  "version": "1.0.0",
-  "main": "./app.js",
-  "dependencies": {
-    "@dependency/deploymentProvisioning": "https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x",
-    "@dependency/appscript": "https://github.com/AppScriptIO/appscript#semver:^1.x.x"
-  }
-}
