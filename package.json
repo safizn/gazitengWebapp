@@ -11,8 +11,10 @@
     "buildAndRelease": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildAndRelease.moduleProject({})\""
   },
   "dependencies": {
-    "@dependency/appscript": "https://github.com/AppScriptIO/appscript#semver:^1.x.x",
-    "@dependency/deploymentProvisioning": "https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x"
+    "@application/gazitengWebapp-clientSide": "https://github.com/myuseringithub/gazitengWebapp-clientSide#semver:^1.x.x",
+    "@dependency/deploymentProvisioning": "https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x",
+    "@dependency/serviceRealtimeEndpoint": "https://github.com/AppScriptIO/serviceRealtimeEndpoint#semver:^1.x.x",
+    "@dependency/serviceDynamicContent": "https://github.com/AppScriptIO/serviceDynamicContent#semver:^1.x.x"
   },
   "devDependencies": {
     "@dependency/deploymentScript": "https://github.com/AppScriptIO/deploymentScript#semver:^1.x.x",
