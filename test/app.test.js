@@ -15,10 +15,9 @@ suite('Application services:', () => {
 
   suite('Expose services on ports.', () => {
     test('Should call services', async () => {
-      console.log(application)
       await application().catch(error => throw error)
-      http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'staticContent').port}`)
-      chaiAssertion.deepEqual(true, true)
+      http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}`)
+      // chaiAssertion.deepEqual(true, true)
     })
   })
 })
