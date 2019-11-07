@@ -8,8 +8,12 @@ import { application } from '..'
 import ownProjectConfig from '../configuration'
 import { serviceConfig } from '../source/configuration/apiGateway'
 const boltProtocolDriver = require('neo4j-driver').v1
+import { memgraphContainer } from '@dependency/deploymentProvisioning'
 
 async function clearGraphData() {
+  console.groupCollapsed('• Run prerequisite containers:')
+  memgraphContainer.runDockerContainer() // temporary solution
+  console.groupEnd()
   // Delete all nodes in the in-memory database
   console.log('• Cleared graph database.')
   const url = { protocol: 'bolt', hostname: 'localhost', port: 7687 },
@@ -26,7 +30,10 @@ suite('Application services:', () => {
   suite('Expose services on ports.', () => {
     test('Should call services', async () => {
       await application().catch(error => throw error)
-      await new Promise((resolve, reject) => http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'apiEndpoint').port}`, response => resolve()))
+      await new Promise((resolve, reject) => {
+        let urlPath = `/@javascript/jspm.initialization.js`
+        http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
+      })
       // chaiAssertion.deepEqual(true, true)
     })
   })
