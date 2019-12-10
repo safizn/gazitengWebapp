@@ -1,10 +1,10 @@
 import ownProjectConfig from '../configuration'
 import { serviceConfig } from './configuration/apiGateway'
 import clientSideProjectConfigList from '@application/gazitengWebapp-clientSide'
-import * as serviceRealtimeEndpoint from '@dependency/serviceRealtimeEndpoint'
+// import * as serviceApiEndpoint from '@dependency/serviceApiEndpoint'
+// import * as serviceAccessControl from '@dependency/serviceAccessControl'
 import * as serviceDynamicContent from '@dependency/serviceDynamicContent'
-import * as serviceAccessControl from '@dependency/serviceAccessControl'
-import * as serviceApiEndpoint from '@dependency/serviceApiEndpoint'
+// import * as serviceRealtimeEndpoint from '@dependency/serviceRealtimeEndpoint'
 
 // initialize services
 export const application = async () => {
@@ -12,10 +12,10 @@ export const application = async () => {
 
   console.groupCollapsed('• Run services:')
 
-  await serviceApiEndpoint.initialize({
-    targetProjectConfig: ownProjectConfig,
-    port: serviceConfig.find(item => item.targetService == 'apiEndpoint').port,
-  })
+  // await serviceApiEndpoint.initialize({
+  //   targetProjectConfig: ownProjectConfig,
+  //   port: serviceConfig.find(item => item.targetService == 'apiEndpoint').port,
+  // })
 
   // await serviceAccessControl.oAuth.initialize({ targetProjectConfig })
 
@@ -23,7 +23,7 @@ export const application = async () => {
 
   await serviceDynamicContent.initializeAssetContentDelivery({
     targetProjectConfig,
-    entrypointKey: '78f91938-f9cf-4cbf-9bc8-f97836ff23dd',
+    // entrypointKey: 'xxxx-xxxx-xxxx-xxxx',
     port: serviceConfig.find(item => item.targetService == 'contentDelivery').port,
   })
 
@@ -32,9 +32,9 @@ export const application = async () => {
     port: serviceConfig.find(item => item.targetService == 'contentRendering').port,
   })
 
-  await serviceRealtimeEndpoint.initializeWS({ targetProjectConfig })
+  // await serviceRealtimeEndpoint.initializeWS({ targetProjectConfig })
 
   console.groupEnd()
 
-  console.log('• WebApp up & running !')
+  console.log('• WebApp up & running ! \n')
 }
