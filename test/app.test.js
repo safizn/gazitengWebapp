@@ -29,18 +29,24 @@ suite('Application services:', () => {
 
   suite('Expose services on ports.', () => {
     test('Should call services', async () => {
-      // await application().catch(error => throw error)
-
-      // await new Promise((resolve, reject) => {
-      //   let urlPath = `/@javascript/jspm.initialization.js`
-      //   http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
-      // })
-
+      await application().catch(error => throw error)
+      await new Promise((resolve, reject) => {
+        let urlPath = `/@javascript`
+        http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
+      })
+      await new Promise((resolve, reject) => {
+        let urlPath = `/asset`
+        http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
+      })
       await new Promise((resolve, reject) => {
         let urlPath = `/upload`
         http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
       })
 
+      // await new Promise((resolve, reject) => {
+      //   let urlPath = `/@javascript/jspm.initialization.js`
+      //   http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
+      // })
       // chaiAssertion.deepEqual(true, true)
     })
   })
