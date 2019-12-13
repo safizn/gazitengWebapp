@@ -24,30 +24,27 @@ async function clearGraphData() {
   session.close()
 }
 
-suite('Application services:', () => {
-  setup(async () => await clearGraphData())
+suite('Application integration test with services:', () => {
+  // setup(async () => await clearGraphData())
 
-  suite('Expose services on ports.', () => {
-    test('Should call services', async () => {
+  suite('Exposing services through dedicated ports:', () => {
+    test('Should call successfully expose services', async () => {
       await application().catch(error => throw error)
-      await new Promise((resolve, reject) => {
-        let urlPath = `/@javascript`
-        http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
-      })
-      await new Promise((resolve, reject) => {
-        let urlPath = `/asset`
-        http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
-      })
-      await new Promise((resolve, reject) => {
-        let urlPath = `/upload`
-        http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
-      })
+      const url = `http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}`
 
-      // await new Promise((resolve, reject) => {
-      //   let urlPath = `/@javascript/jspm.initialization.js`
-      //   http.get(`http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}${urlPath}`, response => resolve())
-      // })
-      // chaiAssertion.deepEqual(true, true)
+      try {
+        await new Promise((resolve, reject) => {
+          http.get(`${url}/@javascript`, response => resolve())
+        })
+        await new Promise((resolve, reject) => {
+          http.get(`${url}/asset`, response => resolve())
+        })
+        await new Promise((resolve, reject) => {
+          http.get(`${url}/upload`, response => resolve())
+        })
+      } catch (error) {
+        throw error
+      }
     })
   })
 })

@@ -3,7 +3,7 @@ import { serviceConfig } from './configuration/apiGateway'
 import clientSideProjectConfigList from '@application/gazitengWebapp-clientSide'
 // import * as serviceApiEndpoint from '@dependency/serviceApiEndpoint'
 // import * as serviceAccessControl from '@dependency/serviceAccessControl'
-import * as serviceDynamicContent from '@dependency/serviceDynamicContent'
+import { service } from '@dependency/serviceDynamicContent'
 // import * as serviceRealtimeEndpoint from '@dependency/serviceRealtimeEndpoint'
 
 // initialize services
@@ -21,13 +21,13 @@ export const application = async () => {
 
   // await serviceAccessControl.openIdConnect.initialize({ targetProjectConfig })
 
-  await serviceDynamicContent.initializeAssetContentDelivery({
+  await service.restApi.initializeAssetContentDelivery({
     targetProjectConfig,
     // entrypointKey: 'xxxx-xxxx-xxxx-xxxx',
     port: serviceConfig.find(item => item.targetService == 'contentDelivery').port,
   })
 
-  await serviceDynamicContent.initializeRootContentRendering({
+  await service.restApi.initializeRootContentRendering({
     targetProjectConfig,
     port: serviceConfig.find(item => item.targetService == 'contentRendering').port,
   })

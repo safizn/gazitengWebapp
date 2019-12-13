@@ -39,7 +39,13 @@ const ownConfig = {
     programmaticAPI: 'app.js',
   },
   get script() {
-    return [...script, ...[{ type: 'directory', path: ownConfig.directory.script }, { type: 'directory', path: path.join(ownConfig.directory.root, 'node_modules') }]]
+    return [
+      ...script,
+      ...[
+        { type: 'directory', path: ownConfig.directory.script },
+        { type: 'directory', path: path.join(ownConfig.directory.root, 'node_modules') },
+      ],
+    ]
   },
   build: {
     get compile() {
