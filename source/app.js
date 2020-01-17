@@ -1,7 +1,7 @@
 import ownProjectConfig from '../configuration'
+import { serviceConfig } from './configuration/apiGateway'
 import clientSideProjectConfigList from '@application/gazitengWebapp-clientSide'
 import { service } from '@dependency/serviceDynamicContent'
-import { serviceConfig } from './configuration/apiGateway'
 // import * as serviceApiEndpoint from '@dependency/serviceApiEndpoint'
 // import * as serviceAccessControl from '@dependency/serviceAccessControl'
 // import * as serviceRealtimeEndpoint from '@dependency/serviceRealtimeEndpoint'
