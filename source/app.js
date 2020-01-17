@@ -1,5 +1,4 @@
 import ownProjectConfig from '../configuration'
-import { serviceConfig } from './configuration/apiGateway'
 import clientSideProjectConfigList from '@application/gazitengWebapp-clientSide'
 import { service } from '@dependency/serviceDynamicContent'
 // import * as serviceApiEndpoint from '@dependency/serviceApiEndpoint'
@@ -14,17 +13,17 @@ export const application = async () => {
 
   await service.restApi.initializeAssetContentDelivery({
     targetProjectConfig,
-    port: serviceConfig.find(item => item.targetService == 'contentDelivery').port,
+    port: ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentDelivery').port,
   })
 
   await service.restApi.initializeRootContentRendering({
     targetProjectConfig,
-    port: serviceConfig.find(item => item.targetService == 'contentRendering').port,
+    port: ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentRendering').port,
   })
 
   // await serviceApiEndpoint.initialize({
   //   targetProjectConfig: ownProjectConfig,
-  //   port: serviceConfig.find(item => item.targetService == 'apiEndpoint').port,
+  //   port: ownProjectConfig.apiGateway.service.find(item => item.targetService == 'apiEndpoint').port,
   // })
 
   // await serviceAccessControl.oAuth.initialize({ targetProjectConfig })

@@ -1,5 +1,6 @@
 const path = require('path')
 const { script } = require('./script.config.js')
+const { service, sslProtocol } = require('./apiGateway')
 
 /* previous serverConfig - TODO: check which configs to use:
 {
@@ -64,22 +65,17 @@ const ownConfig = {
       return getBabelConfig(ownConfig.transpilation.babelConfigKey, { configType: 'json' })
     },
   },
-  production: {
-    hostStorageFolderName: 'gaziteng', // remote production folder
-    reverseProxy: {
-      domain: 'gaziteng.com',
-    },
+  apiGateway: {
+    service,
   },
-  container: {
-    projectPath: '/project',
+  production: {
+    get containerRoute() {
+      return `http://${ownConfig.production.containerStackName}_nodejs:${this.port}`
+    },
+    hostStorageFolderName: 'gaziteng', // remote production folder
+    domain: 'gaziteng.com',
     dockerImageName: 'gaziteng-webapp',
-    stackName: 'gazitengwebapp',
-    get SourceCodePath() {
-      return `${ownConfig.container.projectPath}/application/source`
-    },
-    get DestinationPath() {
-      return `${ownConfig.container.projectPath}/application/distribution`
-    },
+    containerStackName: 'gazitengwebapp',
   },
   databaseVersion: 1,
 }

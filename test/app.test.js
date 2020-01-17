@@ -6,7 +6,6 @@ import path from 'path'
 import filesystem from 'fs'
 import { application } from '..'
 import ownProjectConfig from '../configuration'
-import { serviceConfig } from '../source/configuration/apiGateway'
 const boltProtocolDriver = require('neo4j-driver').v1
 import { memgraphContainer } from '@dependency/deploymentProvisioning'
 
@@ -28,7 +27,7 @@ suite('Application integration test with services:', () => {
   setup(async () => await clearGraphData())
 
   suite('Exposing services through dedicated ports:', () => {
-    const url = `http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}`
+    const url = `http://${ownProjectConfig.runtimeVariable.HOST}:${ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentDelivery').port}`
     test('Should call successfully expose services', async () => {
       await application().catch(error => throw error)
 
