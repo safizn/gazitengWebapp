@@ -3,8 +3,8 @@
 
 
 "@application/gazitengWebapp-clientSide@https://github.com/myuseringithub/gazitengWebapp-clientSide#semver:^1.x.x":
-  version "1.0.4"
-  resolved "https://github.com/myuseringithub/gazitengWebapp-clientSide#9537f39da444deda8e2fb97fcf11f2d92e7c7274"
+  version "1.1.1"
+  resolved "https://github.com/myuseringithub/gazitengWebapp-clientSide#414ce3bf691e8b33c0f8e7fec3d4b8041f93e0b3"
 
 "@babel/babel-plugin-functionSentProxyImplementation@https://github.com/AppScriptIO/babel-plugin-functionSentProxyImplementation#semver:^1.x.x":
   version "1.0.1"
@@ -1051,7 +1051,6 @@
 
 "@dependency/entity@https://github.com/AppScriptIO/entity#semver:1.0.15", "@dependency/entity@https://github.com/AppScriptIO/entity#semver:^1.x.x":
   version "1.0.15"
-  uid "32f3f551cc8fd1bb38023c4c743acea3d4e961fe"
   resolved "https://github.com/AppScriptIO/entity#32f3f551cc8fd1bb38023c4c743acea3d4e961fe"
   dependencies:
     "@dependency/multiplePrototypeDelegation" "https://github.com/AppScriptIO/multiplePrototypeDelegation#semver:^1.x.x"
@@ -1308,8 +1307,8 @@
     koa-router "*"
 
 "@dependency/serviceDynamicContent@https://github.com/AppScriptIO/serviceDynamicContent#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/serviceDynamicContent#19253cee05d69403470de270aa63a3cee7749615"
+  version "1.0.3"
+  resolved "https://github.com/AppScriptIO/serviceDynamicContent#69562b8a4b185ba04f0a2d3e1a174555cabd3d86"
   dependencies:
     "@babel/core" "*"
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x"
