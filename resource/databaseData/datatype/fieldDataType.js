@@ -1,18 +1,19 @@
-// TODO: add ability for recursive types. Datatype of other Datatypes. & Allow nested tree structures in fields.  Repeater
-var data = []
+"use strict";
+var data = [];
 data.fieldDataType = [
-  {
-    key: 'c8e940ed-e903-4c90-825a-77bd255d3a0d',
-    label: {
-      name: 'String',
-      description: 'Accepts any pure string.',
-    },
-    webcomponent: 'component',
-    validationFunction: 'function',
-  },
-]
+{
+  key: 'c8e940ed-e903-4c90-825a-77bd255d3a0d',
+  label: {
+    name: 'String',
+    description: 'Accepts any pure string.' },
 
-r.db('webapp')
-  .table('setting')
-  .get('fieldDataType')
-  .update({ fieldDataType: data.fieldDataType }, { nonAtomic: true })
+  webcomponent: 'component',
+  validationFunction: 'function' }];
+
+
+
+r.db('webapp').
+table('setting').
+get('fieldDataType').
+update({ fieldDataType: data.fieldDataType }, { nonAtomic: true });
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Jlc291cmNlL2RhdGFiYXNlRGF0YS9kYXRhdHlwZS9maWVsZERhdGFUeXBlLmpzIl0sIm5hbWVzIjpbImRhdGEiLCJmaWVsZERhdGFUeXBlIiwia2V5IiwibGFiZWwiLCJuYW1lIiwiZGVzY3JpcHRpb24iLCJ3ZWJjb21wb25lbnQiLCJ2YWxpZGF0aW9uRnVuY3Rpb24iLCJyIiwiZGIiLCJ0YWJsZSIsImdldCIsInVwZGF0ZSIsIm5vbkF0b21pYyJdLCJtYXBwaW5ncyI6IjtBQUNBLElBQUlBLElBQUksR0FBRyxFQUFYO0FBQ0FBLElBQUksQ0FBQ0MsYUFBTCxHQUFxQjtBQUNuQjtBQUNFQyxFQUFBQSxHQUFHLEVBQUUsc0NBRFA7QUFFRUMsRUFBQUEsS0FBSyxFQUFFO0FBQ0xDLElBQUFBLElBQUksRUFBRSxRQUREO0FBRUxDLElBQUFBLFdBQVcsRUFBRSwwQkFGUixFQUZUOztBQU1FQyxFQUFBQSxZQUFZLEVBQUUsV0FOaEI7QUFPRUMsRUFBQUEsa0JBQWtCLEVBQUUsVUFQdEIsRUFEbUIsQ0FBckI7Ozs7QUFZQUMsQ0FBQyxDQUFDQyxFQUFGLENBQUssUUFBTDtBQUNHQyxLQURILENBQ1MsU0FEVDtBQUVHQyxHQUZILENBRU8sZUFGUDtBQUdHQyxNQUhILENBR1UsRUFBRVgsYUFBYSxFQUFFRCxJQUFJLENBQUNDLGFBQXRCLEVBSFYsRUFHaUQsRUFBRVksU0FBUyxFQUFFLElBQWIsRUFIakQiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBUT0RPOiBhZGQgYWJpbGl0eSBmb3IgcmVjdXJzaXZlIHR5cGVzLiBEYXRhdHlwZSBvZiBvdGhlciBEYXRhdHlwZXMuICYgQWxsb3cgbmVzdGVkIHRyZWUgc3RydWN0dXJlcyBpbiBmaWVsZHMuICBSZXBlYXRlclxudmFyIGRhdGEgPSBbXVxuZGF0YS5maWVsZERhdGFUeXBlID0gW1xuICB7XG4gICAga2V5OiAnYzhlOTQwZWQtZTkwMy00YzkwLTgyNWEtNzdiZDI1NWQzYTBkJyxcbiAgICBsYWJlbDoge1xuICAgICAgbmFtZTogJ1N0cmluZycsXG4gICAgICBkZXNjcmlwdGlvbjogJ0FjY2VwdHMgYW55IHB1cmUgc3RyaW5nLicsXG4gICAgfSxcbiAgICB3ZWJjb21wb25lbnQ6ICdjb21wb25lbnQnLFxuICAgIHZhbGlkYXRpb25GdW5jdGlvbjogJ2Z1bmN0aW9uJyxcbiAgfSxcbl1cblxuci5kYignd2ViYXBwJylcbiAgLnRhYmxlKCdzZXR0aW5nJylcbiAgLmdldCgnZmllbGREYXRhVHlwZScpXG4gIC51cGRhdGUoeyBmaWVsZERhdGFUeXBlOiBkYXRhLmZpZWxkRGF0YVR5cGUgfSwgeyBub25BdG9taWM6IHRydWUgfSlcbiJdfQ==

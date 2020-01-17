@@ -1,39 +1,40 @@
-import ownProjectConfig from '../configuration'
-import { service } from '@dependency/serviceDynamicContent'
-import { serviceConfig } from './configuration/apiGateway'
-// import * as serviceApiEndpoint from '@dependency/serviceApiEndpoint'
-// import * as serviceAccessControl from '@dependency/serviceAccessControl'
-// import * as serviceRealtimeEndpoint from '@dependency/serviceRealtimeEndpoint'
-import clientSideProjectConfigList from '@application/gazitengWebapp-clientSide'
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.application = void 0;var _configuration = _interopRequireDefault(require("../configuration"));
+var _serviceDynamicContent = require("@dependency/serviceDynamicContent");
+var _apiGateway = require("./configuration/apiGateway");
 
-// initialize services
-export const application = async () => {
-  const targetProjectConfig = Object.assign(ownProjectConfig, { clientSideProjectConfigList })
 
-  console.groupCollapsed('• Run services:')
 
-  await service.restApi.initializeAssetContentDelivery({
+var _gazitengWebappClientSide = _interopRequireDefault(require("@application/gazitengWebapp-clientSide"));
+
+
+const application = async () => {
+  const targetProjectConfig = Object.assign(_configuration.default, { clientSideProjectConfigList: _gazitengWebappClientSide.default });
+
+  console.groupCollapsed('• Run services:');
+
+  await _serviceDynamicContent.service.restApi.initializeAssetContentDelivery({
     targetProjectConfig,
-    port: serviceConfig.find(item => item.targetService == 'contentDelivery').port,
-  })
+    port: _apiGateway.serviceConfig.find(item => item.targetService == 'contentDelivery').port });
 
-  await service.restApi.initializeRootContentRendering({
+
+  await _serviceDynamicContent.service.restApi.initializeRootContentRendering({
     targetProjectConfig,
-    port: serviceConfig.find(item => item.targetService == 'contentRendering').port,
-  })
+    port: _apiGateway.serviceConfig.find(item => item.targetService == 'contentRendering').port });
 
-  // await serviceApiEndpoint.initialize({
-  //   targetProjectConfig: ownProjectConfig,
-  //   port: serviceConfig.find(item => item.targetService == 'apiEndpoint').port,
-  // })
 
-  // await serviceAccessControl.oAuth.initialize({ targetProjectConfig })
 
-  // await serviceAccessControl.openIdConnect.initialize({ targetProjectConfig })
 
-  // await serviceRealtimeEndpoint.initializeWS({ targetProjectConfig })
 
-  console.groupEnd()
 
-  console.log('• WebApp up & running ! \n')
-}
+
+
+
+
+
+
+
+  console.groupEnd();
+
+  console.log('• WebApp up & running ! \n');
+};exports.application = application;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NvdXJjZS9hcHAuanMiXSwibmFtZXMiOlsiYXBwbGljYXRpb24iLCJ0YXJnZXRQcm9qZWN0Q29uZmlnIiwiT2JqZWN0IiwiYXNzaWduIiwib3duUHJvamVjdENvbmZpZyIsImNsaWVudFNpZGVQcm9qZWN0Q29uZmlnTGlzdCIsImNvbnNvbGUiLCJncm91cENvbGxhcHNlZCIsInNlcnZpY2UiLCJyZXN0QXBpIiwiaW5pdGlhbGl6ZUFzc2V0Q29udGVudERlbGl2ZXJ5IiwicG9ydCIsInNlcnZpY2VDb25maWciLCJmaW5kIiwiaXRlbSIsInRhcmdldFNlcnZpY2UiLCJpbml0aWFsaXplUm9vdENvbnRlbnRSZW5kZXJpbmciLCJncm91cEVuZCIsImxvZyJdLCJtYXBwaW5ncyI6IjZMQUFBO0FBQ0E7QUFDQTs7OztBQUlBOzs7QUFHTyxNQUFNQSxXQUFXLEdBQUcsWUFBWTtBQUNyQyxRQUFNQyxtQkFBbUIsR0FBR0MsTUFBTSxDQUFDQyxNQUFQLENBQWNDLHNCQUFkLEVBQWdDLEVBQUVDLDJCQUEyQixFQUEzQkEsaUNBQUYsRUFBaEMsQ0FBNUI7O0FBRUFDLEVBQUFBLE9BQU8sQ0FBQ0MsY0FBUixDQUF1QixpQkFBdkI7O0FBRUEsUUFBTUMsK0JBQVFDLE9BQVIsQ0FBZ0JDLDhCQUFoQixDQUErQztBQUNuRFQsSUFBQUEsbUJBRG1EO0FBRW5EVSxJQUFBQSxJQUFJLEVBQUVDLDBCQUFjQyxJQUFkLENBQW1CQyxJQUFJLElBQUlBLElBQUksQ0FBQ0MsYUFBTCxJQUFzQixpQkFBakQsRUFBb0VKLElBRnZCLEVBQS9DLENBQU47OztBQUtBLFFBQU1ILCtCQUFRQyxPQUFSLENBQWdCTyw4QkFBaEIsQ0FBK0M7QUFDbkRmLElBQUFBLG1CQURtRDtBQUVuRFUsSUFBQUEsSUFBSSxFQUFFQywwQkFBY0MsSUFBZCxDQUFtQkMsSUFBSSxJQUFJQSxJQUFJLENBQUNDLGFBQUwsSUFBc0Isa0JBQWpELEVBQXFFSixJQUZ4QixFQUEvQyxDQUFOOzs7Ozs7Ozs7Ozs7OztBQWdCQUwsRUFBQUEsT0FBTyxDQUFDVyxRQUFSOztBQUVBWCxFQUFBQSxPQUFPLENBQUNZLEdBQVIsQ0FBWSw0QkFBWjtBQUNELENBN0JNLEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgb3duUHJvamVjdENvbmZpZyBmcm9tICcuLi9jb25maWd1cmF0aW9uJ1xuaW1wb3J0IHsgc2VydmljZSB9IGZyb20gJ0BkZXBlbmRlbmN5L3NlcnZpY2VEeW5hbWljQ29udGVudCdcbmltcG9ydCB7IHNlcnZpY2VDb25maWcgfSBmcm9tICcuL2NvbmZpZ3VyYXRpb24vYXBpR2F0ZXdheSdcbi8vIGltcG9ydCAqIGFzIHNlcnZpY2VBcGlFbmRwb2ludCBmcm9tICdAZGVwZW5kZW5jeS9zZXJ2aWNlQXBpRW5kcG9pbnQnXG4vLyBpbXBvcnQgKiBhcyBzZXJ2aWNlQWNjZXNzQ29udHJvbCBmcm9tICdAZGVwZW5kZW5jeS9zZXJ2aWNlQWNjZXNzQ29udHJvbCdcbi8vIGltcG9ydCAqIGFzIHNlcnZpY2VSZWFsdGltZUVuZHBvaW50IGZyb20gJ0BkZXBlbmRlbmN5L3NlcnZpY2VSZWFsdGltZUVuZHBvaW50J1xuaW1wb3J0IGNsaWVudFNpZGVQcm9qZWN0Q29uZmlnTGlzdCBmcm9tICdAYXBwbGljYXRpb24vZ2F6aXRlbmdXZWJhcHAtY2xpZW50U2lkZSdcblxuLy8gaW5pdGlhbGl6ZSBzZXJ2aWNlc1xuZXhwb3J0IGNvbnN0IGFwcGxpY2F0aW9uID0gYXN5bmMgKCkgPT4ge1xuICBjb25zdCB0YXJnZXRQcm9qZWN0Q29uZmlnID0gT2JqZWN0LmFzc2lnbihvd25Qcm9qZWN0Q29uZmlnLCB7IGNsaWVudFNpZGVQcm9qZWN0Q29uZmlnTGlzdCB9KVxuXG4gIGNvbnNvbGUuZ3JvdXBDb2xsYXBzZWQoJ+KAoiBSdW4gc2VydmljZXM6JylcblxuICBhd2FpdCBzZXJ2aWNlLnJlc3RBcGkuaW5pdGlhbGl6ZUFzc2V0Q29udGVudERlbGl2ZXJ5KHtcbiAgICB0YXJnZXRQcm9qZWN0Q29uZmlnLFxuICAgIHBvcnQ6IHNlcnZpY2VDb25maWcuZmluZChpdGVtID0+IGl0ZW0udGFyZ2V0U2VydmljZSA9PSAnY29udGVudERlbGl2ZXJ5JykucG9ydCxcbiAgfSlcblxuICBhd2FpdCBzZXJ2aWNlLnJlc3RBcGkuaW5pdGlhbGl6ZVJvb3RDb250ZW50UmVuZGVyaW5nKHtcbiAgICB0YXJnZXRQcm9qZWN0Q29uZmlnLFxuICAgIHBvcnQ6IHNlcnZpY2VDb25maWcuZmluZChpdGVtID0+IGl0ZW0udGFyZ2V0U2VydmljZSA9PSAnY29udGVudFJlbmRlcmluZycpLnBvcnQsXG4gIH0pXG5cbiAgLy8gYXdhaXQgc2VydmljZUFwaUVuZHBvaW50LmluaXRpYWxpemUoe1xuICAvLyAgIHRhcmdldFByb2plY3RDb25maWc6IG93blByb2plY3RDb25maWcsXG4gIC8vICAgcG9ydDogc2VydmljZUNvbmZpZy5maW5kKGl0ZW0gPT4gaXRlbS50YXJnZXRTZXJ2aWNlID09ICdhcGlFbmRwb2ludCcpLnBvcnQsXG4gIC8vIH0pXG5cbiAgLy8gYXdhaXQgc2VydmljZUFjY2Vzc0NvbnRyb2wub0F1dGguaW5pdGlhbGl6ZSh7IHRhcmdldFByb2plY3RDb25maWcgfSlcblxuICAvLyBhd2FpdCBzZXJ2aWNlQWNjZXNzQ29udHJvbC5vcGVuSWRDb25uZWN0LmluaXRpYWxpemUoeyB0YXJnZXRQcm9qZWN0Q29uZmlnIH0pXG5cbiAgLy8gYXdhaXQgc2VydmljZVJlYWx0aW1lRW5kcG9pbnQuaW5pdGlhbGl6ZVdTKHsgdGFyZ2V0UHJvamVjdENvbmZpZyB9KVxuXG4gIGNvbnNvbGUuZ3JvdXBFbmQoKVxuXG4gIGNvbnNvbGUubG9nKCfigKIgV2ViQXBwIHVwICYgcnVubmluZyAhIFxcbicpXG59XG4iXX0=

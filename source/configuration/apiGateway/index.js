@@ -1,39 +1,38 @@
-import filesystem from 'fs'
-import path from 'path'
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.sslProtocol = exports.serviceConfig = void 0;var _fs = _interopRequireDefault(require("fs"));
+var _path = _interopRequireDefault(require("path"));
 
 let PROTOCOL = 'http://',
-  HOST = 'localhost'
+HOST = 'localhost';
 
-export const serviceConfig = [
-  {
-    port: 8088,
-    targetService: 'oAuth',
-  },
-  {
-    port: 8084,
-    targetService: 'openIdConnect',
-  },
-  {
-    port: 8082,
-    targetService: 'apiEndpoint',
-    url: `${PROTOCOL}api.${HOST}/`,
-  },
-  {
-    port: 8081,
-    targetService: 'contentDelivery',
-    url: `${PROTOCOL}cdn.${HOST}`,
-  },
-  {
-    port: 8080,
-    targetService: 'contentRendering',
-  },
-]
+const serviceConfig = [
+{
+  port: 8088,
+  targetService: 'oAuth' },
 
-export const sslProtocol = {
-  // expose as encrypted https
+{
+  port: 8084,
+  targetService: 'openIdConnect' },
+
+{
+  port: 8082,
+  targetService: 'apiEndpoint',
+  url: `${PROTOCOL}api.${HOST}/` },
+
+{
+  port: 8081,
+  targetService: 'contentDelivery',
+  url: `${PROTOCOL}cdn.${HOST}` },
+
+{
+  port: 8080,
+  targetService: 'contentRendering' }];exports.serviceConfig = serviceConfig;
+
+
+
+const sslProtocol = {
+
   port: 443,
   ssl: {
-    key: filesystem.readFileSync(path.join(__dirname, './sampleSSL/server.key')),
-    cert: filesystem.readFileSync(path.join(__dirname, './sampleSSL/server.crt')),
-  },
-}
+    key: _fs.default.readFileSync(_path.default.join(__dirname, './sampleSSL/server.key')),
+    cert: _fs.default.readFileSync(_path.default.join(__dirname, './sampleSSL/server.crt')) } };exports.sslProtocol = sslProtocol;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NvdXJjZS9jb25maWd1cmF0aW9uL2FwaUdhdGV3YXkvaW5kZXguanMiXSwibmFtZXMiOlsiUFJPVE9DT0wiLCJIT1NUIiwic2VydmljZUNvbmZpZyIsInBvcnQiLCJ0YXJnZXRTZXJ2aWNlIiwidXJsIiwic3NsUHJvdG9jb2wiLCJzc2wiLCJrZXkiLCJmaWxlc3lzdGVtIiwicmVhZEZpbGVTeW5jIiwicGF0aCIsImpvaW4iLCJfX2Rpcm5hbWUiLCJjZXJ0Il0sIm1hcHBpbmdzIjoicU5BQUE7QUFDQTs7QUFFQSxJQUFJQSxRQUFRLEdBQUcsU0FBZjtBQUNFQyxJQUFJLEdBQUcsV0FEVDs7QUFHTyxNQUFNQyxhQUFhLEdBQUc7QUFDM0I7QUFDRUMsRUFBQUEsSUFBSSxFQUFFLElBRFI7QUFFRUMsRUFBQUEsYUFBYSxFQUFFLE9BRmpCLEVBRDJCOztBQUszQjtBQUNFRCxFQUFBQSxJQUFJLEVBQUUsSUFEUjtBQUVFQyxFQUFBQSxhQUFhLEVBQUUsZUFGakIsRUFMMkI7O0FBUzNCO0FBQ0VELEVBQUFBLElBQUksRUFBRSxJQURSO0FBRUVDLEVBQUFBLGFBQWEsRUFBRSxhQUZqQjtBQUdFQyxFQUFBQSxHQUFHLEVBQUcsR0FBRUwsUUFBUyxPQUFNQyxJQUFLLEdBSDlCLEVBVDJCOztBQWMzQjtBQUNFRSxFQUFBQSxJQUFJLEVBQUUsSUFEUjtBQUVFQyxFQUFBQSxhQUFhLEVBQUUsaUJBRmpCO0FBR0VDLEVBQUFBLEdBQUcsRUFBRyxHQUFFTCxRQUFTLE9BQU1DLElBQUssRUFIOUIsRUFkMkI7O0FBbUIzQjtBQUNFRSxFQUFBQSxJQUFJLEVBQUUsSUFEUjtBQUVFQyxFQUFBQSxhQUFhLEVBQUUsa0JBRmpCLEVBbkIyQixDQUF0QixDOzs7O0FBeUJBLE1BQU1FLFdBQVcsR0FBRzs7QUFFekJILEVBQUFBLElBQUksRUFBRSxHQUZtQjtBQUd6QkksRUFBQUEsR0FBRyxFQUFFO0FBQ0hDLElBQUFBLEdBQUcsRUFBRUMsWUFBV0MsWUFBWCxDQUF3QkMsY0FBS0MsSUFBTCxDQUFVQyxTQUFWLEVBQXFCLHdCQUFyQixDQUF4QixDQURGO0FBRUhDLElBQUFBLElBQUksRUFBRUwsWUFBV0MsWUFBWCxDQUF3QkMsY0FBS0MsSUFBTCxDQUFVQyxTQUFWLEVBQXFCLHdCQUFyQixDQUF4QixDQUZILEVBSG9CLEVBQXBCLEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZmlsZXN5c3RlbSBmcm9tICdmcydcbmltcG9ydCBwYXRoIGZyb20gJ3BhdGgnXG5cbmxldCBQUk9UT0NPTCA9ICdodHRwOi8vJyxcbiAgSE9TVCA9ICdsb2NhbGhvc3QnXG5cbmV4cG9ydCBjb25zdCBzZXJ2aWNlQ29uZmlnID0gW1xuICB7XG4gICAgcG9ydDogODA4OCxcbiAgICB0YXJnZXRTZXJ2aWNlOiAnb0F1dGgnLFxuICB9LFxuICB7XG4gICAgcG9ydDogODA4NCxcbiAgICB0YXJnZXRTZXJ2aWNlOiAnb3BlbklkQ29ubmVjdCcsXG4gIH0sXG4gIHtcbiAgICBwb3J0OiA4MDgyLFxuICAgIHRhcmdldFNlcnZpY2U6ICdhcGlFbmRwb2ludCcsXG4gICAgdXJsOiBgJHtQUk9UT0NPTH1hcGkuJHtIT1NUfS9gLFxuICB9LFxuICB7XG4gICAgcG9ydDogODA4MSxcbiAgICB0YXJnZXRTZXJ2aWNlOiAnY29udGVudERlbGl2ZXJ5JyxcbiAgICB1cmw6IGAke1BST1RPQ09MfWNkbi4ke0hPU1R9YCxcbiAgfSxcbiAge1xuICAgIHBvcnQ6IDgwODAsXG4gICAgdGFyZ2V0U2VydmljZTogJ2NvbnRlbnRSZW5kZXJpbmcnLFxuICB9LFxuXVxuXG5leHBvcnQgY29uc3Qgc3NsUHJvdG9jb2wgPSB7XG4gIC8vIGV4cG9zZSBhcyBlbmNyeXB0ZWQgaHR0cHNcbiAgcG9ydDogNDQzLFxuICBzc2w6IHtcbiAgICBrZXk6IGZpbGVzeXN0ZW0ucmVhZEZpbGVTeW5jKHBhdGguam9pbihfX2Rpcm5hbWUsICcuL3NhbXBsZVNTTC9zZXJ2ZXIua2V5JykpLFxuICAgIGNlcnQ6IGZpbGVzeXN0ZW0ucmVhZEZpbGVTeW5jKHBhdGguam9pbihfX2Rpcm5hbWUsICcuL3NhbXBsZVNTTC9zZXJ2ZXIuY3J0JykpLFxuICB9LFxufVxuIl19
