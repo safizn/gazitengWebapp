@@ -25,25 +25,46 @@ async function clearGraphData() {
 }
 
 suite('Application integration test with services:', () => {
-  // setup(async () => await clearGraphData())
+  setup(async () => await clearGraphData())
 
   suite('Exposing services through dedicated ports:', () => {
+    const url = `http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}`
     test('Should call successfully expose services', async () => {
       await application().catch(error => throw error)
-      const url = `http://${ownProjectConfig.runtimeVariable.HOST}:${serviceConfig.find(item => item.targetService == 'contentDelivery').port}`
 
-      try {
-        await new Promise((resolve, reject) => {
-          http.get(`${url}/@javascript`, response => resolve())
-        })
-        await new Promise((resolve, reject) => {
-          http.get(`${url}/asset`, response => resolve())
-        })
-        await new Promise((resolve, reject) => {
-          http.get(`${url}/upload`, response => resolve())
-        })
-      } catch (error) {
-        throw error
+      {
+        let responseStream = await new Promise((resolve, reject) => http.get(`${url}/@javascript`, response => resolve(response)))
+        assert(responseStream.statusCode == 404, `• Response return non successful statusCode.`)
+      }
+      {
+        let responseStream = await new Promise((resolve, reject) => http.get(`${url}/@javascript/jspm.initialization.js`, response => resolve(response)))
+        assert(responseStream.statusCode == 200, `• Response return non successful statusCode.`)
+      }
+    })
+
+    test('Should call successfully expose services', async () => {
+      await application().catch(error => throw error)
+
+      {
+        let responseStream = await new Promise((resolve, reject) => http.get(`${url}/asset`, response => resolve(response)))
+        assert(responseStream.statusCode == 404, `• Response return non successful statusCode.`)
+      }
+      {
+        let responseStream = await new Promise((resolve, reject) => http.get(`${url}/asset/metadata/manifest.json`, response => resolve(response)))
+        assert(responseStream.statusCode == 200, `• Response return non successful statusCode.`)
+      }
+    })
+
+    test('Should call successfully expose services', async () => {
+      await application().catch(error => throw error)
+
+      {
+        let responseStream = await new Promise((resolve, reject) => http.get(`${url}/upload`, response => resolve(response)))
+        assert(responseStream.statusCode == 404, `• Response return non successful statusCode.`)
+      }
+      {
+        let responseStream = await new Promise((resolve, reject) => http.get(`${url}/upload/Logo.png`, response => resolve(response)))
+        assert(responseStream.statusCode == 200, `• Response return non successful statusCode.`)
       }
     })
   })

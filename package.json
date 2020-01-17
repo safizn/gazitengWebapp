@@ -24,6 +24,8 @@
     "@dependency/javascriptTranspilation": "https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x",
     "@dependency/scriptManager": "https://github.com/AppScriptIO/scriptManager#semver:^1.x.x",
     "neo4j-driver": "^1.7.5",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
     "typescript": "^3.3.3333"
   },
   "flat": false
