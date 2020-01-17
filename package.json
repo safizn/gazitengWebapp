@@ -1,32 +1,32 @@
 {
-  "name": "@application/gazitengWebapp",
-  "version": "1.0.2",
-  "main": "./entrypoint/programmaticAPI",
-  "scripts": {
-    "post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
-    "run": "yarn run scriptManager ./ \".application()\"",
-    "test": "yarn run scriptManager @dependency/deploymentScript \".test.default({ testPath: ['./test'] })\"",
-    "test-inspect": "export NODE_OPTIONS='--inspect-brk' && yarn run scriptManager @dependency/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: true, shouldCompileTest: true })\"",
-    "build": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildSourceCode.moduleProject({}, {compile:[/**'./test'*/]})\"",
-    "buildAndRelease": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildAndRelease.moduleProject({})\""
-  },
-  "dependencies": {
-    "@application/gazitengWebapp-clientSide": "https://github.com/myuseringithub/gazitengWebapp-clientSide#semver:^1.x.x",
-    "@dependency/serviceAccessControl": "https://github.com/AppScriptIO/serviceAccessControl#semver:^1.x.x",
-    "@dependency/serviceApiEndpoint": "https://github.com/AppScriptIO/serviceApiEndpoint#semver:^1.x.x",
-    "@dependency/serviceDynamicContent": "https://github.com/AppScriptIO/serviceDynamicContent#semver:^1.x.x",
-    "@dependency/serviceRealtimeEndpoint": "https://github.com/AppScriptIO/serviceRealtimeEndpoint#semver:^1.x.x"
-  },
-  "devDependencies": {
-    "@dependency/deploymentProvisioning": "https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x",
-    "@dependency/deploymentScript": "https://github.com/AppScriptIO/deploymentScript#semver:^1.x.x",
-    "@dependency/javascriptStaticAnalysis": "https://github.com/AppScriptIO/javascriptStaticAnalysis#semver:^1.x.x",
-    "@dependency/javascriptTranspilation": "https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x",
-    "@dependency/scriptManager": "https://github.com/AppScriptIO/scriptManager#semver:^1.x.x",
-    "neo4j-driver": "^1.7.5",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.5",
-    "typescript": "^3.3.3333"
-  },
-  "flat": false
+	"name": "@application/gazitengWebapp",
+	"version": "1.0.3",
+	"main": "./entrypoint/programmaticAPI",
+	"scripts": {
+		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
+		"run": "yarn run scriptManager ./ \".application()\"",
+		"test": "yarn run scriptManager @dependency/deploymentScript \".test.default({ testPath: ['./test'] })\"",
+		"test-inspect": "export NODE_OPTIONS='--inspect-brk' && yarn run scriptManager @dependency/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: true, shouldCompileTest: true })\"",
+		"build": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildSourceCode.moduleProject({}, {compile:[/**'./test'*/]})\"",
+		"buildAndRelease": "yarn run scriptManager shouldCompileScript=true @dependency/deploymentScript \".buildAndRelease.moduleProject({})\""
+	},
+	"dependencies": {
+		"@application/gazitengWebapp-clientSide": "https://github.com/myuseringithub/gazitengWebapp-clientSide#semver:^1.x.x",
+		"@dependency/serviceAccessControl": "https://github.com/AppScriptIO/serviceAccessControl#semver:^1.x.x",
+		"@dependency/serviceApiEndpoint": "https://github.com/AppScriptIO/serviceApiEndpoint#semver:^1.x.x",
+		"@dependency/serviceDynamicContent": "https://github.com/AppScriptIO/serviceDynamicContent#semver:^1.x.x",
+		"@dependency/serviceRealtimeEndpoint": "https://github.com/AppScriptIO/serviceRealtimeEndpoint#semver:^1.x.x"
+	},
+	"devDependencies": {
+		"@dependency/deploymentProvisioning": "https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x",
+		"@dependency/deploymentScript": "https://github.com/AppScriptIO/deploymentScript#semver:^1.x.x",
+		"@dependency/javascriptStaticAnalysis": "https://github.com/AppScriptIO/javascriptStaticAnalysis#semver:^1.x.x",
+		"@dependency/javascriptTranspilation": "https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x",
+		"@dependency/scriptManager": "https://github.com/AppScriptIO/scriptManager#semver:^1.x.x",
+		"neo4j-driver": "^1.7.5",
+		"request": "^2.88.0",
+		"request-promise": "^4.2.5",
+		"typescript": "^3.3.3333"
+	},
+	"flat": false
 }
