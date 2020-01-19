@@ -1,6 +1,6 @@
 {
 	"name": "@application/gazitengWebapp",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"main": "./entrypoint/programmaticAPI",
 	"scripts": {
 		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
