@@ -38,6 +38,7 @@ const ownConfig = {
   },
   entrypoint: {
     programmaticAPI: 'app.js',
+    cli: './clientInterface/subprocessCliAdapter.js',
   },
   get script() {
     return [
