@@ -1,7 +1,6 @@
 const path = require('path')
 const { script } = require('./script.config.js')
 const { service, sslProtocol } = require('./apiGateway')
-const clientSideProjectConfigList = require('@application/gazitengWebapp-clientSide')
 
 /* previous serverConfig - TODO: check which configs to use:
 {
@@ -12,9 +11,9 @@ const clientSideProjectConfigList = require('@application/gazitengWebapp-clientS
 }
 
 */
-
-const ownConfig = {
-  clientSideProjectConfigList,
+const ownConfig = {}
+module.exports = ownConfig // NOTE: any circular dependency must be handled after exporting this configuration.
+Object.assign(ownConfig, {
   runtimeVariable: {
     DEPLOYMENT: process.env.DEPLOYMENT || 'development', // Deployment type
     DISTRIBUTION: process.env.DISTRIBUTION || false,
@@ -81,6 +80,10 @@ const ownConfig = {
     containerStackName: 'gazitengwebapp',
   },
   databaseVersion: 1,
-}
+})
 
-module.exports = ownConfig
+/** Must be positioned after exporting config, to prevent circular dependencies in the transpilation module - as the transpiler checks for the root module's configuration to print the transpiled files in shared temporary folder.
+  In case the following modules also require tranpilation.
+*/
+const clientSideProjectConfigList = require('@application/gazitengWebapp-clientSide')
+ownConfig.clientSideProjectConfigList = clientSideProjectConfigList

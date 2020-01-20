@@ -996,13 +996,13 @@
     vinyl-fs "*"
 
 "@dependency/configurationManagement@http://github.com/AppScriptIO/configurationManagement#semver:^1.x.x":
-  version "1.0.4"
-  uid "4b9ba191b7f9d1fbcfad46978d6c0e865852a4fe"
-  resolved "http://github.com/AppScriptIO/configurationManagement#4b9ba191b7f9d1fbcfad46978d6c0e865852a4fe"
+  version "1.0.5"
+  uid c0d6aac471cdd123000c69dcc03d26a48f693bdd
+  resolved "http://github.com/AppScriptIO/configurationManagement#c0d6aac471cdd123000c69dcc03d26a48f693bdd"
 
 "@dependency/configurationManagement@https://github.com/AppScriptIO/configurationManagement#semver:^1.x.x":
-  version "1.0.4"
-  resolved "https://github.com/AppScriptIO/configurationManagement#4b9ba191b7f9d1fbcfad46978d6c0e865852a4fe"
+  version "1.0.5"
+  resolved "https://github.com/AppScriptIO/configurationManagement#c0d6aac471cdd123000c69dcc03d26a48f693bdd"
 
 "@dependency/deploymentProvisioning@https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x":
   version "1.0.10"
@@ -1053,7 +1053,6 @@
 
 "@dependency/entity@https://github.com/AppScriptIO/entity#semver:1.0.15", "@dependency/entity@https://github.com/AppScriptIO/entity#semver:^1.x.x":
   version "1.0.15"
-  uid "32f3f551cc8fd1bb38023c4c743acea3d4e961fe"
   resolved "https://github.com/AppScriptIO/entity#32f3f551cc8fd1bb38023c4c743acea3d4e961fe"
   dependencies:
     "@dependency/multiplePrototypeDelegation" "https://github.com/AppScriptIO/multiplePrototypeDelegation#semver:^1.x.x"
@@ -1067,7 +1066,6 @@
 
 "@dependency/graphTraversal-implementation@https://github.com/AppScriptIO/graphTraversal-implementation#semver:4.x.x", "@dependency/graphTraversal-implementation@https://github.com/AppScriptIO/graphTraversal-implementation#semver:^4.x.x":
   version "4.2.2"
-  uid ae3a8c6f3c024b9b77513655c5661f6184826476
   resolved "https://github.com/AppScriptIO/graphTraversal-implementation#ae3a8c6f3c024b9b77513655c5661f6184826476"
   dependencies:
     neo4j-driver "^1.7.5"
@@ -1085,7 +1083,6 @@
 
 "@dependency/graphTraversal@https://github.com/AppScriptIO/graphTraversal#semver:4.x.x", "@dependency/graphTraversal@https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x":
   version "4.1.9"
-  uid "9475789c98a6f8fcde9e6f2a6bac3e306d8a44ae"
   resolved "https://github.com/AppScriptIO/graphTraversal#9475789c98a6f8fcde9e6f2a6bac3e306d8a44ae"
   dependencies:
     "@dependency/entity" "https://github.com/AppScriptIO/entity#semver:^1.x.x"
@@ -1141,8 +1138,8 @@
     sinon "*"
 
 "@dependency/javascriptTranspilation@https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x":
-  version "1.2.8"
-  resolved "https://github.com/AppScriptIO/javascriptTranspilation#1c621f97390864aee61b9ed618d8c71cdcf807a9"
+  version "1.2.9"
+  resolved "https://github.com/AppScriptIO/javascriptTranspilation#6e996d8a0ea6de6b934972ae4e0162bf8c804fba"
   dependencies:
     "@babel/babel-plugin-functionSentProxyImplementation" "https://github.com/AppScriptIO/babel-plugin-functionSentProxyImplementation#semver:^1.x.x"
     "@babel/cli" "*"
