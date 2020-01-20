@@ -1,6 +1,7 @@
 const path = require('path')
 const { script } = require('./script.config.js')
 const { service, sslProtocol } = require('./apiGateway')
+const clientSideProjectConfigList = require('@application/gazitengWebapp-clientSide')
 
 /* previous serverConfig - TODO: check which configs to use:
 {
@@ -13,6 +14,7 @@ const { service, sslProtocol } = require('./apiGateway')
 */
 
 const ownConfig = {
+  clientSideProjectConfigList,
   runtimeVariable: {
     DEPLOYMENT: process.env.DEPLOYMENT || 'development', // Deployment type
     DISTRIBUTION: process.env.DISTRIBUTION || false,
