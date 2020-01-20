@@ -3,9 +3,9 @@
  */
 import { application } from '../app.js'
 import assert from 'assert'
-// import { consoleLogOverwrite } from '../../utility/consoleLogOverwrite.js'
+import { consoleLogOverwrite } from '../utility/consoleLogOverwrite.js'
 
-// consoleLogOverwrite()
+consoleLogOverwrite()
 
 process.on('SIGINT', () => console.log('application subprocess iterrupted.') && process.exit(0))
 
