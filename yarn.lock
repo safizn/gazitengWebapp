@@ -2,13 +2,9 @@
 # yarn lockfile v1
 
 
-"@application/gazitengWebapp-clientSide@https://github.com/myuseringithub/gazitengWebapp-clientSide#semver:^1.x.x":
-  version "1.1.1"
-  resolved "https://github.com/myuseringithub/gazitengWebapp-clientSide#414ce3bf691e8b33c0f8e7fec3d4b8041f93e0b3"
-
 "@babel/babel-plugin-functionSentProxyImplementation@https://github.com/AppScriptIO/babel-plugin-functionSentProxyImplementation#semver:^1.x.x":
-  version "1.0.1"
-  resolved "https://github.com/AppScriptIO/babel-plugin-functionSentProxyImplementation#886f69852b590dc651c3767bec8be0ccadc8405c"
+  version "1.0.2"
+  resolved "https://github.com/AppScriptIO/babel-plugin-functionSentProxyImplementation#fa11a55bb8f8e33884e152f3fd56c3dada8ce804"
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-function-sent" "^7.2.0"
@@ -944,25 +940,20 @@
 
 "@dependency/JSModuleTypeCheck@http://github.com/AppScriptIO/JSModuleTypeCheck#semver:^1.x.x":
   version "1.0.2"
-  uid "09585099a7d382b9a90baa55eb80ba261152168f"
   resolved "http://github.com/AppScriptIO/JSModuleTypeCheck#09585099a7d382b9a90baa55eb80ba261152168f"
-
-"@dependency/JSModuleTypeCheck@https://github.com/AppScriptIO/JSModuleTypeCheck#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/JSModuleTypeCheck#09585099a7d382b9a90baa55eb80ba261152168f"
 
 "@dependency/addModuleResolutionPath@https://github.com/AppScriptIO/addModuleResolutionPath#semver:^1.x.x":
   version "1.0.5"
   resolved "https://github.com/AppScriptIO/addModuleResolutionPath#1c9b1a61d78048d0968cf6e3427ed18d68ecd478"
 
 "@dependency/buildTool@https://github.com/AppScriptIO/buildTool#semver:2.x.x":
-  version "2.0.5"
-  resolved "https://github.com/AppScriptIO/buildTool#49dc2245936271e6b81eb1888600e175ebe11abc"
+  version "2.0.6"
+  resolved "https://github.com/AppScriptIO/buildTool#e2b3f1ed8d7386d884dcdb54c414202d926b0504"
   dependencies:
     "@dependency/deploymentProvisioning" "https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x"
     "@dependency/fragmentIndentationObjectStream" "https://github.com/AppScriptIO/fragmentIndentationObjectStream#semver:^1.x.x"
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:4.x.x"
-    "@dependency/javascriptTranspilation" "https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x"
+    "@dependency/javascriptTranspilation" "https://github.com/AppScriptIO/javascriptTranspilation#semver:^2.x.x"
     command-exists "*"
     css-slam "*"
     fs-extra "*"
@@ -1077,6 +1068,7 @@
 
 "@dependency/graphTraversal-implementation@https://github.com/AppScriptIO/graphTraversal-implementation#semver:4.x.x", "@dependency/graphTraversal-implementation@https://github.com/AppScriptIO/graphTraversal-implementation#semver:^4.x.x":
   version "4.2.2"
+  uid ae3a8c6f3c024b9b77513655c5661f6184826476
   resolved "https://github.com/AppScriptIO/graphTraversal-implementation#ae3a8c6f3c024b9b77513655c5661f6184826476"
   dependencies:
     neo4j-driver "^1.7.5"
@@ -1094,6 +1086,7 @@
 
 "@dependency/graphTraversal@https://github.com/AppScriptIO/graphTraversal#semver:4.x.x", "@dependency/graphTraversal@https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x":
   version "4.2.1"
+  uid cdcb2ba508bf627c036d35c18e51aa9601824629
   resolved "https://github.com/AppScriptIO/graphTraversal#cdcb2ba508bf627c036d35c18e51aa9601824629"
   dependencies:
     "@dependency/entity" "https://github.com/AppScriptIO/entity#semver:^1.x.x"
@@ -1117,8 +1110,8 @@
   resolved "https://github.com/AppScriptIO/handleFilesystemOperation#69d6054f655b1cc80b81afa696b22da13c37b04a"
 
 "@dependency/handleJSNativeDataStructure@https://github.com/AppScriptIO/handleJSNativeDataStructure#semver:^2.x.x":
-  version "2.0.2"
-  resolved "https://github.com/AppScriptIO/handleJSNativeDataStructure#e5acf482ee0a674f560eb9a38ddf34dc9310f81a"
+  version "2.0.3"
+  resolved "https://github.com/AppScriptIO/handleJSNativeDataStructure#ebe241c7819e7156092259ef06de588a4fca9230"
   dependencies:
     multistream "^2.1.1"
 
@@ -1131,12 +1124,7 @@
 
 "@dependency/installNodeJSModule@http://github.com/AppScriptIO/installNodeJSModule#semver:^1.x.x":
   version "1.0.2"
-  uid e019e8000b79962ba8201506c862baf4241a74f5
   resolved "http://github.com/AppScriptIO/installNodeJSModule#e019e8000b79962ba8201506c862baf4241a74f5"
-
-"@dependency/installNodeJSModule@https://github.com/AppScriptIO/installNodeJSModule#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/installNodeJSModule#e019e8000b79962ba8201506c862baf4241a74f5"
 
 "@dependency/javascriptStaticAnalysis@https://github.com/AppScriptIO/javascriptStaticAnalysis#semver:^1.x.x":
   version "1.0.2"
@@ -1154,10 +1142,10 @@
     typescript "^3.3.3333"
 
 "@dependency/javascriptTestRunner@https://github.com/AppScriptIO/javascriptTestRunner#semver:^1.x.x":
-  version "1.3.6"
-  resolved "https://github.com/AppScriptIO/javascriptTestRunner#f702a2a88bd34d7441fb9da029c4d24710cfbc38"
+  version "1.3.7"
+  resolved "https://github.com/AppScriptIO/javascriptTestRunner#a1e87531aec69de735b717a9833a06963825de74"
   dependencies:
-    "@dependency/javascriptTranspilation" "https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x"
+    "@dependency/javascriptTranspilation" "https://github.com/AppScriptIO/javascriptTranspilation#semver:^2.x.x"
     "@dependency/nodejsLiveReload" "https://github.com/AppScriptIO/nodejsLiveReload#semver:^2.x.x"
     "@dependency/parseKeyValuePairSeparatedBySymbol" "https://github.com/AppScriptIO/parseKeyValuePairSeparatedBySymbol#semver:^1.x.x"
     chai "^4.1.2"
@@ -1165,52 +1153,6 @@
     moment "*"
     should "*"
     sinon "*"
-
-"@dependency/javascriptTranspilation@https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x":
-  version "1.2.9"
-  resolved "https://github.com/AppScriptIO/javascriptTranspilation#6e996d8a0ea6de6b934972ae4e0162bf8c804fba"
-  dependencies:
-    "@babel/babel-plugin-functionSentProxyImplementation" "https://github.com/AppScriptIO/babel-plugin-functionSentProxyImplementation#semver:^1.x.x"
-    "@babel/cli" "*"
-    "@babel/core" "*"
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-proposal-class-properties" "*"
-    "@babel/plugin-proposal-decorators" "*"
-    "@babel/plugin-proposal-export-default-from" "^7.2.0"
-    "@babel/plugin-proposal-export-namespace-from" "^7.2.0"
-    "@babel/plugin-proposal-function-bind" "*"
-    "@babel/plugin-proposal-function-sent" "*"
-    "@babel/plugin-proposal-logical-assignment-operators" "^7.2.0"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.2.0"
-    "@babel/plugin-proposal-object-rest-spread" "^7.3.4"
-    "@babel/plugin-proposal-optional-catch-binding" "^7.2.0"
-    "@babel/plugin-proposal-optional-chaining" "^7.2.0"
-    "@babel/plugin-proposal-pipeline-operator" "^7.3.2"
-    "@babel/plugin-proposal-throw-expressions" "^7.2.0"
-    "@babel/plugin-syntax-decorators" "*"
-    "@babel/plugin-syntax-dynamic-import" "*"
-    "@babel/plugin-syntax-function-bind" "^7.2.0"
-    "@babel/plugin-syntax-function-sent" "^7.2.0"
-    "@babel/plugin-syntax-import-meta" "*"
-    "@babel/plugin-syntax-logical-assignment-operators" "^7.2.0"
-    "@babel/plugin-syntax-typescript" "^7.3.3"
-    "@babel/plugin-transform-modules-commonjs" "*"
-    "@babel/plugin-transform-runtime" "*"
-    "@babel/plugin-transform-typescript" "^7.3.2"
-    "@babel/preset-env" "*"
-    "@babel/register" "*"
-    "@babel/runtime" "*"
-    "@dependency/addModuleResolutionPath" "https://github.com/AppScriptIO/addModuleResolutionPath#semver:^1.x.x"
-    "@dependency/configurationManagement" "https://github.com/AppScriptIO/configurationManagement#semver:^1.x.x"
-    babel-core "^7.0.0-bridge"
-    babel-minify "*"
-    babel-plugin-dynamic-import-node "*"
-    babel-plugin-macros "*"
-    babel-plugin-parameter-decorator "^1.0.7"
-    babel-plugin-transform-commonjs-es2015-modules "*"
-    babel-plugin-transform-custom-element-classes "*"
-    babel-preset-minify "*"
-    pirates "^4.0.1"
 
 "@dependency/javascriptTranspilation@https://github.com/AppScriptIO/javascriptTranspilation#semver:^2.x.x":
   version "2.0.6"
@@ -1260,13 +1202,6 @@
     clone-deep "^4.0.1"
     pirates "^4.0.1"
 
-"@dependency/moduleScopePattern@https://github.com/AppScriptIO/moduleScopePattern#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/moduleScopePattern#82c3ee40de9a3e8bb5fe137b1337e27863266e90"
-  dependencies:
-    "@dependency/recursiveCreateDirectory" "https://github.com/AppScriptIO/recursiveCreateDirectory#semver:^1.x.x"
-    del "^3.0.0"
-
 "@dependency/multiplePrototypeDelegation@https://github.com/AppScriptIO/multiplePrototypeDelegation#semver:^1.x.x":
   version "1.1.1"
   resolved "https://github.com/AppScriptIO/multiplePrototypeDelegation#0e8dfe5fa8f9f4f967025722f8754c29d9ce9e9f"
@@ -1291,10 +1226,6 @@
   version "1.0.2"
   resolved "https://github.com/AppScriptIO/promiseProperRace#72091832f41fdc59f68e834cd4e1fb5ef2f09e31"
 
-"@dependency/recursiveCreateDirectory@https://github.com/AppScriptIO/recursiveCreateDirectory#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/recursiveCreateDirectory#56c4d3e62b7e4158040963e6ba07bc1211e883a3"
-
 "@dependency/resolveAndLookupPath@http://github.com/AppScriptIO/resolveAndLookupPath#semver:^1.x.x":
   version "1.1.1"
   uid "88e86468b7bc6ee8801b9b9f9625809e0cd685bf"
@@ -1314,15 +1245,12 @@
     "@dependency/resolveAndLookupPath" "http://github.com/AppScriptIO/resolveAndLookupPath#semver:^1.x.x"
 
 "@dependency/scriptManager@https://github.com/AppScriptIO/scriptManager#semver:^1.x.x":
-  version "1.1.1"
-  resolved "https://github.com/AppScriptIO/scriptManager#b541ae7eb0834ae8f3c23de5baf92bb53168e363"
+  version "1.1.3"
+  resolved "https://github.com/AppScriptIO/scriptManager#68fa5487a43e8ddd98081556091581a18bd5bec5"
   dependencies:
-    "@dependency/JSModuleTypeCheck" "https://github.com/AppScriptIO/JSModuleTypeCheck#semver:^1.x.x"
-    "@dependency/addModuleResolutionPath" "https://github.com/AppScriptIO/addModuleResolutionPath#semver:^1.x.x"
     "@dependency/configurationManagement" "https://github.com/AppScriptIO/configurationManagement#semver:^1.x.x"
-    "@dependency/installNodeJSModule" "https://github.com/AppScriptIO/installNodeJSModule#semver:^1.x.x"
-    "@dependency/javascriptTranspilation" "https://github.com/AppScriptIO/javascriptTranspilation#semver:^1.x.x"
-    "@dependency/moduleScopePattern" "https://github.com/AppScriptIO/moduleScopePattern#semver:^1.x.x"
+    "@dependency/handleModuleSystem" "https://github.com/AppScriptIO/handleModuleSystem#semver:^2.x.x"
+    "@dependency/javascriptTranspilation" "https://github.com/AppScriptIO/javascriptTranspilation#semver:^2.x.x"
     "@dependency/parseKeyValuePairSeparatedBySymbol" "https://github.com/AppScriptIO/parseKeyValuePairSeparatedBySymbol#semver:^1.x.x"
     "@dependency/scriptExecution" "https://github.com/AppScriptIO/scriptExecution#semver:^1.x.x"
     child-process-promise "^2.2.1"
@@ -1333,65 +1261,6 @@
     slash "^2.0.0"
     upath "^1.1.0"
     yargs "^12.0.2"
-
-"@dependency/serviceAccessControl@https://github.com/AppScriptIO/serviceAccessControl#semver:^1.x.x":
-  version "1.0.1"
-  resolved "https://github.com/AppScriptIO/serviceAccessControl#3455c5a6a21a1c05234da8bd3f953e73b3bebbbb"
-  dependencies:
-    "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^1.x.x"
-    koa-bodyparser "*"
-    koa-mount "*"
-    koa-views "*"
-    oauth2-server "*"
-    oidc-provider "*"
-    openid-client "*"
-    rethinkdb "*"
-    underscore "*"
-
-"@dependency/serviceApiEndpoint@https://github.com/AppScriptIO/serviceApiEndpoint#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/serviceApiEndpoint#aeeb3d30f02aa22e9d1187c3134fea493a7fec9d"
-  dependencies:
-    "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^1.x.x"
-    koa-compose "*"
-    koa-router "*"
-
-"@dependency/serviceDynamicContent@https://github.com/AppScriptIO/serviceDynamicContent#semver:^1.x.x":
-  version "1.0.5"
-  resolved "https://github.com/AppScriptIO/serviceDynamicContent#644c88cdc7ed247465cfd054ca60ae4bc77ece50"
-  dependencies:
-    "@babel/core" "*"
-    "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x"
-    "@dependency/graphTraversal-implementation" "https://github.com/AppScriptIO/graphTraversal-implementation#semver:^4.x.x"
-    "@dependency/namedCurry" "https://github.com/AppScriptIO/namedCurry#semver:^1.x.x"
-    "@dependency/streamToStringConvertion" "https://github.com/AppScriptIO/streamToStringConvertion#semver:^1.x.x"
-    "@dependency/wrapStringStream" "https://github.com/AppScriptIO/wrapStringStream#semver:^1.x.x"
-    co-body "*"
-    koa "*"
-    koa-bodyparser "^4.2.1"
-    koa-compress "*"
-    koa-helmet "*"
-    koa-json-error "*"
-    koa-logger "*"
-    koa-response-time "*"
-    koa-sendfile "*"
-    koa-sslify "*"
-    koa-views "*"
-    moment "*"
-    multistream "*"
-    openid-client "*"
-    promise-events "*"
-    ramda "^0.26.1"
-    underscore "*"
-    useragent "*"
-
-"@dependency/serviceRealtimeEndpoint@https://github.com/AppScriptIO/serviceRealtimeEndpoint#semver:^1.x.x":
-  version "1.0.3"
-  resolved "https://github.com/AppScriptIO/serviceRealtimeEndpoint#3bfbdd29fb8cb75960abb58037b4f9e966441ccd"
-  dependencies:
-    engine.io "*"
-    socket.io "*"
-    ws "*"
 
 "@dependency/streamToStringConvertion@https://github.com/AppScriptIO/streamToStringConvertion#semver:^1.x.x":
   version "1.0.2"
@@ -1454,6 +1323,69 @@
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@polymer/esm-amd-loader/-/esm-amd-loader-1.0.4.tgz#4e77f2f59b29b01e0ad02aa83d33716cddc5f9f9"
   integrity sha512-h+hqYkL+tQV/y2ESD5gFXMl5z4cC+XY1jTlBeGSBaTcj3VbB5OBEScbvRXm63NcEbBneQQYbHfBAXAkF9i9wIA==
+
+"@service/gazitengWebapp-clientSide@https://github.com/myuseringithub/gazitengWebapp-clientSide#semver:^1.x.x":
+  version "1.2.0"
+  resolved "https://github.com/myuseringithub/gazitengWebapp-clientSide#88b34e5c881ccdc29f5341492b258137f0f23d8d"
+
+"@service/serviceAccessControl@https://github.com/AppScriptIO/serviceAccessControl#semver:^1.x.x":
+  version "1.0.1"
+  resolved "https://github.com/AppScriptIO/serviceAccessControl#3455c5a6a21a1c05234da8bd3f953e73b3bebbbb"
+  dependencies:
+    "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^1.x.x"
+    koa-bodyparser "*"
+    koa-mount "*"
+    koa-views "*"
+    oauth2-server "*"
+    oidc-provider "*"
+    openid-client "*"
+    rethinkdb "*"
+    underscore "*"
+
+"@service/serviceApiEndpoint@https://github.com/AppScriptIO/serviceApiEndpoint#semver:^1.x.x":
+  version "1.0.2"
+  resolved "https://github.com/AppScriptIO/serviceApiEndpoint#aeeb3d30f02aa22e9d1187c3134fea493a7fec9d"
+  dependencies:
+    "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^1.x.x"
+    koa-compose "*"
+    koa-router "*"
+
+"@service/serviceDynamicContent@https://github.com/AppScriptIO/serviceDynamicContent#semver:^1.x.x":
+  version "1.0.5"
+  resolved "https://github.com/AppScriptIO/serviceDynamicContent#644c88cdc7ed247465cfd054ca60ae4bc77ece50"
+  dependencies:
+    "@babel/core" "*"
+    "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x"
+    "@dependency/graphTraversal-implementation" "https://github.com/AppScriptIO/graphTraversal-implementation#semver:^4.x.x"
+    "@dependency/namedCurry" "https://github.com/AppScriptIO/namedCurry#semver:^1.x.x"
+    "@dependency/streamToStringConvertion" "https://github.com/AppScriptIO/streamToStringConvertion#semver:^1.x.x"
+    "@dependency/wrapStringStream" "https://github.com/AppScriptIO/wrapStringStream#semver:^1.x.x"
+    co-body "*"
+    koa "*"
+    koa-bodyparser "^4.2.1"
+    koa-compress "*"
+    koa-helmet "*"
+    koa-json-error "*"
+    koa-logger "*"
+    koa-response-time "*"
+    koa-sendfile "*"
+    koa-sslify "*"
+    koa-views "*"
+    moment "*"
+    multistream "*"
+    openid-client "*"
+    promise-events "*"
+    ramda "^0.26.1"
+    underscore "*"
+    useragent "*"
+
+"@service/serviceRealtimeEndpoint@https://github.com/AppScriptIO/serviceRealtimeEndpoint#semver:^1.x.x":
+  version "1.0.3"
+  resolved "https://github.com/AppScriptIO/serviceRealtimeEndpoint#3bfbdd29fb8cb75960abb58037b4f9e966441ccd"
+  dependencies:
+    engine.io "*"
+    socket.io "*"
+    ws "*"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -6019,7 +5951,7 @@ http-cache-semantics@^4.0.0:
   resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.0.3.tgz#495704773277eeef6e43f9ab2c2c7d259dda25c5"
   integrity sha512-TcIMG3qeVLgDr1TEd2XvHaTnMPwYQUQMIBLy+5pLSDKYFc7UIqj39w8EGzZkaxoLv/l2K8HaI0t5AVA+YYgUew==
 
-http-errors@1.7.3, http-errors@^1.3.1, http-errors@^1.6.3, http-errors@~1.7.2:
+http-errors@1.7.3, http-errors@^1.6.3, http-errors@^1.7.3, http-errors@~1.7.2:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.7.3.tgz#6c619e4f9c60308c38519498c14fbb10aacebb06"
   integrity sha512-ZTTX0MWrsQ2ZAhA1cejAwDLycFsd7I7nVtnkT3Ol0aqodaKW+0CTZDQ1uBv5whptCnc8e8HeRRJxRs0kmm/Qfw==
@@ -6917,16 +6849,16 @@ koa-response-time@*:
   integrity sha512-W2YvnmqmmdEwjJh2rvUPqDD+yjnKvIQry6JhV9dHEwGpfcRzjmQBRVNg62Czbvut/Dpf+l7b9uFauet157UeUQ==
 
 koa-router@*:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/koa-router/-/koa-router-7.4.0.tgz#aee1f7adc02d5cb31d7d67465c9eacc825e8c5e0"
-  integrity sha512-IWhaDXeAnfDBEpWS6hkGdZ1ablgr6Q6pGdXCyK38RbzuH4LkUOpPqPw+3f8l8aTDrQmBQ7xJc0bs2yV4dzcO+g==
+  version "8.0.6"
+  resolved "https://registry.yarnpkg.com/koa-router/-/koa-router-8.0.6.tgz#5e808ee69dad4fd62d647102aac42be09e4425b0"
+  integrity sha512-qBrxDisLkuIPfasyrEtSPAtaP49ILfjDTJJoAiVC96uWM4PGM12XuFBY/iSm43zQFry1XFFE2OgVRaV2IrBnMg==
   dependencies:
-    debug "^3.1.0"
-    http-errors "^1.3.1"
-    koa-compose "^3.0.0"
-    methods "^1.0.1"
-    path-to-regexp "^1.1.1"
-    urijs "^1.19.0"
+    debug "^4.1.1"
+    http-errors "^1.7.3"
+    koa-compose "^4.1.0"
+    methods "^1.1.2"
+    path-to-regexp "1.x"
+    urijs "^1.19.2"
 
 koa-send@^5.0.0:
   version "5.0.0"
@@ -7743,7 +7675,7 @@ merge2@^1.3.0:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.3.0.tgz#5b366ee83b2f1582c48f87e47cf1a9352103ca81"
   integrity sha512-2j4DAdlBOkiSZIsaXk4mTE3sRS02yBHAtfy127xRV3bQUFqXkjHCHLW6Scv7DwNRbIWNHH8zpnz9zMaKXIdvYw==
 
-methods@^1.0.1:
+methods@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
   integrity sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=
@@ -8769,7 +8701,7 @@ path-root@^0.1.1:
   dependencies:
     path-root-regex "^0.1.0"
 
-path-to-regexp@^1.0.1, path-to-regexp@^1.1.1, path-to-regexp@^1.7.0:
+path-to-regexp@1.x, path-to-regexp@^1.0.1, path-to-regexp@^1.7.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.8.0.tgz#887b3ba9d84393e87a0a0b9f4cb756198b53548a"
   integrity sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
@@ -11176,7 +11108,7 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-urijs@^1.16.1, urijs@^1.19.0:
+urijs@^1.16.1, urijs@^1.19.2:
   version "1.19.2"
   resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.2.tgz#f9be09f00c4c5134b7cb3cf475c1dd394526265a"
   integrity sha512-s/UIq9ap4JPZ7H1EB5ULo/aOUbWqfDi7FKzMC2Nz+0Si8GiT1rIEaprt8hy3Vy2Ex2aJPpOQv4P4DuOZ+K1c6w==

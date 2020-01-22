@@ -85,5 +85,5 @@ Object.assign(ownConfig, {
 /** Must be positioned after exporting config, to prevent circular dependencies in the transpilation module - as the transpiler checks for the root module's configuration to print the transpiled files in shared temporary folder.
   In case the following modules also require tranpilation.
 */
-const clientSideProjectConfigList = require('@application/gazitengWebapp-clientSide')
+const clientSideProjectConfigList = require('@service/gazitengWebapp-clientSide')
 ownConfig.clientSideProjectConfigList = clientSideProjectConfigList

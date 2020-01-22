@@ -1,8 +1,8 @@
 import ownProjectConfig from '../configuration'
-import { service } from '@dependency/serviceDynamicContent'
-// import * as serviceApiEndpoint from '@dependency/serviceApiEndpoint'
-// import * as serviceAccessControl from '@dependency/serviceAccessControl'
-// import * as serviceRealtimeEndpoint from '@dependency/serviceRealtimeEndpoint'
+import { service } from '@service/serviceDynamicContent'
+// import * as serviceApiEndpoint from '@service/serviceApiEndpoint'
+// import * as serviceAccessControl from '@service/serviceAccessControl'
+// import * as serviceRealtimeEndpoint from '@service/serviceRealtimeEndpoint'
 
 // initialize services
 export const application = async () => {
