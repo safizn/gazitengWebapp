@@ -23,12 +23,6 @@ async function clearGraphData() {
   session.close()
 }
 
-suite.only('Application integration test with services:', () => {
-  test('', () => {
-    console.log('ok')
-  })
-})
-
 suite('Application integration test with services:', () => {
   setup(async () => await clearGraphData())
 
