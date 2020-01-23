@@ -942,10 +942,6 @@
   version "1.0.2"
   resolved "http://github.com/AppScriptIO/JSModuleTypeCheck#09585099a7d382b9a90baa55eb80ba261152168f"
 
-"@dependency/addModuleResolutionPath@https://github.com/AppScriptIO/addModuleResolutionPath#semver:^1.x.x":
-  version "1.0.5"
-  resolved "https://github.com/AppScriptIO/addModuleResolutionPath#1c9b1a61d78048d0968cf6e3427ed18d68ecd478"
-
 "@dependency/buildTool@https://github.com/AppScriptIO/buildTool#semver:2.x.x":
   version "2.0.6"
   resolved "https://github.com/AppScriptIO/buildTool#e2b3f1ed8d7386d884dcdb54c414202d926b0504"
@@ -1011,17 +1007,17 @@
     which "*"
 
 "@dependency/deploymentScript@https://github.com/AppScriptIO/deploymentScript#semver:^2.x.x":
-  version "2.0.6"
-  resolved "https://github.com/AppScriptIO/deploymentScript#f10ccc0ef48ce01f6f2c56d8f071d9bea68e514a"
+  version "2.0.7"
+  resolved "https://github.com/AppScriptIO/deploymentScript#1c9f064a2dcd068649ac79b51833ce77318fe312"
   dependencies:
     "@dependency/buildTool" "https://github.com/AppScriptIO/buildTool#semver:2.x.x"
     "@dependency/deploymentProvisioning" "https://github.com/AppScriptIO/deploymentProvisioning#semver:^1.x.x"
     "@dependency/entity" "https://github.com/AppScriptIO/entity#semver:1.0.15"
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:4.x.x"
     "@dependency/graphTraversal-implementation" "https://github.com/AppScriptIO/graphTraversal-implementation#semver:4.x.x"
+    "@dependency/handleFilesystemOperation" "https://github.com/AppScriptIO/handleFilesystemOperation#semver:^2.x.x"
     "@dependency/javascriptTestRunner" "https://github.com/AppScriptIO/javascriptTestRunner#semver:^1.x.x"
     "@dependency/nodejsLiveReload" "https://github.com/AppScriptIO/nodejsLiveReload#semver:^2.x.x"
-    "@dependency/resolveAndLookupPath" "https://github.com/AppScriptIO/resolveAndLookupPath#semver:^1.x.x"
     apollo-cache-inmemory "*"
     apollo-client "*"
     apollo-link "*"
@@ -1068,7 +1064,6 @@
 
 "@dependency/graphTraversal-implementation@https://github.com/AppScriptIO/graphTraversal-implementation#semver:4.x.x", "@dependency/graphTraversal-implementation@https://github.com/AppScriptIO/graphTraversal-implementation#semver:^4.x.x":
   version "4.2.2"
-  uid ae3a8c6f3c024b9b77513655c5661f6184826476
   resolved "https://github.com/AppScriptIO/graphTraversal-implementation#ae3a8c6f3c024b9b77513655c5661f6184826476"
   dependencies:
     neo4j-driver "^1.7.5"
@@ -1086,7 +1081,6 @@
 
 "@dependency/graphTraversal@https://github.com/AppScriptIO/graphTraversal#semver:4.x.x", "@dependency/graphTraversal@https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x":
   version "4.2.1"
-  uid cdcb2ba508bf627c036d35c18e51aa9601824629
   resolved "https://github.com/AppScriptIO/graphTraversal#cdcb2ba508bf627c036d35c18e51aa9601824629"
   dependencies:
     "@dependency/entity" "https://github.com/AppScriptIO/entity#semver:^1.x.x"
@@ -1127,10 +1121,10 @@
   resolved "http://github.com/AppScriptIO/installNodeJSModule#e019e8000b79962ba8201506c862baf4241a74f5"
 
 "@dependency/javascriptStaticAnalysis@https://github.com/AppScriptIO/javascriptStaticAnalysis#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/javascriptStaticAnalysis#ddf7d2dfebb347b8cb47f67d1992620c22c20b64"
+  version "1.0.3"
+  resolved "https://github.com/AppScriptIO/javascriptStaticAnalysis#59f0530047b6c082e6b0dfc3e813d83e72e2c67a"
   dependencies:
-    "@dependency/addModuleResolutionPath" "https://github.com/AppScriptIO/addModuleResolutionPath#semver:^1.x.x"
+    "@dependency/handleModuleSystem" "https://github.com/AppScriptIO/handleModuleSystem#semver:^2.x.x"
     "@typescript-eslint/eslint-plugin" "^1.4.2"
     "@typescript-eslint/parser" "^1.4.2"
     babel-eslint next
@@ -1228,12 +1222,7 @@
 
 "@dependency/resolveAndLookupPath@http://github.com/AppScriptIO/resolveAndLookupPath#semver:^1.x.x":
   version "1.1.1"
-  uid "88e86468b7bc6ee8801b9b9f9625809e0cd685bf"
   resolved "http://github.com/AppScriptIO/resolveAndLookupPath#88e86468b7bc6ee8801b9b9f9625809e0cd685bf"
-
-"@dependency/resolveAndLookupPath@https://github.com/AppScriptIO/resolveAndLookupPath#semver:^1.x.x":
-  version "1.1.1"
-  resolved "https://github.com/AppScriptIO/resolveAndLookupPath#88e86468b7bc6ee8801b9b9f9625809e0cd685bf"
 
 "@dependency/scriptExecution@https://github.com/AppScriptIO/scriptExecution#semver:^1.x.x":
   version "1.0.5"
@@ -1261,16 +1250,6 @@
     slash "^2.0.0"
     upath "^1.1.0"
     yargs "^12.0.2"
-
-"@dependency/streamToStringConvertion@https://github.com/AppScriptIO/streamToStringConvertion#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/streamToStringConvertion#98912cb4b6d7b9cf1ea430a0765b66c7e5dfd24f"
-
-"@dependency/wrapStringStream@https://github.com/AppScriptIO/wrapStringStream#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/wrapStringStream#4a2051793276cc01f614a6fd7cdc1b512998dd72"
-  dependencies:
-    multistream "^2.1.1"
 
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
@@ -1329,8 +1308,8 @@
   resolved "https://github.com/myuseringithub/gazitengWebapp-clientSide#88b34e5c881ccdc29f5341492b258137f0f23d8d"
 
 "@service/serviceAccessControl@https://github.com/AppScriptIO/serviceAccessControl#semver:^1.x.x":
-  version "1.0.1"
-  resolved "https://github.com/AppScriptIO/serviceAccessControl#3455c5a6a21a1c05234da8bd3f953e73b3bebbbb"
+  version "1.1.1"
+  resolved "https://github.com/AppScriptIO/serviceAccessControl#d02b66cfe2f2369f990ec40f6c09977f7d6a647f"
   dependencies:
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^1.x.x"
     koa-bodyparser "*"
@@ -1343,23 +1322,22 @@
     underscore "*"
 
 "@service/serviceApiEndpoint@https://github.com/AppScriptIO/serviceApiEndpoint#semver:^1.x.x":
-  version "1.0.2"
-  resolved "https://github.com/AppScriptIO/serviceApiEndpoint#aeeb3d30f02aa22e9d1187c3134fea493a7fec9d"
+  version "1.1.1"
+  resolved "https://github.com/AppScriptIO/serviceApiEndpoint#346afc96b437862f7793b0c5a2b57ab09622b89c"
   dependencies:
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^1.x.x"
     koa-compose "*"
     koa-router "*"
 
 "@service/serviceDynamicContent@https://github.com/AppScriptIO/serviceDynamicContent#semver:^1.x.x":
-  version "1.0.5"
-  resolved "https://github.com/AppScriptIO/serviceDynamicContent#644c88cdc7ed247465cfd054ca60ae4bc77ece50"
+  version "1.1.1"
+  resolved "https://github.com/AppScriptIO/serviceDynamicContent#d2987d9827b599232c2e61bef0958ce4dcb3dc6a"
   dependencies:
     "@babel/core" "*"
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x"
     "@dependency/graphTraversal-implementation" "https://github.com/AppScriptIO/graphTraversal-implementation#semver:^4.x.x"
+    "@dependency/handleJSNativeDataStructure" "https://github.com/AppScriptIO/handleJSNativeDataStructure#semver:^2.x.x"
     "@dependency/namedCurry" "https://github.com/AppScriptIO/namedCurry#semver:^1.x.x"
-    "@dependency/streamToStringConvertion" "https://github.com/AppScriptIO/streamToStringConvertion#semver:^1.x.x"
-    "@dependency/wrapStringStream" "https://github.com/AppScriptIO/wrapStringStream#semver:^1.x.x"
     co-body "*"
     koa "*"
     koa-bodyparser "^4.2.1"
@@ -1380,8 +1358,8 @@
     useragent "*"
 
 "@service/serviceRealtimeEndpoint@https://github.com/AppScriptIO/serviceRealtimeEndpoint#semver:^1.x.x":
-  version "1.0.3"
-  resolved "https://github.com/AppScriptIO/serviceRealtimeEndpoint#3bfbdd29fb8cb75960abb58037b4f9e966441ccd"
+  version "1.1.1"
+  resolved "https://github.com/AppScriptIO/serviceRealtimeEndpoint#0219e13f1c16a903892f87bfbb1ee35b6d746842"
   dependencies:
     engine.io "*"
     socket.io "*"
