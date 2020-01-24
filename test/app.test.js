@@ -24,13 +24,14 @@ async function clearGraphData() {
 }
 
 suite('Application integration test with services:', () => {
-  setup(async () => await clearGraphData())
-
   suite('Exposing services through dedicated ports:', () => {
+    suiteSetup(async () => {
+      await clearGraphData()
+      await application().catch(error => throw error)
+    })
+
     const url = `http://${ownProjectConfig.runtimeVariable.HOST}:${ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentDelivery').port}`
     test('Should call successfully expose services', async () => {
-      await application().catch(error => throw error)
-
       {
         let responseStream = await new Promise((resolve, reject) => http.get(`${url}/@javascript`, response => resolve(response)))
         assert(responseStream.statusCode == 404, `• Response return non successful statusCode.`)
@@ -42,8 +43,6 @@ suite('Application integration test with services:', () => {
     })
 
     test('Should call successfully expose services', async () => {
-      await application().catch(error => throw error)
-
       {
         let responseStream = await new Promise((resolve, reject) => http.get(`${url}/asset`, response => resolve(response)))
         assert(responseStream.statusCode == 404, `• Response return non successful statusCode.`)
@@ -55,8 +54,6 @@ suite('Application integration test with services:', () => {
     })
 
     test('Should call successfully expose services', async () => {
-      await application().catch(error => throw error)
-
       {
         let responseStream = await new Promise((resolve, reject) => http.get(`${url}/upload`, response => resolve(response)))
         assert(responseStream.statusCode == 404, `• Response return non successful statusCode.`)
