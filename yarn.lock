@@ -974,13 +974,21 @@
     underscore "^1.9.1"
 
 "@dependency/handleFilesystemOperation@http://github.com/AppScriptIO/handleFilesystemOperation#semver:^2.x.x":
-  version "2.0.2"
-  uid ae324d7c2d7d70c022f1aaeec10f963d4a841e59
-  resolved "http://github.com/AppScriptIO/handleFilesystemOperation#ae324d7c2d7d70c022f1aaeec10f963d4a841e59"
+  version "2.0.3"
+  uid c1318dd6db9de85460eee6956d1c3f920ff4046e
+  resolved "http://github.com/AppScriptIO/handleFilesystemOperation#c1318dd6db9de85460eee6956d1c3f920ff4046e"
+  dependencies:
+    glob "^7.1.6"
+    glob-stream "^6.1.0"
+    globby "^11.0.0"
 
 "@dependency/handleFilesystemOperation@https://github.com/AppScriptIO/handleFilesystemOperation#semver:^2.x.x":
-  version "2.0.2"
-  resolved "https://github.com/AppScriptIO/handleFilesystemOperation#ae324d7c2d7d70c022f1aaeec10f963d4a841e59"
+  version "2.0.3"
+  resolved "https://github.com/AppScriptIO/handleFilesystemOperation#c1318dd6db9de85460eee6956d1c3f920ff4046e"
+  dependencies:
+    glob "^7.1.6"
+    glob-stream "^6.1.0"
+    globby "^11.0.0"
 
 "@dependency/handleJSNativeDataStructure@https://github.com/AppScriptIO/handleJSNativeDataStructure#semver:^2.x.x":
   version "2.0.4"
@@ -1084,8 +1092,8 @@
     which "*"
 
 "@deployment/deploymentScript@https://github.com/AppScriptIO/deploymentScript#semver:^2.x.x":
-  version "2.2.1"
-  resolved "https://github.com/AppScriptIO/deploymentScript#1ebb2ed01401d8e5fe7caecfb926ec13af1b7137"
+  version "2.2.2"
+  resolved "https://github.com/AppScriptIO/deploymentScript#3d7ad33612182ebd8c1ca37b2d248062cb0b3f98"
   dependencies:
     "@dependency/entity" "https://github.com/AppScriptIO/entity#semver:^2.x.x"
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x"
@@ -1132,8 +1140,8 @@
     typescript "^3.3.3333"
 
 "@deployment/javascriptTestRunner@https://github.com/AppScriptIO/javascriptTestRunner#semver:^2.x.x":
-  version "2.0.2"
-  resolved "https://github.com/AppScriptIO/javascriptTestRunner#ae32ab9bd0e86e6307078a840f4a5d49b577cf07"
+  version "2.0.3"
+  resolved "https://github.com/AppScriptIO/javascriptTestRunner#ba76bb2ccc73f6c8ece451416afb6dfee0ed2ba4"
   dependencies:
     "@dependency/parseKeyValuePairSeparatedBySymbol" "https://github.com/AppScriptIO/parseKeyValuePairSeparatedBySymbol#semver:^1.x.x"
     "@deployment/javascriptTranspilation" "https://github.com/AppScriptIO/javascriptTranspilation#semver:^2.x.x"
@@ -1193,8 +1201,8 @@
     pirates "^4.0.1"
 
 "@deployment/nodejsLiveReload@https://github.com/AppScriptIO/nodejsLiveReload#semver:^2.x.x":
-  version "2.2.1"
-  resolved "https://github.com/AppScriptIO/nodejsLiveReload#7016f4d4f9c751597368e44e5f321677c838944e"
+  version "2.2.2"
+  resolved "https://github.com/AppScriptIO/nodejsLiveReload#518a922be96dd72fe2b6e7ab3f6ca2ae30037cdc"
   dependencies:
     browser-sync "*"
     chokidar "*"
@@ -1209,8 +1217,8 @@
     "@deployment/configurationManagement" "http://github.com/AppScriptIO/configurationManagement#semver:^2.x.x"
 
 "@deployment/scriptManager@https://github.com/AppScriptIO/scriptManager#semver:^2.x.x":
-  version "2.0.1"
-  resolved "https://github.com/AppScriptIO/scriptManager#2b0ea85c730a1c20fc2f542279635cb989a33c53"
+  version "2.0.2"
+  resolved "https://github.com/AppScriptIO/scriptManager#3481beba4e00247d939fd0f220571dd86bdc7adf"
   dependencies:
     "@dependency/handleModuleSystem" "https://github.com/AppScriptIO/handleModuleSystem#semver:^2.x.x"
     "@dependency/parseKeyValuePairSeparatedBySymbol" "https://github.com/AppScriptIO/parseKeyValuePairSeparatedBySymbol#semver:^1.x.x"
@@ -5273,7 +5281,7 @@ glob-watcher@^5.0.3:
     just-debounce "^1.0.0"
     object.defaults "^1.1.0"
 
-glob@*, glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
+glob@*, glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.6:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
   integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
@@ -5345,7 +5353,7 @@ globals@^9.18.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.18.0.tgz#aa3896b3e69b487f17e31ed2143d69a8e30c2d8a"
   integrity sha512-S0nG3CLEQiY/ILxqtztTWH/3iRRdyBLw6KMDxnKMchrtbj2OFmehVh0WUCfW3DUrIgx/qFrJPICrq4Z4sTR9UQ==
 
-globby@*:
+globby@*, globby@^11.0.0:
   version "11.0.0"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.0.tgz#56fd0e9f0d4f8fb0c456f1ab0dee96e1380bc154"
   integrity sha512-iuehFnR3xu5wBBtm4xi0dMe92Ob87ufyu/dHwpDYfbcpYpIbrO5OnS8M1vWvrBhSGEJ3/Ecj7gnX76P8YxpPEg==
