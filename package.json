@@ -4,7 +4,8 @@
 	"main": "./entrypoint/programmaticAPI",
 	"scripts": {
 		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
-		"run": "yarn run scriptManager ./ \".application()\"",
+		"runDevelopment": "sudo yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({})\"",
+		"runProduction": "yarn run scriptManager ./ \".application()\"",
 		"run-pureCommand": "sudo node --eval \"require(process.cwd()).application()\"",
 		"test": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: false, shouldCompileTest: true })\"",
 		"test-inspect": "export NODE_OPTIONS='--inspect-brk' && yarn run scriptManager @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: true, shouldCompileTest: true })\"",
