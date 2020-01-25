@@ -1092,8 +1092,8 @@
     which "*"
 
 "@deployment/deploymentScript@https://github.com/AppScriptIO/deploymentScript#semver:^2.x.x":
-  version "2.2.2"
-  resolved "https://github.com/AppScriptIO/deploymentScript#3d7ad33612182ebd8c1ca37b2d248062cb0b3f98"
+  version "2.2.3"
+  resolved "https://github.com/AppScriptIO/deploymentScript#2e81219a0ae989e5fbf7b66f63eba0338995c8ee"
   dependencies:
     "@dependency/entity" "https://github.com/AppScriptIO/entity#semver:^2.x.x"
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x"
@@ -1140,8 +1140,8 @@
     typescript "^3.3.3333"
 
 "@deployment/javascriptTestRunner@https://github.com/AppScriptIO/javascriptTestRunner#semver:^2.x.x":
-  version "2.0.3"
-  resolved "https://github.com/AppScriptIO/javascriptTestRunner#ba76bb2ccc73f6c8ece451416afb6dfee0ed2ba4"
+  version "2.0.4"
+  resolved "https://github.com/AppScriptIO/javascriptTestRunner#3561d19e6b4342d8e6c980b1c05ffb87f8afc3ae"
   dependencies:
     "@dependency/parseKeyValuePairSeparatedBySymbol" "https://github.com/AppScriptIO/parseKeyValuePairSeparatedBySymbol#semver:^1.x.x"
     "@deployment/javascriptTranspilation" "https://github.com/AppScriptIO/javascriptTranspilation#semver:^2.x.x"
@@ -1201,8 +1201,8 @@
     pirates "^4.0.1"
 
 "@deployment/nodejsLiveReload@https://github.com/AppScriptIO/nodejsLiveReload#semver:^2.x.x":
-  version "2.2.3"
-  resolved "https://github.com/AppScriptIO/nodejsLiveReload#d96b54dc9b1c4cac65b490a05e39c19882699e1e"
+  version "2.2.4"
+  resolved "https://github.com/AppScriptIO/nodejsLiveReload#6d7d65bfd7b1cd6dd7b7b6b45e11571822243f41"
   dependencies:
     browser-sync "*"
     chokidar "*"
@@ -3107,9 +3107,9 @@ cancel-token@^0.1.1:
     "@types/node" "^4.0.30"
 
 caniuse-lite@^1.0.30001020, caniuse-lite@^1.0.30001022:
-  version "1.0.30001022"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001022.tgz#9eeffe580c3a8f110b7b1742dcf06a395885e4c6"
-  integrity sha512-FjwPPtt/I07KyLPkBQ0g7/XuZg6oUkYBVnPHNj3VHJbOjmmJ/GdSo/GUY6MwINEQvjhP6WZVbX8Tvms8xh0D5A==
+  version "1.0.30001023"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001023.tgz#b82155827f3f5009077bdd2df3d8968bcbcc6fc4"
+  integrity sha512-C5TDMiYG11EOhVOA62W1p3UsJ2z4DsHtMBQtjzp3ZsUglcQn62WOUgW0y795c7A5uZ+GCEIvzkMatLIlAsbNTA==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -8324,9 +8324,9 @@ only@~0.0.2:
   integrity sha1-Kv3oTQPlC5qO3EROMGEKcCle37Q=
 
 openid-client@*:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/openid-client/-/openid-client-3.12.0.tgz#1a9972fd58ebff97f089166a5e52dd8b70d5f74b"
-  integrity sha512-QVuwLCSVFz240vXNXU9MQadOsC9D0+m6BsIjjnfNO9+2syOQW8vwZsg+fRk8sOY7xyRI9E+jirx1ctmVQYoG8g==
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/openid-client/-/openid-client-3.12.1.tgz#1f5237c8dace565a9cd664ae0f81f9f53fff84db"
+  integrity sha512-l8RgNDu9qejVtM09nWBxbL+sr2R3NJ3VYLu0gaU+wD/+elhEBkKUhuQLEEhzFjWEFK58n39CYv8ZQR4POKIT1g==
   dependencies:
     "@types/got" "^9.6.9"
     base64url "^3.0.1"
