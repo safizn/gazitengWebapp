@@ -25,6 +25,7 @@
 		"@deployment/javascriptStaticAnalysis": "https://github.com/AppScriptIO/javascriptStaticAnalysis#semver:^2.x.x",
 		"@deployment/javascriptTranspilation": "https://github.com/AppScriptIO/javascriptTranspilation#semver:^2.x.x",
 		"@deployment/scriptManager": "https://github.com/AppScriptIO/scriptManager#semver:^2.x.x",
+		"loadtest": "^4.1.0",
 		"neo4j-driver": "^1.7.5",
 		"request": "^2.88.0",
 		"request-promise": "^4.2.5",
