@@ -5,23 +5,35 @@ import { service } from '@service/serviceDynamicContent'
 // import * as serviceRealtimeEndpoint from '@service/serviceRealtimeEndpoint'
 
 // initialize services
-export const application = async () => {
+export const application = async (
+  {} = {},
+  {
+    // dependency service configs
+    memgraph = { host: 'localhost' },
+  } = {},
+) => {
   // Application & Service messages:
-  process.on('service', message => console.log(`☕ Service: ${message.serviceName}, port ${message.port}, status ${message.status}`))
+  process.on('service', message => console.log(`☕ Service: ${message.serviceName}, host ${message.host}, port ${message.port}, status ${message.status}`))
   process.on('application', message => console.log(`✔ WebApp: status ${message.status} \n`))
 
   // Each service should emit an event/message to listening processes, marking a ready status to receive requests (in case run in a forked process).
   console.groupCollapsed('• Run services:')
 
-  await service.restApi.initializeAssetContentDelivery({
-    targetProjectConfig: ownProjectConfig,
-    port: ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentDelivery').port,
-  })
+  await service.restApi.initializeAssetContentDelivery(
+    {
+      targetProjectConfig: ownProjectConfig,
+      port: ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentDelivery').port,
+    },
+    { memgraph },
+  )
 
-  await service.restApi.initializeRootContentRendering({
-    targetProjectConfig: ownProjectConfig,
-    port: ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentRendering').port,
-  })
+  await service.restApi.initializeRootContentRendering(
+    {
+      targetProjectConfig: ownProjectConfig,
+      port: ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentRendering').port,
+    },
+    { memgraph },
+  )
 
   // await serviceApiEndpoint.initialize({
   //   targetProjectConfig: ownProjectConfig,
