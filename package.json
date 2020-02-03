@@ -6,16 +6,13 @@
 		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
 		"run": "node --eval \"require(process.cwd()).application()\"",
 		"run-throughScriptManager": "yarn run scriptManager ./ \".application()\"",
-
 		"run-configuredForContainer": "node --eval \"require(process.cwd()).application({}, { memgraph: { host: 'memgraph' }})\"",
 		"container-run": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.runApplication({ scriptCommandName: 'run-configuredForContainer' })\"",
-		"container-livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.runApplication({ scriptCommandName: 'livereload' })\"",
-
+		"container-livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.runApplication({ scriptCommandName: 'livereload-configuredForContainer' })\"",
 		"livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({})\"",
-
+		"livereload-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({ application: [{},{ memgraph: { host: 'memgraph' }}] })\"",
 		"test": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: false, shouldCompileTest: true })\"",
 		"test-inspect": "export NODE_OPTIONS='--inspect-brk' && yarn run scriptManager @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: true, shouldCompileTest: true })\"",
-
 		"build": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildSourceCode.moduleProject({}, {compile:[/**'./test'*/]})\"",
 		"buildAndRelease": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildAndRelease.moduleProject({})\""
 	},
@@ -27,7 +24,6 @@
 		"@service/serviceRealtimeEndpoint": "https://github.com/AppScriptIO/serviceRealtimeEndpoint#semver:^2.x.x"
 	},
 	"devDependencies": {
-		"@deployment/deploymentProvisioning": "https://github.com/AppScriptIO/deploymentProvisioning#semver:^2.x.x",
 		"@deployment/deploymentScript": "https://github.com/AppScriptIO/deploymentScript#semver:^2.x.x",
 		"@deployment/javascriptStaticAnalysis": "https://github.com/AppScriptIO/javascriptStaticAnalysis#semver:^2.x.x",
 		"@deployment/javascriptTranspilation": "https://github.com/AppScriptIO/javascriptTranspilation#semver:^2.x.x",
