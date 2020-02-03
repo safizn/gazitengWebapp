@@ -4,13 +4,18 @@
 	"main": "./entrypoint/programmaticAPI",
 	"scripts": {
 		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
-		"runContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.runApplication({})\"",
-		"runDevelopment": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({})\"",
-		"runProduction": "yarn run scriptManager ./ \".application()\"",
-		"run-pureCommand": "node --eval \"require(process.cwd()).application()\"",
-		"run-pureCommandInContainer": "node --eval \"require(process.cwd()).application({}, { memgraph: { host: 'memgraph' }})\"",
+		"run": "node --eval \"require(process.cwd()).application()\"",
+		"run-throughScriptManager": "yarn run scriptManager ./ \".application()\"",
+
+		"run-configuredForContainer": "node --eval \"require(process.cwd()).application({}, { memgraph: { host: 'memgraph' }})\"",
+		"container-run": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.runApplication({ scriptCommandName: 'run-configuredForContainer' })\"",
+		"container-livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.runApplication({ scriptCommandName: 'livereload' })\"",
+
+		"livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({})\"",
+
 		"test": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: false, shouldCompileTest: true })\"",
 		"test-inspect": "export NODE_OPTIONS='--inspect-brk' && yarn run scriptManager @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: true, shouldCompileTest: true })\"",
+
 		"build": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildSourceCode.moduleProject({}, {compile:[/**'./test'*/]})\"",
 		"buildAndRelease": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildAndRelease.moduleProject({})\""
 	},
