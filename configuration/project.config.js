@@ -18,6 +18,7 @@ Object.assign(ownConfig, {
     DEPLOYMENT: process.env.DEPLOYMENT || 'development', // Deployment type
     DISTRIBUTION: process.env.DISTRIBUTION || false,
     HOST: process.env.HOST || 'localhost',
+    PROTOCOL: process.env.PROTOCOL || 'http://',
   },
   directory: {
     root: path.normalize(`${__dirname}/..`),
@@ -68,7 +69,9 @@ Object.assign(ownConfig, {
     },
   },
   apiGateway: {
-    service,
+    get service() {
+      return service({ protocol: ownConfig.runtimeVariable.PROTOCOL, host: ownConfig.runtimeVariable.HOST })
+    },
   },
   production: {
     get containerRoute() {

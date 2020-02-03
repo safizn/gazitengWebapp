@@ -1,10 +1,7 @@
 const filesystem = require('fs')
 const path = require('path')
 
-let PROTOCOL = 'http://',
-  HOST = 'localhost'
-
-module.exports.service = [
+module.exports.service = ({ protocol, host }) => [
   {
     targetService: 'contentRendering',
     port: 8080,
@@ -15,14 +12,14 @@ module.exports.service = [
     targetService: 'contentDelivery',
     port: 8081,
     subdomain: `cdn`,
-    url: `${PROTOCOL}cdn.${HOST}`,
+    url: `${protocol}cdn.${host}`,
     ssl: true,
   },
   {
     targetService: 'apiEndpoint',
     port: 8082,
     subdomain: `api`,
-    url: `${PROTOCOL}api.${HOST}/`,
+    url: `${protocol}api.${host}/`,
     ssl: true,
   },
   {
