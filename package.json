@@ -8,6 +8,7 @@
 		"run-throughScriptManager": "yarn run scriptManager ./ \".application()\"",
 		"run-configuredForContainer": "node --eval \"require(process.cwd()).application({}, { memgraph: { host: 'memgraph' }})\"",
 		"container-run": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.runApplication({ scriptCommandName: 'run-configuredForContainer' })\"",
+		"container-run-command": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \" .container.run.runApplication({ scriptCommand: ' node --eval \\\"  require(process.cwd()).application({}, { memgraph: { host: \\'memgraph\\' }}) \\\"  '}) \"",
 		"container-livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.runApplication({ scriptCommandName: 'livereload-configuredForContainer' })\"",
 		"livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({})\"",
 		"livereload-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({ application: [{},{ memgraph: { host: 'memgraph' }}] })\"",
