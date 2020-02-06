@@ -1,36 +1,28 @@
 import assert from 'assert'
 import http from 'http'
 import { assert as chaiAssertion } from 'chai'
-import loadtest from 'loadtest'
-import utility from 'util'
 import path from 'path'
 import filesystem from 'fs'
+import loadtest from 'loadtest'
 import { application } from '..'
 import ownProjectConfig from '../configuration'
-const boltProtocolDriver = require('neo4j-driver').v1
 import { container } from '@deployment/deploymentScript'
+// parse additional passed parameters for tests (as Mocha.run doesn't support passing parameters to test files)
+let testConfig = global.additionalParameter ? JSON.parse(global.additionalParameter) : { memgraph: { host: 'localhost' || 'memgraph' } }
 
-async function clearGraphData() {
-  console.groupCollapsed('• Run prerequisite containers:')
-  container.memgraph.runDockerContainer() // temporary solution
-  console.groupEnd()
-  // Delete all nodes in the in-memory database
-  console.log('• Cleared graph database.')
-  const url = { protocol: 'bolt', hostname: 'localhost', port: 7687 },
-    authentication = { username: 'neo4j', password: 'test' }
-  const graphDBDriver = boltProtocolDriver.driver(`${url.protocol}://${url.hostname}:${url.port}`, boltProtocolDriver.auth.basic(authentication.username, authentication.password))
-  let session = await graphDBDriver.session()
-  let result = await session.run(`match (n) detach delete n`)
-  session.close()
-}
+suiteSetup(async () => {
+  await container.memgraph.clearGraphData({ memgraph: testConfig.memgraph })
+  let applicationInfo = await application({}, { memgraph: testConfig.memgraph }).catch(error => throw error)
+  suiteTeardown(function(done) {
+    console.log('• Closing used server ports:')
+    let promiseArray = []
+    for (let service of applicationInfo.service) promiseArray.push(service.close())
+    Promise.all(promiseArray).then(() => done())
+  })
+})
 
 suite('Application integration test with services:', () => {
   suite('Exposing services through dedicated ports:', () => {
-    suiteSetup(async () => {
-      await clearGraphData()
-      await application().catch(error => throw error)
-    })
-
     // content Delivery
     {
       const url = `http://${ownProjectConfig.runtimeVariable.HOST}:${ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentDelivery').port}`
@@ -91,11 +83,6 @@ suite('Performance measure:', () => {
     avgRequestTime = 4000 // goal: 1000
 
   suite('Application with integrated services:', () => {
-    suiteSetup(async () => {
-      await clearGraphData()
-      await application().catch(error => throw error)
-    })
-
     const url = `http://${ownProjectConfig.runtimeVariable.HOST}:${ownProjectConfig.apiGateway.service.find(item => item.targetService == 'contentRendering').port}`
     test('performance testing /heaving-ping', function(done) {
       let gLatency
