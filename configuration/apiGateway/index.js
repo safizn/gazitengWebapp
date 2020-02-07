@@ -34,7 +34,8 @@ module.exports.service = ({ protocol, host }) => [
     subdomain: `oauth`,
   },
   {
-    subdomain: `rethinkdb`,
+    targetService: 'memgraph',
+    subdomain: `database`,
     ssl: false,
   },
 ]
