@@ -5,11 +5,11 @@ const resolvedModule = {
   },
 }
 
-module.exports = {
-  script: [
+module.exports = function() {
+  return [
     {
       type: 'directory',
       path: `${resolvedModule.deploymentScript}/script`,
     },
-  ],
+  ]
 }

@@ -1,5 +1,5 @@
 const path = require('path')
-const { script } = require('./script.config.js')
+const script = require('./script.config.js')
 const { service, sslProtocol } = require('./apiGateway')
 
 /* previous serverConfig - TODO: check which configs to use:
@@ -44,7 +44,7 @@ Object.assign(ownConfig, {
   },
   get script() {
     return [
-      ...script,
+      ...script(),
       ...[
         { type: 'directory', path: ownConfig.directory.script },
         { type: 'directory', path: path.join(ownConfig.directory.root, 'node_modules') },
