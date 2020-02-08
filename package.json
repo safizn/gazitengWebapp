@@ -4,7 +4,6 @@
 	"main": "./entrypoint/programmaticAPI",
 	"scripts": {
 		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
-
 		"run": "node --eval \"require(process.cwd()).application()\"",
 		"run-configuredForContainer": "node --eval \"require(process.cwd()).application({}, { memgraph: { host: 'memgraph' }})\"",
 		"run-throughScriptManager": "yarn run scriptManager ./ \".application()\"",
@@ -12,21 +11,18 @@
 		"container-run-command": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \" .container.run.dockerCli({ scriptCommand: ' node --eval \\\"  require(process.cwd()).application({}, { memgraph: { host: \\'memgraph\\' }}) \\\"  '}) \"",
 		"container-run": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerCli({ scriptCommand: 'yarn run run-configuredForContainer' })\"",
 		"container-run-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: 'yarn run run-configuredForContainer' })\"",
-
 		"livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({})\"",
 		"livereload-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({ application: [{},{ memgraph: { host: 'memgraph' }}] })\"",
 		"container-livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerCli({ scriptCommand: ' yarn run livereload-configuredForContainer' })\"",
 		"container-livereload-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: 'yarn run livereload-configuredForContainer' })\"",
-
 		"test": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: false, shouldCompileTest: true })\"",
 		"test-inspect": "export NODE_OPTIONS='--inspect-brk' && yarn run scriptManager @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: true, shouldCompileTest: true })\"",
 		"test-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".test.default({ testPath: ['./test'], shouldDebugger: false, shouldCompileTest: true }, { memgraph: {host:'memgraph'} })\"",
 		"container-test": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerCli({ scriptCommand: ' yarn run test-configuredForContainer' })\"",
 		"container-test-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: 'yarn run test-configuredForContainer' })\"",
-
 		"build": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildSourceCode.moduleProject({}, {compile:[/**'./test'*/]})\"",
 		"build-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildSourceCode.webappProject({memgraph:{host:'memgraph'}})\"",
-		"container-build-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: 'yarn run build-configuredForContainer' })\"",
+		"container-build-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: '/bin/bash' || 'yarn run build-configuredForContainer' })\"",
 		"buildAndRelease": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildAndRelease.moduleProject({})\"",
 		"image-build": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.build.dockerBuildImage({})\""
 	},
