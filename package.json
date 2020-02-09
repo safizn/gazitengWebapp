@@ -21,8 +21,8 @@
 		"container-test": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerCli({ scriptCommand: ' yarn run test-configuredForContainer' })\"",
 		"container-test-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: 'yarn run test-configuredForContainer' })\"",
 		"build": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildSourceCode.moduleProject({}, {compile:[/**'./test'*/]})\"",
-		"build-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildSourceCode.webappProject({memgraph:{host:'memgraph'}})\"",
-		"container-build-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: '/bin/bash' || 'yarn run build-configuredForContainer' })\"",
+		"build-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildSourceCode.moduleProject({memgraph:{host:'memgraph'}})\"",
+		"container-build-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: 'yarn run build-configuredForContainer' })\"",
 		"buildAndRelease": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildAndRelease.moduleProject({})\"",
 		"image-build": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.build.dockerBuildImage({})\""
 	},
