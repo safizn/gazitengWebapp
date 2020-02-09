@@ -11,9 +11,7 @@ const { service, sslProtocol } = require('./apiGateway')
 }
 
 */
-const ownConfig = {}
-module.exports = ownConfig // NOTE: any circular dependency must be handled after exporting this configuration.
-Object.assign(ownConfig, {
+const ownConfig = {
   runtimeVariable: {
     DEPLOYMENT: process.env.DEPLOYMENT || 'development', // Deployment type
     DISTRIBUTION: process.env.DISTRIBUTION || false,
@@ -83,7 +81,8 @@ Object.assign(ownConfig, {
     containerStackName: 'gazitengwebapp',
   },
   databaseVersion: 1,
-})
+}
+module.exports = ownConfig // NOTE: any circular dependency must be handled after exporting this configuration.
 
 /** Must be positioned after exporting config, to prevent circular dependencies in the transpilation module - as the transpiler checks for the root module's configuration to print the transpiled files in shared temporary folder.
   In case the following modules also require tranpilation.
