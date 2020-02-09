@@ -1332,8 +1332,8 @@
     koa-router "*"
 
 "@service/serviceDynamicContent@https://github.com/AppScriptIO/serviceDynamicContent#semver:^2.x.x":
-  version "2.1.1"
-  resolved "https://github.com/AppScriptIO/serviceDynamicContent#5d8827e6e1dd13699ab38e813939f15cf9f39fc1"
+  version "2.1.2"
+  resolved "https://github.com/AppScriptIO/serviceDynamicContent#9d282146c8672d354d373939e986eaaa94d163d4"
   dependencies:
     "@babel/core" "*"
     "@dependency/graphTraversal" "https://github.com/AppScriptIO/graphTraversal#semver:^4.x.x"
@@ -9696,9 +9696,9 @@ reusify@^1.0.0:
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
 rimraf@*:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.1.tgz#48d3d4cb46c80d388ab26cd61b1b466ae9ae225a"
-  integrity sha512-IQ4ikL8SjBiEDZfk+DFVwqRK8md24RWMEJkdSlgNLkyyAImcjf8SWvU1qFMDOb4igBClbTQ/ugPqXcRwdFTxZw==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
+  integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   dependencies:
     glob "^7.1.3"
 

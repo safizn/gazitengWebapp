@@ -11,6 +11,7 @@
 		"container-run-command": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \" .container.run.dockerCli({ scriptCommand: ' node --eval \\\"  require(process.cwd()).application({}, { memgraph: { host: \\'memgraph\\' }}) \\\"  '}) \"",
 		"container-run": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerCli({ scriptCommand: 'yarn run run-configuredForContainer' })\"",
 		"container-run-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: 'yarn run run-configuredForContainer' })\"",
+		"container-run-stack": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerStackCli({ })\"",
 		"livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({})\"",
 		"livereload-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".run.default({ application: [{},{ memgraph: { host: 'memgraph' }}] })\"",
 		"container-livereload": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerCli({ scriptCommand: ' yarn run livereload-configuredForContainer' })\"",
