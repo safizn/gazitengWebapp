@@ -1,12 +1,13 @@
-/**
- * Interface for running mocha function through childprocess.spawn api (as it allows only a module path to be passed as parameter).
- */
-import { application } from '../app.js'
-import assert from 'assert'
-import { consoleLogOverwrite } from '../utility/consoleLogOverwrite.js'
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-consoleLogOverwrite()
 
-assert(process.argv[2], '• Must pass command arguments to run application cli adapter script.')
-let args = JSON.parse(process.argv[2])
-application(...args).catch(error => console.log(error))
+var _app = require("../app.js");
+var _assert = _interopRequireDefault(require("assert"));
+var _consoleLogOverwrite = require("../utility/consoleLogOverwrite.js");
+
+(0, _consoleLogOverwrite.consoleLogOverwrite)();
+
+(0, _assert.default)(process.argv[2], '• Must pass command arguments to run application cli adapter script.');
+let args = JSON.parse(process.argv[2]);
+(0, _app.application)(...args).catch(error => console.log(error));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9jbGllbnRJbnRlcmZhY2Uvc3VicHJvY2Vzc0NsaUFkYXB0ZXIuanMiXSwibmFtZXMiOlsicHJvY2VzcyIsImFyZ3YiLCJhcmdzIiwiSlNPTiIsInBhcnNlIiwiY2F0Y2giLCJlcnJvciIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7OztBQUdBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQSxxQkFBT0EsT0FBTyxDQUFDQyxJQUFSLENBQWEsQ0FBYixDQUFQLEVBQXdCLHNFQUF4QjtBQUNBLElBQUlDLElBQUksR0FBR0MsSUFBSSxDQUFDQyxLQUFMLENBQVdKLE9BQU8sQ0FBQ0MsSUFBUixDQUFhLENBQWIsQ0FBWCxDQUFYO0FBQ0Esc0JBQVksR0FBR0MsSUFBZixFQUFxQkcsS0FBckIsQ0FBMkJDLEtBQUssSUFBSUMsT0FBTyxDQUFDQyxHQUFSLENBQVlGLEtBQVosQ0FBcEMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEludGVyZmFjZSBmb3IgcnVubmluZyBtb2NoYSBmdW5jdGlvbiB0aHJvdWdoIGNoaWxkcHJvY2Vzcy5zcGF3biBhcGkgKGFzIGl0IGFsbG93cyBvbmx5IGEgbW9kdWxlIHBhdGggdG8gYmUgcGFzc2VkIGFzIHBhcmFtZXRlcikuXG4gKi9cbmltcG9ydCB7IGFwcGxpY2F0aW9uIH0gZnJvbSAnLi4vYXBwLmpzJ1xuaW1wb3J0IGFzc2VydCBmcm9tICdhc3NlcnQnXG5pbXBvcnQgeyBjb25zb2xlTG9nT3ZlcndyaXRlIH0gZnJvbSAnLi4vdXRpbGl0eS9jb25zb2xlTG9nT3ZlcndyaXRlLmpzJ1xuXG5jb25zb2xlTG9nT3ZlcndyaXRlKClcblxuYXNzZXJ0KHByb2Nlc3MuYXJndlsyXSwgJ+KAoiBNdXN0IHBhc3MgY29tbWFuZCBhcmd1bWVudHMgdG8gcnVuIGFwcGxpY2F0aW9uIGNsaSBhZGFwdGVyIHNjcmlwdC4nKVxubGV0IGFyZ3MgPSBKU09OLnBhcnNlKHByb2Nlc3MuYXJndlsyXSlcbmFwcGxpY2F0aW9uKC4uLmFyZ3MpLmNhdGNoKGVycm9yID0+IGNvbnNvbGUubG9nKGVycm9yKSlcbiJdfQ==

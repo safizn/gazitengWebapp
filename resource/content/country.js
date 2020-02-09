@@ -1,12 +1,12 @@
-let data = [
-  {
-    name: 'United States of America',
-    nativeName: 'United States of America',
-    twoLetterCode: 'US',
-  },
-]
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;let data = [
+{
+  name: 'United States of America',
+  nativeName: 'United States of America',
+  twoLetterCode: 'US' }];var _default =
 
-export default {
+
+
+{
   databaseTableName: 'country',
-  data: data,
-}
+  data: data };exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Jlc291cmNlL2NvbnRlbnQvY291bnRyeS5qcyJdLCJuYW1lcyI6WyJkYXRhIiwibmFtZSIsIm5hdGl2ZU5hbWUiLCJ0d29MZXR0ZXJDb2RlIiwiZGF0YWJhc2VUYWJsZU5hbWUiXSwibWFwcGluZ3MiOiJvR0FBQSxJQUFJQSxJQUFJLEdBQUc7QUFDVDtBQUNFQyxFQUFBQSxJQUFJLEVBQUUsMEJBRFI7QUFFRUMsRUFBQUEsVUFBVSxFQUFFLDBCQUZkO0FBR0VDLEVBQUFBLGFBQWEsRUFBRSxJQUhqQixFQURTLENBQVgsQzs7OztBQVFlO0FBQ2JDLEVBQUFBLGlCQUFpQixFQUFFLFNBRE47QUFFYkosRUFBQUEsSUFBSSxFQUFFQSxJQUZPLEUiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgZGF0YSA9IFtcbiAge1xuICAgIG5hbWU6ICdVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EnLFxuICAgIG5hdGl2ZU5hbWU6ICdVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EnLFxuICAgIHR3b0xldHRlckNvZGU6ICdVUycsXG4gIH0sXG5dXG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgZGF0YWJhc2VUYWJsZU5hbWU6ICdjb3VudHJ5JyxcbiAgZGF0YTogZGF0YSxcbn1cbiJdfQ==

@@ -1,12 +1,12 @@
-let data = [
-  {
-    name: { long: 'Universitatea de Medicina si Farmacie "Carol Davila" din Bucuresti', short: 'UMFCD' },
-    link: ['http://umfcd.ro/', 'http://umfcaroldavila.ro/'],
-    logo: 'http://www.srrm.ro/upload/poze/1395759637_tmp_umf-carol-davila-1857-1627894619.png',
-  },
-]
+"use strict";let data = [
+{
+  name: { long: 'Universitatea de Medicina si Farmacie "Carol Davila" din Bucuresti', short: 'UMFCD' },
+  link: ['http://umfcd.ro/', 'http://umfcaroldavila.ro/'],
+  logo: 'http://www.srrm.ro/upload/poze/1395759637_tmp_umf-carol-davila-1857-1627894619.png' }];
+
+
 
 module.exports = {
   databaseTableName: 'university',
-  data: data,
-}
+  data: data };
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Jlc291cmNlL2NvbnRlbnQvdW5pdmVyc2l0eS5qcyJdLCJuYW1lcyI6WyJkYXRhIiwibmFtZSIsImxvbmciLCJzaG9ydCIsImxpbmsiLCJsb2dvIiwibW9kdWxlIiwiZXhwb3J0cyIsImRhdGFiYXNlVGFibGVOYW1lIl0sIm1hcHBpbmdzIjoiYUFBQSxJQUFJQSxJQUFJLEdBQUc7QUFDVDtBQUNFQyxFQUFBQSxJQUFJLEVBQUUsRUFBRUMsSUFBSSxFQUFFLG9FQUFSLEVBQThFQyxLQUFLLEVBQUUsT0FBckYsRUFEUjtBQUVFQyxFQUFBQSxJQUFJLEVBQUUsQ0FBQyxrQkFBRCxFQUFxQiwyQkFBckIsQ0FGUjtBQUdFQyxFQUFBQSxJQUFJLEVBQUUsb0ZBSFIsRUFEUyxDQUFYOzs7O0FBUUFDLE1BQU0sQ0FBQ0MsT0FBUCxHQUFpQjtBQUNmQyxFQUFBQSxpQkFBaUIsRUFBRSxZQURKO0FBRWZSLEVBQUFBLElBQUksRUFBRUEsSUFGUyxFQUFqQiIsInNvdXJjZXNDb250ZW50IjpbImxldCBkYXRhID0gW1xuICB7XG4gICAgbmFtZTogeyBsb25nOiAnVW5pdmVyc2l0YXRlYSBkZSBNZWRpY2luYSBzaSBGYXJtYWNpZSBcIkNhcm9sIERhdmlsYVwiIGRpbiBCdWN1cmVzdGknLCBzaG9ydDogJ1VNRkNEJyB9LFxuICAgIGxpbms6IFsnaHR0cDovL3VtZmNkLnJvLycsICdodHRwOi8vdW1mY2Fyb2xkYXZpbGEucm8vJ10sXG4gICAgbG9nbzogJ2h0dHA6Ly93d3cuc3JybS5yby91cGxvYWQvcG96ZS8xMzk1NzU5NjM3X3RtcF91bWYtY2Fyb2wtZGF2aWxhLTE4NTctMTYyNzg5NDYxOS5wbmcnLFxuICB9LFxuXVxuXG5tb2R1bGUuZXhwb3J0cyA9IHtcbiAgZGF0YWJhc2VUYWJsZU5hbWU6ICd1bml2ZXJzaXR5JyxcbiAgZGF0YTogZGF0YSxcbn1cbiJdfQ==
