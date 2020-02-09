@@ -1,6 +1,6 @@
 {
 	"name": "@service/gazitengWebapp",
-	"version": "1.2.1",
+	"version": "1.3.1",
 	"main": "./entrypoint/programmaticAPI",
 	"scripts": {
 		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
@@ -24,6 +24,7 @@
 		"build-configuredForContainer": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildSourceCode.moduleProject({memgraph:{host:'memgraph'}})\"",
 		"container-build": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerCli({ scriptCommand: 'yarn run build-configuredForContainer' })\"",
 		"container-build-compose": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerComposeCli({ scriptCommand: 'yarn run build-configuredForContainer' })\"",
+		"release": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildAndRelease.moduleProject({ shouldBuildCode: false })\"",
 		"buildAndRelease": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".buildAndRelease.moduleProject({})\"",
 		"image-build": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.build.dockerBuildImage({})\""
 	},
