@@ -7,7 +7,7 @@ const projectConfig = require('../../configuration'),
 
 // • Run
 if (filesystem.existsSync(projectConfig.directory.distribution)) {
-  module.exports = require(projectConfig.directory.distribution)
+  module.exports = require(path.join(projectConfig.directory.distribution, path.relative(projectConfig.directory.root, projectConfig.directory.source), projectConfig.entrypoint.cli))
 } else {
   // • Transpilation (babelJSCompiler)
   const { Compiler } = require('@deployment/javascriptTranspilation')
