@@ -1,11 +1,12 @@
 {
 	"name": "@service/gazitengWebapp",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"main": "./entrypoint/programmaticAPI",
 	"scripts": {
 		"post-install": "cd ./source/clientSide/packageManager && yarn workspaces run install",
 		"run": "node --eval \"require(process.cwd()).application()\"",
 		"run-configuredForContainer": "node --eval \"require(process.cwd()).application({}, { memgraph: { host: 'memgraph' }})\"",
+		"run-configuredForContainer-pipeApproach": "echo require\\(process.cwd\\(\\)\\).application\\({}, { memgraph: { host: 'memgraph' }}\\) | node -",
 		"run-throughScriptManager": "yarn run scriptManager ./ \".application()\"",
 		"container-run-bash": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \".container.run.dockerCli({})\"",
 		"container-run-command": "yarn run scriptManager shouldCompileScript=true @deployment/deploymentScript \" .container.run.dockerCli({ scriptCommand: ' node --eval \\\"  require(process.cwd()).application({}, { memgraph: { host: \\'memgraph\\' }}) \\\"  '}) \"",
